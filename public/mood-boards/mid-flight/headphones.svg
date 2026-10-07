@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="500" height="420">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0"/></filter>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+</defs>
+<defs>
+    <linearGradient id="seat15" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2654"/><stop offset="1" stop-color="#0a1028"/></linearGradient>
+    <filter id="fab15" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".7 .2" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.25  0 0 0 0 0.32  0 0 0 0 0.6  0 0 0 0.35 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="foam15" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="3" seed="9" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.1  0 0 0 0 0.12  0 0 0 0 0.2  0 0 0 0.9 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <radialGradient id="cup15" cx=".35" cy=".3"><stop offset="0" stop-color="#3a4985"/><stop offset=".6" stop-color="#151d40"/><stop offset="1" stop-color="#070b1a"/></radialGradient>
+    <linearGradient id="band15" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4985"/><stop offset="1" stop-color="#0a0f22"/></linearGradient>
+    <filter id="b6" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter><filter id="b3" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="500" height="420" fill="url(#seat15)"/>
+  <rect width="500" height="420" filter="url(#fab15)"/>
+  <path d="M140 250 C140 110 360 110 360 250" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="26" filter="url(#b6)" transform="translate(8 12)"/>
+  <ellipse cx="148" cy="280" rx="56" ry="64" fill="#000" opacity=".5" filter="url(#b6)"/>
+  <ellipse cx="368" cy="280" rx="56" ry="64" fill="#000" opacity=".5" filter="url(#b6)"/>
+  <path d="M140 250 C140 110 360 110 360 250" fill="none" stroke="url(#band15)" stroke-width="22" stroke-linecap="round"/>
+  <path d="M146 220 C150 128 350 128 354 220" fill="none" stroke="#9cc4ff" stroke-opacity=".35" stroke-width="2"/>
+  <ellipse cx="140" cy="270" rx="50" ry="60" fill="url(#cup15)"/><ellipse cx="140" cy="270" rx="34" ry="42" fill="#0b1024"/><ellipse cx="140" cy="270" rx="34" ry="42" filter="url(#foam15)" opacity=".8"/><ellipse cx="126" cy="238" rx="12" ry="6" fill="#fff" opacity=".12"/><ellipse cx="360" cy="270" rx="50" ry="60" fill="url(#cup15)"/><ellipse cx="360" cy="270" rx="34" ry="42" fill="#0b1024"/><ellipse cx="360" cy="270" rx="34" ry="42" filter="url(#foam15)" opacity=".8"/><ellipse cx="346" cy="238" rx="12" ry="6" fill="#fff" opacity=".12"/>
+  <path d="M150 330 C170 400 270 350 300 392 S380 410 420 380" fill="none" stroke="#000" stroke-opacity=".5" stroke-width="6" filter="url(#b3)" transform="translate(3 6)"/>
+  <path d="M150 330 C170 400 270 350 300 392 S380 410 420 380" fill="none" stroke="#0b0f20" stroke-width="5"/>
+  <g transform="rotate(-30 430 372)">
+    <rect x="420" y="362" width="30" height="20" rx="4" fill="#2a3358"/>
+    <rect x="450" y="364" width="16" height="4" rx="1" fill="#b9c4e0"/><rect x="450" y="376" width="16" height="4" rx="1" fill="#b9c4e0"/>
+  </g>
+<rect width="500" height="420" fill="url(#vignette)"/>
+<rect width="500" height="420" filter="url(#grain)"/>
+</svg>

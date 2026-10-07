@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0"/></filter>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+</defs>
+<defs>
+    <filter id="fl20" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" seed="12" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.3  0 0 0 0 0.38  0 0 0 0 0.7  0 0 0 0.3 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="satin20" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b4f94"/><stop offset=".35" stop-color="#1b2756"/><stop offset=".55" stop-color="#5068b4"/><stop offset=".75" stop-color="#16204a"/><stop offset="1" stop-color="#0b1230"/></linearGradient>
+    <linearGradient id="plug20" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd79a"/><stop offset="1" stop-color="#d98a3a"/></linearGradient>
+    <filter id="foam20" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="2" numOctaves="3" seed="3" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.6  0 0 0 0 0.35  0 0 0 0 0.1  0 0 0 0.35 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="b6" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="560" height="380" fill="#121b40"/>
+  <rect width="560" height="380" filter="url(#fl20)"/>
+  <path d="M60 210 C40 120 140 40 260 120 M300 120 C420 40 520 120 500 210" fill="none" stroke="#0a0f24" stroke-width="10" stroke-linecap="round"/>
+  <path d="M110 190 C110 120 210 110 280 140 C350 110 450 120 450 190 C450 260 360 270 280 240 C200 270 110 260 110 190 Z" fill="#000" opacity=".5" filter="url(#b6)" transform="translate(8 12)"/>
+  <path d="M110 190 C110 120 210 110 280 140 C350 110 450 120 450 190 C450 260 360 270 280 240 C200 270 110 260 110 190 Z" fill="url(#satin20)"/>
+  <path d="M118 190 C118 128 212 118 280 148 C348 118 442 128 442 190" fill="none" stroke="#9cc4ff" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M120 194 C120 250 200 258 280 232 C360 258 440 250 440 194" fill="none" stroke="#0a0f24" stroke-opacity=".6" stroke-dasharray="3 4"/>
+  <g transform="rotate(-20 140 320)"><ellipse cx="140" cy="326" rx="22" ry="8" fill="#000" opacity=".45" filter="url(#b6)"/><rect x="118" y="308" width="44" height="24" rx="11" fill="url(#plug20)"/><rect x="118" y="308" width="44" height="24" rx="11" filter="url(#foam20)"/></g><g transform="rotate(15 210 330)"><ellipse cx="210" cy="336" rx="22" ry="8" fill="#000" opacity=".45" filter="url(#b6)"/><rect x="188" y="318" width="44" height="24" rx="11" fill="url(#plug20)"/><rect x="188" y="318" width="44" height="24" rx="11" filter="url(#foam20)"/></g>
+<rect width="560" height="380" fill="url(#vignette)"/>
+<rect width="560" height="380" filter="url(#grain)"/>
+</svg>

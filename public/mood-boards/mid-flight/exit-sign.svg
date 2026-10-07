@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0"/></filter>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+</defs>
+<defs>
+    <linearGradient id="ceil12" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1330"/><stop offset="1" stop-color="#05070f"/></linearGradient>
+    <radialGradient id="red12" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff3b4d" stop-opacity=".45"/><stop offset="1" stop-color="#ff3b4d" stop-opacity="0"/></radialGradient>
+    <filter id="b4" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter><filter id="b10" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <rect width="640" height="320" fill="url(#ceil12)"/>
+  <path d="M0 250 Q320 210 640 250" stroke="#5b8cff" stroke-width="12" opacity=".4" fill="none" filter="url(#b10)"/>
+  <path d="M0 250 Q320 210 640 250" stroke="#9cc4ff" stroke-width="2" fill="none"/>
+  <ellipse cx="320" cy="140" rx="260" ry="130" fill="url(#red12)"/>
+  <rect x="200" y="92" width="240" height="96" rx="10" fill="#0a0507" stroke="#3a1a22" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="54" letter-spacing="8" text-anchor="middle">
+    <text x="326" y="160" fill="#ff3b4d" filter="url(#b10)" opacity=".9">EXIT</text>
+    <text x="326" y="160" fill="#ff3b4d" filter="url(#b4)">EXIT</text>
+    <text x="326" y="160" fill="#ffd0d5">EXIT</text>
+  </g>
+<rect width="640" height="320" fill="url(#vignette)"/>
+<rect width="640" height="320" filter="url(#grain)"/>
+</svg>

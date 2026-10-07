@@ -24,15 +24,18 @@ _TBD — e.g. me, looking back at where I've been; friends asking "where have yo
 
 > Rename the moods in [`lib/moods.ts`](lib/moods.ts). Routes and hub links are generated from it.
 
-### Mood 1 — _Name TBD_
+### Mood 1 — Mid Flight
 
-- **Keywords:** _TBD · TBD · TBD_
-- **Palette:** _TBD_
-- **Type:** _TBD_
-- **References / inspiration:** _TBD_
-- **Why it might fit a flight log:** _TBD_
+_Flying in the night, from the window seat._ The cabin lights are dimmed to blue, rows of seats stretch back forever, and through the window tiny towns glow far below.
 
-### Mood 2 — _Name TBD_
+- **Keywords:** Nocturnal · Hushed · Nostalgic
+- **Palette:** cabin dark `#05070f`, night navy `#0b1330`, seat blue `#1a2752`, LED strip `#5b8cff`, aisle light `#7fd3ff`, reading lamp `#ffc979` (the one warm color)
+- **Type:** DM Sans Light for display/body, DM Mono for flight data labels
+- **References / inspiration:** red-eye flights, blue LED cabin mood lighting, the seatback flight-progress map, city lights from 35,000 ft
+- **Why it might fit a flight log:** it's the feeling of actually being on the flights being logged — quiet, reflective, looking back at where you've been
+- **Artifacts:** 30 — 23 SVG illustrations drawn by the agent (`node scripts/mid-flight/generate.mjs` → `public/mood-boards/mid-flight/`) plus palette, type, and interface tiles
+
+### Mood 2 — First Class _(planned, not started)_
 
 - **Keywords:** _TBD · TBD · TBD_
 - **Palette:** _TBD_

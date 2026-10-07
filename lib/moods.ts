@@ -9,7 +9,12 @@ export type Mood = {
 };
 
 export const moods: Mood[] = [
-  { slug: "mood-1", name: "Mood 1", keywords: ["TBD", "TBD", "TBD"], swatches: [] },
+  {
+    slug: "mid-flight",
+    name: "Mid Flight",
+    keywords: ["Nocturnal", "Hushed", "Nostalgic"],
+    swatches: ["#05070f", "#0b1330", "#1a2752", "#5b8cff", "#7fd3ff", "#ffc979"],
+  },
   { slug: "mood-2", name: "Mood 2", keywords: ["TBD", "TBD", "TBD"], swatches: [] },
   { slug: "mood-3", name: "Mood 3", keywords: ["TBD", "TBD", "TBD"], swatches: [] },
 ];

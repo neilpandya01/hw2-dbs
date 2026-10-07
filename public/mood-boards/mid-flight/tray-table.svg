@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0"/></filter>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+</defs>
+<defs>
+      <linearGradient id="tray9" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151d3d"/><stop offset="1" stop-color="#232e5a"/></linearGradient>
+      <radialGradient id="pool9" cx=".38" cy=".6" r=".45"><stop offset="0" stop-color="#ffc979" stop-opacity=".4"/><stop offset="1" stop-color="#ffc979" stop-opacity="0"/></radialGradient>
+      <linearGradient id="cup9" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cfdcf5" stop-opacity=".35"/><stop offset=".25" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#cfdcf5" stop-opacity=".15"/><stop offset="1" stop-color="#cfdcf5" stop-opacity=".3"/></linearGradient>
+      <linearGradient id="ale9" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0c27a"/><stop offset="1" stop-color="#9c6a2c"/></linearGradient>
+      <linearGradient id="bag9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f6cf0"/><stop offset="1" stop-color="#1b3aa0"/></linearGradient>
+      <filter id="b8" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8"/></filter><filter id="b3" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+    </defs>
+    <rect width="640" height="460" fill="#070b1a"/>
+    <path d="M60 0 H580 L560 150 H80 Z" fill="#111a3a"/>
+    <rect x="270" y="40" width="100" height="60" rx="5" fill="#0b1229" stroke="#24305e"/>
+    <polygon points="110,170 530,170 630,460 10,460" fill="url(#tray9)"/>
+    <polygon points="110,170 530,170 630,460 10,460" fill="url(#pool9)"/>
+    <path d="M110 170 H530" stroke="#9cc4ff" stroke-opacity=".35" stroke-width="2"/>
+    <ellipse cx="460" cy="205" rx="40" ry="10" fill="#0b1229"/>
+    <polygon points="160,300 330,282 360,380 170,402" fill="#e9eef8" opacity=".22"/>
+    <path d="M190 330 L320 318 M196 360 L340 346" stroke="#fff" stroke-opacity=".12"/>
+    <ellipse cx="258" cy="372" rx="44" ry="12" fill="#000" opacity=".5" filter="url(#b3)"/>
+    <path d="M210 262 L222 366 Q258 378 294 366 L306 262 Z" fill="url(#ale9)" opacity=".8"/>
+    <ellipse cx="258" cy="272" rx="46" ry="13" fill="#e9b768" opacity=".9"/>
+    <rect x="236" y="262" width="24" height="16" rx="4" fill="#fff" opacity=".45" transform="rotate(12 248 270)"/>
+    <rect x="262" y="266" width="20" height="14" rx="4" fill="#fff" opacity=".35" transform="rotate(-10 272 273)"/>
+    <path d="M206 250 L222 366 Q258 378 294 366 L310 250" fill="url(#cup9)" stroke="#cfdcf5" stroke-opacity=".5"/>
+    <ellipse cx="258" cy="250" rx="52" ry="14" fill="none" stroke="#e8efff" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M222 270 L232 356" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+    <g transform="rotate(-14 470 330)">
+      <ellipse cx="470" cy="368" rx="64" ry="10" fill="#000" opacity=".45" filter="url(#b3)"/>
+      <path d="M410 300 Q470 292 530 300 L534 362 Q470 370 406 362 Z" fill="url(#bag9)"/>
+      <path d="M410 300 Q470 292 530 300 L530 310 Q470 302 410 310 Z" fill="#1b3aa0"/>
+      <path d="M420 330 l20 6 M470 340 l18 -4 M500 320 l10 8" stroke="#fff" stroke-opacity=".2"/>
+      <text x="470" y="344" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="14" letter-spacing="2" fill="#eef3ff">PRETZELS</text>
+    </g>
+<rect width="640" height="460" fill="url(#vignette)"/>
+<rect width="640" height="460" filter="url(#grain)"/>
+</svg>

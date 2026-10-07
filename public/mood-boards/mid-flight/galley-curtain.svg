@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" width="500" height="620">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0"/></filter>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+</defs>
+<defs>
+      <linearGradient id="fold11" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a1128"/><stop offset=".5" stop-color="#1e2c5e"/><stop offset="1" stop-color="#0a1128"/></linearGradient>
+      <linearGradient id="spill11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc979" stop-opacity=".55"/><stop offset="1" stop-color="#ffc979" stop-opacity="0"/></linearGradient>
+      <linearGradient id="slit11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1d6"/><stop offset="1" stop-color="#ffc979"/></linearGradient>
+      <filter id="b6" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter><filter id="b18" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="18"/></filter>
+    </defs>
+    <rect width="500" height="620" fill="#05070f"/>
+    <polygon points="0,0 500,0 370,110 130,110" fill="#0c1534"/>
+    <line x1="0" y1="10" x2="130" y2="110" stroke="#5b8cff" stroke-width="10" opacity=".5" filter="url(#b6)"/>
+    <line x1="500" y1="10" x2="370" y2="110" stroke="#5b8cff" stroke-width="10" opacity=".5" filter="url(#b6)"/>
+    <line x1="0" y1="10" x2="130" y2="110" stroke="#9cc4ff" stroke-width="2"/>
+    <line x1="500" y1="10" x2="370" y2="110" stroke="#9cc4ff" stroke-width="2"/>
+    <polygon points="0,0 130,110 130,470 0,620" fill="#0a1026"/>
+    <polygon points="500,0 370,110 370,470 500,620" fill="#0a1026"/>
+    <polygon points="130,470 370,470 500,620 0,620" fill="#0b1229"/>
+    <rect x="292" y="104" width="30" height="372" fill="#ffc979" opacity=".6" filter="url(#b18)"/>
+    <rect x="300" y="110" width="14" height="360" fill="url(#slit11)"/>
+    <rect x="130" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="150" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="170" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="190" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="210" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="230" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="250" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="270" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="290" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="310" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="330" y="110" width="20" height="360" fill="url(#fold11)"/><rect x="350" y="110" width="20" height="360" fill="url(#fold11)"/>
+    <rect x="130" y="110" width="168" height="360" fill="#000" opacity=".15"/>
+    <rect x="314" y="110" width="56" height="360" fill="#000" opacity=".1"/>
+    <path d="M298 110 Q296 290 300 470" stroke="#ffc979" stroke-opacity=".7" stroke-width="2" fill="none"/>
+    <path d="M316 110 Q318 290 314 470" stroke="#ffc979" stroke-opacity=".5" stroke-width="2" fill="none"/>
+    <rect x="130" y="104" width="240" height="8" rx="3" fill="#2a3670"/>
+    <polygon points="296,470 318,470 380,620 230,620" fill="url(#spill11)"/>
+    <path d="M0 620 L0 520 Q30 500 80 510 L90 620 Z M500 620 L500 520 Q470 500 420 510 L410 620 Z" fill="#111a3a"/>
+<rect width="500" height="620" fill="url(#vignette)"/>
+<rect width="500" height="620" filter="url(#grain)"/>
+</svg>
