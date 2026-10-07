@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Design tokens for the chosen style go here once a mood is picked. */
+@theme {
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-neutral-900);
+}
