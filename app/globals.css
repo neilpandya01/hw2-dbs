@@ -1,7 +1,42 @@
 @import "tailwindcss";
 
-/* Design tokens for the chosen style go here once a mood is picked. */
+/* ---------- Mid Flight design tokens ---------- */
+/* Fonts are loaded per-system with next/font (components/ui/mid-flight/fonts.ts). */
+@theme inline {
+  --font-mf: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mf-mono: var(--font-dm-mono), ui-monospace, monospace;
+}
+
 @theme {
+  /* color roles */
+  --color-mf-bg: #09102a; /* night navy */
+  --color-mf-surface: #0f1a40; /* seatback blue */
+  --color-mf-raised: #192656; /* seat blue */
+  --color-mf-text: #e6ecfb;
+  --color-mf-muted: #909dc0;
+  --color-mf-border: #283670; /* decorative hairlines */
+  --color-mf-control: #6474aa; /* input / checkbox outlines, ≥3:1 */
+  --color-mf-accent: #eeb98f; /* reading lamp — primary action only */
+  --color-mf-accent-hover: #f5ccaa;
+  --color-mf-accent-pressed: #d9a271;
+  --color-mf-focus: #7fd3ff; /* aisle light — focus + selected */
+  --color-mf-led: #5b8cff; /* LED strip — hover glow */
+  --color-mf-error: #ff7a85;
+  --color-mf-success: #7fe0b0;
+
+  /* shape */
+  --radius-mf-sm: 6px;
+  --radius-mf-md: 12px;
+
+  /* depth comes from light, not drop shadows */
+  --shadow-mf-glow: 0 0 24px -6px rgb(91 140 255 / 0.6);
+  --shadow-mf-lamp: 0 0 28px -6px rgb(238 185 143 / 0.5);
+
+  --animate-mf-shimmer: mf-shimmer 1.6s ease-in-out infinite;
+  @keyframes mf-shimmer {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 0.9; }
+  }
 }
 
 body {

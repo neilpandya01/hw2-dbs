@@ -34,6 +34,7 @@ _Flying in the night, from the window seat._ The cabin lights are dimmed to blue
 - **References / inspiration:** red-eye flights, blue LED cabin mood lighting, the seatback flight-progress map, city lights from 35,000 ft
 - **Why it might fit a flight log:** it's the feeling of actually being on the flights being logged — quiet, reflective, looking back at where you've been
 - **Artifacts:** 28 SVG illustrations drawn by the agent (`node scripts/mid-flight/generate.mjs` → `public/mood-boards/mid-flight/`)
+- **Design system:** `/design-systems/mid-flight` — color roles with contrast ratios, type roles, spacing & shape, components, control states, UI states. Components live in `components/ui/mid-flight/` so the site can reuse them.
 
 ### Mood 2 — First Class _(planned, not started)_
 

@@ -1,21 +1,20 @@
+import Link from "next/link";
 import type { Mood } from "@/lib/moods";
-import ColorRoles from "./ColorRoles";
-import TypeRoles from "./TypeRoles";
-import SpacingShape from "./SpacingShape";
-import ComponentGallery from "./ComponentGallery";
-import ControlStates from "./ControlStates";
-import UIStates from "./UIStates";
+import MidFlightSystem from "./mid-flight/MidFlightSystem";
+
+// Mood slug → its design system. Moods without one show a placeholder.
+const systems: Record<string, () => React.ReactNode> = {
+  "mid-flight": MidFlightSystem,
+};
 
 export default function DesignSystem({ mood }: { mood: Mood }) {
+  const System = systems[mood.slug];
+  if (System) return <System />;
   return (
-    <main className="p-6">
-      <h1 className="text-3xl">{mood.name} · Design System</h1>
-      <ColorRoles />
-      <TypeRoles />
-      <SpacingShape />
-      <ComponentGallery />
-      <ControlStates />
-      <UIStates />
+    <main className="mx-auto max-w-3xl p-6">
+      <Link href="/" className="text-sm text-sky-700 hover:underline">← Hub</Link>
+      <h1 className="mt-4 text-3xl">{mood.name} · Design System</h1>
+      <p className="mt-2 text-neutral-500">Design system coming soon.</p>
     </main>
   );
 }
