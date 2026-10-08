@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+<rect width="820" height="500" fill="#ecebe7"/>
+<rect x="0" y="0" width="820" height="330" fill="#dbe5ea"/>
+    <rect x="0" y="330" width="820" height="170" fill="#3a3d42"/>
+    <!-- lead-in line to the nose wheel, and the stop bar -->
+    <rect x="427" y="330" width="6" height="170" fill="#ffcc00"/><rect x="360" y="420" width="140" height="8" fill="#ffcc00"/>
+    <!-- tail fin and stabilisers behind -->
+    <path d="M421 160 L425 30 L435 30 L439 160 Z" fill="#1d5fd1"/>
+    <rect x="320" y="128" width="220" height="7" rx="3" fill="#c4c8cc"/>
+    <!-- wings, slight dihedral -->
+    <path d="M370 250 L40 222 L40 232 L370 276 Z" fill="#c4c8cc"/>
+    <path d="M490 250 L780 222 L780 232 L490 276 Z" fill="#c4c8cc"/>
+    <rect x="34" y="206" width="8" height="30" fill="#1d5fd1"/><rect x="778" y="206" width="8" height="30" fill="#1d5fd1"/>
+    <circle cx="260" cy="292" r="44" fill="#c4c8cc"/><circle cx="260" cy="292" r="34" fill="#111214"/><circle cx="260" cy="292" r="9" fill="#8b9096"/><rect x="254" y="236" width="12" height="16" fill="#5f646b"/><circle cx="600" cy="292" r="44" fill="#c4c8cc"/><circle cx="600" cy="292" r="34" fill="#111214"/><circle cx="600" cy="292" r="9" fill="#8b9096"/><rect x="594" y="236" width="12" height="16" fill="#5f646b"/>
+    <!-- fuselage, head-on -->
+    <circle cx="430" cy="230" r="86" fill="#ffffff"/>
+    <rect x="344" y="236" width="172" height="8" fill="#1d5fd1"/>
+    <path d="M380 200 L422 192 L422 214 L376 220 Z M480 200 L438 192 L438 214 L484 220 Z" fill="#111214"/>
+    <!-- nose gear -->
+    <rect x="425" y="314" width="10" height="30" fill="#5f646b"/><rect x="408" y="334" width="16" height="26" rx="5" fill="#111214"/><rect x="436" y="334" width="16" height="26" rx="5" fill="#111214"/>
+    <rect x="250" y="334" width="10" height="24" fill="#5f646b"/><rect x="236" y="350" width="38" height="18" rx="6" fill="#111214"/>
+    <rect x="600" y="334" width="10" height="24" fill="#5f646b"/><rect x="586" y="350" width="38" height="18" rx="6" fill="#111214"/>
+    <!-- jet bridge from the terminal (left) to the forward door -->
+    <path d="M0 130 L354 176 L354 222 L0 240 Z" fill="#8b9096"/>
+    <rect x="334" y="168" width="26" height="60" fill="#5f646b"/>
+    <path d="M0 146 L354 186" stroke="#c4c8cc" stroke-width="5"/>
+    <rect x="150" y="222" width="14" height="108" fill="#5f646b"/><rect x="136" y="326" width="42" height="12" fill="#111214"/>
+    <!-- tug and bag cart -->
+    <rect x="600" y="360" width="80" height="34" rx="4" fill="#ffcc00"/><rect x="640" y="344" width="30" height="18" fill="#e0b000"/><circle cx="616" cy="398" r="10" fill="#111214"/><circle cx="666" cy="398" r="10" fill="#111214"/>
+    <rect x="690" y="372" width="110" height="22" fill="#8b9096"/><rect x="696" y="350" width="24" height="22" fill="#1d5fd1"/><rect x="724" y="354" width="28" height="18" fill="#e0322b"/><rect x="756" y="348" width="24" height="24" fill="#111214"/><circle cx="706" cy="398" r="8" fill="#111214"/><circle cx="786" cy="398" r="8" fill="#111214"/>
+    <line x1="680" y1="382" x2="690" y2="382" stroke="#111214" stroke-width="4" stroke-linecap="butt"/>
+    <!-- cones -->
+    <path d="M250 440 L262 400 L274 440 Z" fill="#ff6a13"/><rect x="254" y="414" width="16" height="6" fill="#ffffff"/>
+    <path d="M586 440 L598 400 L610 440 Z" fill="#ff6a13"/><rect x="590" y="414" width="16" height="6" fill="#ffffff"/>
+    <!-- the window frame we're looking through -->
+    <rect x="0" y="0" width="820" height="22" fill="#111214"/><rect x="0" y="460" width="820" height="40" fill="#111214"/>
+    <rect x="270" y="0" width="8" height="500" fill="#111214"/><rect x="560" y="0" width="8" height="500" fill="#111214"/>
+    <text x="24" y="487" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="16" font-weight="700" fill="#ffcc00" text-anchor="start" letter-spacing="3">GATE B22</text>
+    <text x="796" y="487" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="end" letter-spacing="2">UA 914 · LONDON</text>
+</svg>

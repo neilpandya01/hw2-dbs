@@ -4,7 +4,10 @@ import type { Artifact as ArtifactT, MoodBoardConfig } from "./types";
 export default function Artifact({ artifact, theme }: { artifact: ArtifactT; theme: MoodBoardConfig["theme"] }) {
   return (
     <figure className="mb-4 break-inside-avoid">
-      <div className="overflow-hidden rounded-xl border" style={{ borderColor: theme.border, background: theme.surface }}>
+      <div
+        className="overflow-hidden rounded-xl border"
+        style={{ borderColor: theme.border, background: theme.surface, borderRadius: theme.radius }}
+      >
         {artifact.kind === "image" ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={artifact.src} alt={artifact.alt} className="block w-full" loading="lazy" />

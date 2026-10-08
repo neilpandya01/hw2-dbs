@@ -21,7 +21,12 @@ export const moods: Mood[] = [
     keywords: ["Private", "Polished", "Quiet luxury"],
     swatches: ["#f4eee4", "#dcc7a4", "#a8844f", "#6e2a34", "#3e4c5e", "#55644a", "#3b2a20"],
   },
-  { slug: "mood-3", name: "Mood 3", keywords: ["TBD", "TBD", "TBD"], swatches: [] },
+  {
+    slug: "through-the-airport",
+    name: "Process Through the Airport",
+    keywords: ["Legible", "Systematic", "Loud"],
+    swatches: ["#111214", "#ffcc00", "#ffffff", "#d8d6d0", "#1f9d55", "#ff8a00", "#e0322b", "#1d5fd1"],
+  },
 ];
 
 export function getMood(slug: string): Mood | undefined {

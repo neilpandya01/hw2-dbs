@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+<rect width="640" height="480" fill="#8b9096"/>
+<rect x="0" y="0" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="16" width="640" height="10" fill="#8b9096"/><rect x="0" y="26" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="42" width="640" height="10" fill="#8b9096"/><rect x="0" y="52" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="68" width="640" height="10" fill="#8b9096"/><rect x="0" y="78" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="94" width="640" height="10" fill="#8b9096"/><rect x="0" y="104" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="120" width="640" height="10" fill="#8b9096"/><rect x="0" y="130" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="146" width="640" height="10" fill="#8b9096"/><rect x="0" y="156" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="172" width="640" height="10" fill="#8b9096"/><rect x="0" y="182" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="198" width="640" height="10" fill="#8b9096"/><rect x="0" y="208" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="224" width="640" height="10" fill="#8b9096"/><rect x="0" y="234" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="250" width="640" height="10" fill="#8b9096"/><rect x="0" y="260" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="276" width="640" height="10" fill="#8b9096"/><rect x="0" y="286" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="302" width="640" height="10" fill="#8b9096"/><rect x="0" y="312" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="328" width="640" height="10" fill="#8b9096"/><rect x="0" y="338" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="354" width="640" height="10" fill="#8b9096"/><rect x="0" y="364" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="380" width="640" height="10" fill="#8b9096"/><rect x="0" y="390" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="406" width="640" height="10" fill="#8b9096"/><rect x="0" y="416" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="432" width="640" height="10" fill="#8b9096"/><rect x="0" y="442" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="458" width="640" height="10" fill="#8b9096"/><rect x="0" y="468" width="640" height="16" fill="#c4c8cc"/><rect x="0" y="484" width="640" height="10" fill="#8b9096"/>
+    <rect x="60" y="40" width="520" height="400" rx="26" fill="#5d6670"/>
+    <rect x="78" y="58" width="484" height="364" rx="18" fill="#727c87"/>
+    <text x="320" y="410" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="14" font-weight="700" fill="#5d6670" text-anchor="middle" letter-spacing="4">PLEASE RETURN TRAYS</text>
+    <!-- laptop -->
+    <g transform="rotate(-4 220 170)"><rect x="110" y="90" width="230" height="150" rx="8" fill="#2a2d31"/><rect x="124" y="104" width="202" height="122" rx="4" fill="#3a3e44"/><rect x="200" y="228" width="50" height="6" rx="3" fill="#1b1d20"/><rect x="130" y="112" width="30" height="30" rx="15" fill="#ffcc00"/></g>
+    <!-- liquids bag -->
+    <g transform="rotate(8 448 160)"><rect x="380" y="84" width="140" height="150" rx="6" fill="#ffffff" opacity="0.75"/><rect x="380" y="84" width="140" height="14" rx="4" fill="#1d5fd1"/>
+      <rect x="398" y="120" width="30" height="90" rx="6" fill="#1f9d55"/><rect x="404" y="108" width="18" height="14" fill="#111214"/>
+      <rect x="440" y="140" width="34" height="70" rx="14" fill="#ff8a00"/><rect x="484" y="124" width="22" height="86" rx="4" fill="#ffffff" stroke="#111214" stroke-width="2"/><rect x="488" y="112" width="14" height="14" fill="#e0322b"/>
+      <rect x="380" y="84" width="140" height="150" rx="6" fill="none" stroke="#111214" stroke-width="3"/></g>
+    <g transform="translate(160 330) rotate(-78)">
+    <path d="M0 -62 C22 -62 30 -40 28 -10 C26 22 24 52 10 62 C2 66 -10 66 -16 60 C-28 46 -28 10 -26 -18 C-24 -46 -18 -62 0 -62 Z" fill="#ffffff" stroke="#111214" stroke-width="4"/>
+    <path d="M-14 -30 C-10 -50 14 -50 18 -30 L16 18 C8 26 -10 26 -16 18 Z" fill="#e0322b"/>
+    <ellipse cx="0" cy="28" rx="12" ry="14" fill="#111214"/>
+    <line x1="-10" y1="-20" x2="12" y2="-20" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/><line x1="-10" y1="-10" x2="12" y2="-10" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/><line x1="-10" y1="0" x2="12" y2="0" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/><line x1="-10" y1="10" x2="12" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/>
+  </g><g transform="translate(250 352) rotate(-96)">
+    <path d="M0 -62 C22 -62 30 -40 28 -10 C26 22 24 52 10 62 C2 66 -10 66 -16 60 C-28 46 -28 10 -26 -18 C-24 -46 -18 -62 0 -62 Z" fill="#ffffff" stroke="#111214" stroke-width="4"/>
+    <path d="M-14 -30 C-10 -50 14 -50 18 -30 L16 18 C8 26 -10 26 -16 18 Z" fill="#e0322b"/>
+    <ellipse cx="0" cy="28" rx="12" ry="14" fill="#111214"/>
+    <line x1="-10" y1="-20" x2="12" y2="-20" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/><line x1="-10" y1="-10" x2="12" y2="-10" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/><line x1="-10" y1="0" x2="12" y2="0" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/><line x1="-10" y1="10" x2="12" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="butt"/>
+  </g>
+    <!-- belt coiled -->
+    <circle cx="420" cy="340" r="44" fill="none" stroke="#111214" stroke-width="12"/><circle cx="420" cy="340" r="24" fill="none" stroke="#111214" stroke-width="12"/>
+    <rect x="452" y="316" width="26" height="30" rx="3" fill="none" stroke="#c4c8cc" stroke-width="5"/>
+    <!-- keys -->
+    <circle cx="512" cy="300" r="13" fill="none" stroke="#c4c8cc" stroke-width="4"/>
+    <rect x="518" y="306" width="34" height="9" rx="3" fill="#c4c8cc"/><rect x="500" y="312" width="9" height="30" rx="3" fill="#ffcc00"/>
+</svg>

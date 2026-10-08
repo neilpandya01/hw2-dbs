@@ -48,12 +48,15 @@ _A private suite at the front of the plane._ Modern first suites (Emirates, Sing
 - **Why it might fit a flight log:** _TBD_
 - **Design system:** `/design-systems/first-suite`, with the same six sections and component list as Mid Flight, restyled. Square tailored corners, 1px lines instead of shadows (a double rule on the modal, an inner rule on primary hover), tracked-caps actions, a deep-brass focus ring, espresso for selected, and bordeaux kept for the primary action. Components live in `components/ui/first-suite/`.
 
-### Mood 3 — _Name TBD_
+### Mood 3 — Process Through the Airport
 
-- **Keywords:** _TBD · TBD · TBD_
-- **Palette:** _TBD_
-- **Type:** _TBD_
-- **References / inspiration:** _TBD_
+_Curb to curb, read at a glance._ Every step of getting through an airport, not just departures: check-in, security, the gate, the airfield, passport control, the baggage belt. Split-flap boards, overhead signs, pictograms and floor lines: a style built to tell you where to go next, from fifty meters away, while you drag a bag.
+
+- **Keywords:** Legible · Systematic · Loud
+- **Palette:** sign black `#111214`, signal yellow `#ffcc00` (wayfinding, the one loud color), white, concrete `#d8d6d0`, steel `#8b9096`. Status colors each mean one thing: green `#1f9d55` boarding/go, amber `#ff8a00` delayed/gate change, red `#e0322b` cancelled/stop, blue `#1d5fd1` information/arrivals
+- **Type:** Barlow Condensed (display) and Barlow (body), from highway signage. The SVGs use Helvetica/Arial, the real airport sign face
+- **Contrast with the other two:** loud instead of hushed, bold weights instead of light, flat color with hard edges instead of glow (Mid Flight) or hairlines (First Suite), and the airport and airfield instead of the cabin
+- **Artifacts:** 30, in the order of the trip (curb → check-in → security → gate → airfield → passport control → baggage → way out), all SVG illustrations drawn by the agent. Scenes a traveler would find abstract (the check-in hall, the security queue, passport control, the baggage belt, the way out) are drawn from your own eyes, using a one-point-perspective camera at eye height, and each space has its own architecture: a tall glass hall with roof trusses, a low tiled security area, a dark carpeted arrivals hall, glass doors onto the taxi rank (`node scripts/through-the-airport/generate.mjs` → `public/mood-boards/through-the-airport/`). Shared drawing kit (pictograms, signage arrows, split-flap tiles, seven-segment digits, the POV camera) in `scripts/through-the-airport/lib.mjs`
 - **Why it might fit a flight log:** _TBD_
 
 ### Chosen style

@@ -1,4 +1,5 @@
 import type { MoodBoardConfig } from "../types";
+import { throughTheAirport } from "./throughTheAirport";
 import { firstSuite } from "./firstSuite";
 import { midFlight } from "./midFlight";
 
@@ -6,4 +7,5 @@ import { midFlight } from "./midFlight";
 export const boards: Record<string, MoodBoardConfig> = {
   "mid-flight": midFlight,
   "first-suite": firstSuite,
+  "through-the-airport": throughTheAirport,
 };

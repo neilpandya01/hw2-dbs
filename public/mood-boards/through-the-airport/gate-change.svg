@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+<rect width="720" height="440" fill="#ecebe7"/>
+<rect x="20" y="20" width="680" height="400" rx="6" fill="#111214"/>
+    <rect x="20" y="20" width="680" height="80" rx="6" fill="#ff8a00"/><rect x="20" y="80" width="680" height="20" fill="#ff8a00"/>
+    <text x="48" y="76" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="40" font-weight="700" fill="#111214" text-anchor="start" letter-spacing="3" textLength="330" lengthAdjust="spacingAndGlyphs">GATE CHANGE</text>
+    <text x="672" y="76" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="20" font-weight="700" fill="#111214" text-anchor="end" textLength="210" lengthAdjust="spacingAndGlyphs">AF 137 · PARIS CDG</text>
+    <text x="48" y="150" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="20" font-weight="400" fill="#c4c8cc" text-anchor="start">Was</text>
+    <text x="48" y="300" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="130" font-weight="700" fill="#5f646b" text-anchor="start" textLength="250" lengthAdjust="spacingAndGlyphs">C07</text>
+    <line x1="40" y1="254" x2="310" y2="254" stroke="#ff8a00" stroke-width="10" stroke-linecap="butt"/>
+    <g transform="translate(320 180) scale(0.9) rotate(0 50 50)"><path d="M8 41 H60 L38 19 H60 L91 50 L60 81 H38 L60 59 H8 Z" fill="#ff8a00"/></g>
+    <text x="440" y="150" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="20" font-weight="400" fill="#ff8a00" text-anchor="start">Now</text>
+    <text x="440" y="300" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="130" font-weight="700" fill="#ffcc00" text-anchor="start" textLength="240" lengthAdjust="spacingAndGlyphs">B09</text>
+    <rect x="48" y="340" width="624" height="2" fill="#5f646b"/>
+    <text x="48" y="380" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="start" textLength="400" lengthAdjust="spacingAndGlyphs">Boarding 20:40 · allow 9 minutes to walk</text>
+    <g transform="translate(632 352) scale(0.4)"><circle cx="50" cy="50" r="40" fill="none" stroke="#ff8a00" stroke-width="8"/><path d="M50 22 V50 L68 62" fill="none" stroke="#ff8a00" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

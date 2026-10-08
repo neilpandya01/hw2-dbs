@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 760" width="560" height="760">
+<rect width="560" height="760" fill="#ecebe7"/>
+<rect x="0" y="0" width="560" height="500" fill="#dfe6ea"/>
+    <!-- behind them, the terminal and the gate we're being guided into -->
+    <rect x="0" y="300" width="560" height="200" fill="#d8d6d0"/><rect x="0" y="340" width="560" height="110" fill="#a9c3cf"/>
+    <rect x="0" y="340" width="5" height="110" fill="#7d9eae"/><rect x="80" y="340" width="5" height="110" fill="#7d9eae"/><rect x="160" y="340" width="5" height="110" fill="#7d9eae"/><rect x="240" y="340" width="5" height="110" fill="#7d9eae"/><rect x="320" y="340" width="5" height="110" fill="#7d9eae"/><rect x="400" y="340" width="5" height="110" fill="#7d9eae"/><rect x="480" y="340" width="5" height="110" fill="#7d9eae"/><rect x="560" y="340" width="5" height="110" fill="#7d9eae"/>
+    <rect x="0" y="300" width="560" height="12" fill="#111214"/>
+    <rect x="450" y="216" width="100" height="60" rx="3" fill="#111214"/><text x="500" y="260" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="36" font-weight="700" fill="#ffcc00" text-anchor="middle">B22</text><rect x="497" y="276" width="6" height="24" fill="#5f646b"/>
+    <rect x="0" y="500" width="560" height="260" fill="#3a3d42"/>
+    <rect x="276" y="500" width="8" height="260" fill="#ffcc00"/>
+    <!-- legs -->
+    <rect x="224" y="520" width="48" height="190" rx="8" fill="#111214"/><rect x="288" y="520" width="48" height="190" rx="8" fill="#111214"/>
+    <rect x="224" y="640" width="48" height="10" fill="#c4c8cc"/><rect x="288" y="640" width="48" height="10" fill="#c4c8cc"/>
+    <rect x="214" y="700" width="64" height="24" rx="8" fill="#111214"/><rect x="282" y="700" width="64" height="24" rx="8" fill="#111214"/>
+    <!-- arms up, wands up -->
+    <path d="M210 330 L140 200 L150 110" fill="none" stroke="#ff6a13" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M350 330 L420 200 L410 110" fill="none" stroke="#ff6a13" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="128" y="248" width="34" height="10" rx="2" fill="#c4c8cc"/><rect x="398" y="248" width="34" height="10" rx="2" fill="#c4c8cc"/>
+    <circle cx="150" cy="104" r="18" fill="#c98f6b"/><circle cx="410" cy="104" r="18" fill="#c98f6b"/>
+    <rect x="140" y="-10" width="22" height="116" rx="8" fill="#ff6a13"/><rect x="398" y="-10" width="22" height="116" rx="8" fill="#ff6a13"/>
+    <rect x="140" y="74" width="22" height="20" rx="3" fill="#111214"/><rect x="398" y="74" width="22" height="20" rx="3" fill="#111214"/>
+    <!-- vest -->
+    <path d="M194 300 Q194 270 224 266 L336 266 Q366 270 366 300 L360 540 L200 540 Z" fill="#ff6a13"/>
+    <rect x="196" y="400" width="168" height="16" fill="#c4c8cc"/><rect x="198" y="460" width="164" height="16" fill="#c4c8cc"/>
+    <rect x="228" y="266" width="14" height="274" fill="#c4c8cc"/><rect x="318" y="266" width="14" height="274" fill="#c4c8cc"/>
+    <rect x="250" y="300" width="60" height="24" fill="#111214"/><text x="280" y="318" font-family="'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">RAMP</text>
+    <!-- head, ear defenders -->
+    <rect x="264" y="236" width="32" height="34" fill="#a8714f"/>
+    <circle cx="280" cy="210" r="38" fill="#c98f6b"/>
+    <path d="M240 200 Q280 150 320 200" fill="none" stroke="#111214" stroke-width="9"/>
+    <rect x="228" y="192" width="22" height="40" rx="8" fill="#111214"/><rect x="310" y="192" width="22" height="40" rx="8" fill="#111214"/>
+    <rect x="244" y="186" width="72" height="14" rx="4" fill="#ffcc00"/>
+</svg>
