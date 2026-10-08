@@ -39,6 +39,55 @@
   }
 }
 
+/* ---------- First Suite design tokens ---------- */
+/* Fonts are loaded per-system with next/font (components/ui/first-suite/fonts.ts). */
+@theme inline {
+  --font-fs: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-fs-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+}
+
+@theme {
+  /* color roles */
+  --color-fs-bg: #f4eee4; /* off-white cabin wall */
+  --color-fs-surface: #fbf8f2; /* ivory linen */
+  --color-fs-raised: #ece3d4; /* sand: hover, pressed */
+  --color-fs-champagne: #dcc7a4; /* champagne panels: decorative, selected tint */
+  --color-fs-text: #3b2a20; /* espresso */
+  --color-fs-muted: #6e5f52; /* taupe-brown */
+  --color-fs-border: #ddd1bf; /* hairlines, decorative */
+  --color-fs-control: #8f7c6a; /* input / checkbox outlines, ≥3:1 */
+  --color-fs-brass: #a8844f; /* brushed brass: decorative rules */
+  --color-fs-focus: #7d5f33; /* deep brass: focus ring, active tab rule */
+  --color-fs-accent: #6e2a34; /* bordeaux: primary action only */
+  --color-fs-accent-hover: #5a1f29;
+  --color-fs-accent-pressed: #4a1a23;
+  --color-fs-link: #3e4c5e; /* slate ink */
+  --color-fs-success: #55644a; /* sage */
+  --color-fs-warning: #8a4f2c; /* cognac */
+  --color-fs-error: #a6432f; /* terracotta */
+
+  /* shape: tailored, nearly square */
+  --radius-fs-sm: 2px;
+  --radius-fs-md: 4px;
+
+  --animate-fs-sweep: fs-sweep 1.8s cubic-bezier(.4, 0, .2, 1) infinite;
+  @keyframes fs-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(250%); }
+  }
+  --animate-fs-breathe: fs-breathe 2.4s ease-in-out infinite;
+  @keyframes fs-breathe {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+}
+
+/* Cormorant defaults to old-style figures (a "1" like a small capital I, a "4" that
+   drops below the line). Numbers are data here, so use lining figures. */
+.font-fs-serif {
+  font-variant-numeric: lining-nums;
+}
+
 /* Hub + default page colors: a mid-light neutral stone, so moving between
    the dark (Mid Flight) and light (First Suite) pages isn't a glare jump. */
 @theme {

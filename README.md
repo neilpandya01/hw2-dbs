@@ -46,6 +46,7 @@ _A private suite at the front of the plane._ Modern first suites (Emirates, Sing
 - **Contrast with Mid Flight:** soft, bright and spacious instead of dark and glowing. Thin lines, lots of whitespace, almost no shadows
 - **Artifacts:** 29, in the order of the trip (curb → lounge → jet bridge → suite → dinner → night), all SVG illustrations drawn by the agent (`node scripts/first-suite/generate.mjs` → `public/mood-boards/first-suite/`)
 - **Why it might fit a flight log:** _TBD_
+- **Design system:** `/design-systems/first-suite`, with the same six sections and component list as Mid Flight, restyled. Square tailored corners, 1px lines instead of shadows (a double rule on the modal, an inner rule on primary hover), tracked-caps actions, a deep-brass focus ring, espresso for selected, and bordeaux kept for the primary action. Components live in `components/ui/first-suite/`.
 
 ### Mood 3 — _Name TBD_
 

@@ -1,10 +1,12 @@
 import Link from "next/link";
 import type { Mood } from "@/lib/moods";
+import FirstSuiteSystem from "./first-suite/FirstSuiteSystem";
 import MidFlightSystem from "./mid-flight/MidFlightSystem";
 
 // Mood slug → its design system. Moods without one show a placeholder.
 const systems: Record<string, () => React.ReactNode> = {
   "mid-flight": MidFlightSystem,
+  "first-suite": FirstSuiteSystem,
 };
 
 export default function DesignSystem({ mood }: { mood: Mood }) {
