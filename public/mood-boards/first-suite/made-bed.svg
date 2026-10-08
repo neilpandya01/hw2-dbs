@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="420" fill="#f4eee4"/>
+<defs>
+      <linearGradient id="wall_bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+      <linearGradient id="duvet_bed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4eee4"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+      <linearGradient id="drape_bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+      <linearGradient id="base_bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcc7a4"/><stop offset="1" stop-color="#c8ae86"/></linearGradient>
+      <linearGradient id="pj_bed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8494a8"/><stop offset="1" stop-color="#3e4c5e"/></linearGradient>
+      <linearGradient id="pillow_bed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#efe8dd"/></linearGradient>
+      <linearGradient id="throw_bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3c6bf"/><stop offset="1" stop-color="#c39a92"/></linearGradient>
+      <filter id="knit_bed" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .3" numOctaves="3" seed="9" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.45  0 0 0 0 0.25  0 0 0 0 0.25  0 0 0 0.15 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="linen_bed" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8 .5" numOctaves="3" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.3  0 0 0 0.07 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="quilt_bed" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="6" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.45  0 0 0 0 0.36  0 0 0 0 0.25  0 0 0 0.08 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    </defs>
+    <!-- padded side wall -->
+    <rect x="96" y="88" width="424" height="128" rx="6" fill="url(#wall_bed)"/>
+    <rect x="96" y="88" width="424" height="128" rx="6" filter="url(#quilt_bed)"/>
+    <line x1="128" y1="96" x2="128" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="130.5" y1="96" x2="130.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="162" y1="96" x2="162" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="164.5" y1="96" x2="164.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="196" y1="96" x2="196" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="198.5" y1="96" x2="198.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="230" y1="96" x2="230" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="232.5" y1="96" x2="232.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="264" y1="96" x2="264" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="266.5" y1="96" x2="266.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="298" y1="96" x2="298" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="300.5" y1="96" x2="300.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="332" y1="96" x2="332" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="334.5" y1="96" x2="334.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="366" y1="96" x2="366" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="368.5" y1="96" x2="368.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="400" y1="96" x2="400" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="402.5" y1="96" x2="402.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="434" y1="96" x2="434" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="436.5" y1="96" x2="436.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><line x1="468" y1="96" x2="468" y2="212" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.55"/><line x1="470.5" y1="96" x2="470.5" y2="212" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.6"/><path d="M112 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M146 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M180 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M214 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M248 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M282 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M316 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M350 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M384 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M418 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M452 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/><path d="M486 100 V208" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2.4" opacity=".55"/>
+    <rect x="96" y="88" width="424" height="128" rx="6" fill="none" stroke="#a8844f" stroke-width="1"/>
+    <rect x="90" y="82" width="436" height="5" rx="1" fill="#d4b98a" stroke="#a8844f" stroke-width=".6"/>
+    <!-- reading light: brass gooseneck at the head -->
+    <circle cx="124" cy="104" r="6" fill="#d4b98a" stroke="#7d5f33" stroke-width=".7"/>
+    <path d="M124 104 C134 104 150 106 158 124" fill="none" stroke="#a8844f" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M151 122 L166 128 L162 136 L148 130 Z" fill="#d4b98a" stroke="#7d5f33" stroke-width=".7"/>
+    <ellipse cx="156" cy="133" rx="7" ry="2" fill="#fbf8f2" transform="rotate(22 156 133)"/>
+    <path d="M149 133 L120 214 L200 214 L164 136 Z" fill="#fff" opacity=".22"/>
+    <!-- bed base and mattress -->
+    <path d="M64 346 L558 346 L552 376 L70 376 Z" fill="url(#base_bed)"/>
+    <line x1="70" y1="376" x2="552" y2="376" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+    <line x1="66" y1="349" x2="556" y2="349" stroke="#a8844f" stroke-width="0.8" stroke-opacity="1"/>
+    <ellipse cx="311" cy="378" rx="240" ry="3" fill="#3b2a20" opacity="0.07" filter="url(#soft)"/>
+    <path d="M66 318 L556 318 L556 346 L66 346 Z" fill="#f4eee4" stroke="#a49180" stroke-width=".7"/>
+    <path d="M104 214 L512 214 L556 318 L66 318 Z" fill="#fbf8f2" stroke="#857462" stroke-width=".8"/>
+    <path d="M104 214 L242.7 214 L296.3 318 L66 318 Z" fill="#fbf8f2"/>
+    <!-- pillows against the head -->
+    <path d="M110.7 204.2 Q147.7 197.2 184.7 204.2 Q187 227 175.2 249.9 Q135 258.9 94.7 249.9 Q95.7 227 110.7 204.2 Z" fill="url(#pillow_bed)" stroke="#3e4c5e" stroke-width=".9"/>
+      <path d="M147.7 204.2 Q143 225 135 249.9" fill="none" stroke="#dcc7a4" stroke-width="1" opacity=".7"/>
+    <path d="M103 254 Q145.6 247 188.3 254 Q191 277.4 179.7 300.8 Q133.5 309.8 87.3 300.8 Q88.1 277.4 103 254 Z" fill="url(#pillow_bed)" stroke="#3e4c5e" stroke-width=".9"/>
+      <path d="M145.6 254 Q141.3 275.4 133.5 300.8" fill="none" stroke="#dcc7a4" stroke-width="1" opacity=".7"/>
+    <!-- duvet, its drape over the side, the diagonal fold -->
+    <path d="M242.7 214 L512 214 L556 318 L296.3 318 Z" fill="url(#duvet_bed)"/>
+    <path d="M242.7 214 L512 214 L556 318 L296.3 318 Z" filter="url(#linen_bed)"/>
+    <path d="M296.3 318 L556 318 L560 348 L294.3 350 Z" fill="url(#drape_bed)"/>
+    <path d="M296.3 318 L556 318 L560 348 L294.3 350 Z" filter="url(#linen_bed)"/>
+    <line x1="296.3" y1="318" x2="556" y2="318" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.6"/>
+    <line x1="294.3" y1="350" x2="560" y2="348" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.8"/>
+    <path d="M281.3 220.2 L502.3 220.2 L538.8 311.8 L339.9 311.8" fill="none" stroke="#a8844f" stroke-width=".6" stroke-dasharray="2 2" opacity=".6"/>
+    <path d="M242.7 211 L273.3 211 L333 315 L296.3 315 Z" fill="#fbf8f2" stroke="#a49180" stroke-width=".7"/>
+    <line x1="268.4" y1="211" x2="327.2" y2="315" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+    <line x1="246.8" y1="211" x2="301.2" y2="315" stroke="#e6dccb" stroke-width="2" stroke-opacity="0.9"/>
+    <path d="M296.3 315 Q308.3 330 333 315" fill="#fbf8f2" stroke="#a49180" stroke-width=".7"/>
+    <!-- dusty-rose throw folded across the foot -->
+    <path d="M450.8 210 L499.8 210 L543.8 314 L546.8 343 L483.5 344 L482.5 314 Z" fill="url(#throw_bed)"/>
+    <path d="M450.8 210 L499.8 210 L543.8 314 L546.8 343 L483.5 344 L482.5 314 Z" filter="url(#knit_bed)"/>
+    <line x1="482.5" y1="314" x2="543.8" y2="314" stroke="#a65a69" stroke-width="0.9" stroke-opacity="1"/>
+    <line x1="450.8" y1="210" x2="482.5" y2="314" stroke="#a65a69" stroke-width="0.8" stroke-opacity="1"/><line x1="499.8" y1="210" x2="543.8" y2="314" stroke="#a65a69" stroke-width="0.8" stroke-opacity="1"/>
+    <line x1="464.4" y1="214.2" x2="496.2" y2="310.9" stroke="#c39a92" stroke-width="0.6" stroke-opacity="0.9"/><line x1="476.7" y1="214.2" x2="510.8" y2="310.9" stroke="#c39a92" stroke-width="0.6" stroke-opacity="0.9"/><line x1="489.1" y1="214.2" x2="525.4" y2="310.9" stroke="#c39a92" stroke-width="0.6" stroke-opacity="0.9"/>
+    <!-- folded pajamas -->
+    <ellipse cx="398.5" cy="289.9" rx="50" ry="3" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+    <path d="M356.9 288.9 L445.6 288.9 L445.6 279.9 L356.9 279.9 Z" fill="#3e4c5e"/>
+    <line x1="356.9" y1="284.4" x2="445.6" y2="284.4" stroke="#fbf8f2" stroke-width="0.6" stroke-opacity="0.6"/>
+    <path d="M351.5 230 L432.7 230 L445.6 279.9 L356.9 279.9 Z" fill="url(#pj_bed)" stroke="#3e4c5e" stroke-width=".6"/>
+    <line x1="356.2" y1="273.6" x2="444" y2="273.6" stroke="#fbf8f2" stroke-width="0.9" stroke-opacity="0.85"/>
+    <path d="M381.4 229.6 L392.1 229.6 L401.2 279.5 L389.6 279.5 Z" fill="#a65a69"/>
+    <path d="M389.6 279.5 L401.2 279.5 L401.2 288.5 L389.6 288.5 Z" fill="#6e2a34"/>
+    <path d="M363.8 241.4 L405.3 241.4 L410.4 266.4 L366.9 266.4 Z" fill="#fbf8f2" stroke="#a8844f" stroke-width=".7"/>
+    <line x1="374" y1="251.8" x2="398.5" y2="251.8" stroke="#a8844f" stroke-width="0.6" stroke-opacity="1"/>
+    <line x1="379.3" y1="257" x2="395" y2="257" stroke="#a8844f" stroke-width="0.5" stroke-opacity="0.7"/>
+<rect width="600" height="420" fill="url(#daylight)"/>
+<rect width="600" height="420" filter="url(#grain)"/>
+</svg>

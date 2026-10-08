@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" width="520" height="600">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="520" height="600" fill="#f4eee4"/>
+<defs>
+      <linearGradient id="ceil_doors" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4eee4"/><stop offset="1" stop-color="#fbf8f2"/></linearGradient>
+      <linearGradient id="panel_doors" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+      <linearGradient id="leaf_doors" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+      <linearGradient id="cap_doors" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4b98a"/><stop offset="1" stop-color="#a8844f"/></linearGradient>
+      <linearGradient id="floor_doors" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+      <linearGradient id="plate_doors" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4b98a"/><stop offset="1" stop-color="#a8844f"/></linearGradient>
+      <linearGradient id="cognac_doors" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c98a5e"/><stop offset="1" stop-color="#9c5b34"/></linearGradient>
+      <filter id="leather_doors" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="3" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.45  0 0 0 0 0.36  0 0 0 0 0.25  0 0 0 0.08 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="brushed_doors" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".02 .9" numOctaves="2" seed="5" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.4  0 0 0 0 0.3  0 0 0 0 0.18  0 0 0 0.25 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="carpet_doors" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="3" seed="8" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.4  0 0 0 0 0.33  0 0 0 0 0.26  0 0 0 0.12 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    </defs>
+    <!-- the open cabin ceiling above the suites -->
+    <rect width="520" height="150" fill="url(#ceil_doors)"/>
+    <path d="M0 74 Q260 22 520 74" fill="none" stroke="#a49180" stroke-width=".8" stroke-opacity=".5"/>
+    <path d="M0 80 Q260 30 520 80" fill="none" stroke="#d4b98a" stroke-width="1.5"/>
+    <path d="M30 118 Q260 84 490 118" fill="none" stroke="#a49180" stroke-width=".6" stroke-opacity=".35"/>
+    <ellipse cx="150" cy="60" rx="7" ry="2" fill="#fbf8f2" stroke="#a8844f" stroke-width=".7"/><ellipse cx="260" cy="52" rx="7" ry="2" fill="#fbf8f2" stroke="#a8844f" stroke-width=".7"/><ellipse cx="370" cy="60" rx="7" ry="2" fill="#fbf8f2" stroke="#a8844f" stroke-width=".7"/>
+    <!-- aisle floor -->
+    <rect y="500" width="520" height="100" fill="url(#floor_doors)"/>
+    <rect y="500" width="520" height="100" filter="url(#carpet_doors)"/>
+    <line x1="128" y1="500" x2="-310" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="150" y1="500" x2="-215" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="172" y1="500" x2="-120" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="194" y1="500" x2="-25" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="216" y1="500" x2="70" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="238" y1="500" x2="165" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="260" y1="500" x2="260" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="282" y1="500" x2="355" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="304" y1="500" x2="450" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="326" y1="500" x2="545" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="348" y1="500" x2="640" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="370" y1="500" x2="735" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/><line x1="392" y1="500" x2="830" y2="600" stroke="#a49180" stroke-width="0.6" stroke-opacity="0.35"/>
+    <line x1="0" y1="500" x2="520" y2="500" stroke="#a49180" stroke-width="0.8" stroke-opacity="0.6"/>
+    <ellipse cx="260" cy="502" rx="210" ry="3" fill="#3b2a20" opacity="0.07" filter="url(#soft)"/>
+    <!-- suite walls beyond, left and right, receding -->
+    <path d="M0 170 L58 150 L58 500 L0 514 Z" fill="#e6dccb"/>
+    <path d="M520 170 L462 150 L462 500 L520 514 Z" fill="#e6dccb"/>
+    <line x1="0" y1="170" x2="58" y2="150" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/><line x1="520" y1="170" x2="462" y2="150" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+    <line x1="0" y1="330" x2="58" y2="330" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.7"/><line x1="520" y1="330" x2="462" y2="330" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.7"/>
+    <!-- fixed side panels -->
+    <rect x="62" y="150" width="110" height="350" fill="url(#panel_doors)"/><rect x="62" y="150" width="110" height="350" filter="url(#leather_doors)"/>
+    <rect x="348" y="150" width="110" height="350" fill="url(#panel_doors)"/><rect x="348" y="150" width="110" height="350" filter="url(#leather_doors)"/>
+    <rect x="76" y="342" width="82" height="128" rx="1.5" fill="url(#cognac_doors)" opacity=".78"/><rect x="76" y="342" width="82" height="128" filter="url(#leather_doors)"/><line x1="80" y1="358" x2="154" y2="358" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><line x1="80" y1="388" x2="154" y2="388" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><line x1="80" y1="418" x2="154" y2="418" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><line x1="80" y1="448" x2="154" y2="448" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><rect x="362" y="342" width="82" height="128" rx="1.5" fill="url(#cognac_doors)" opacity=".78"/><rect x="362" y="342" width="82" height="128" filter="url(#leather_doors)"/><line x1="366" y1="358" x2="440" y2="358" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><line x1="366" y1="388" x2="440" y2="388" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><line x1="366" y1="418" x2="440" y2="418" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/><line x1="366" y1="448" x2="440" y2="448" stroke="#c98a5e" stroke-width="0.6" stroke-opacity="0.7"/>
+    <rect x="76.5" y="174.5" width="82" height="150" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="76" y="174" width="82" height="150" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/><rect x="76.5" y="342.5" width="82" height="128" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="76" y="342" width="82" height="128" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <rect x="362.5" y="174.5" width="82" height="150" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="362" y="174" width="82" height="150" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/><rect x="362.5" y="342.5" width="82" height="128" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="362" y="342" width="82" height="128" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <line x1="62" y1="330" x2="172" y2="330" stroke="#a8844f" stroke-width="1.2" stroke-opacity="1"/><line x1="348" y1="330" x2="458" y2="330" stroke="#a8844f" stroke-width="1.2" stroke-opacity="1"/>
+    <!-- door opening reveal -->
+    <rect x="169" y="156" width="182" height="344" fill="#c8ae86"/>
+    <!-- back leaf (left), then front leaf (right) overlapping it -->
+    <rect x="172" y="176" width="91" height="320" fill="url(#leaf_doors)"/><rect x="172" y="176" width="91" height="320" filter="url(#leather_doors)"/>
+    <rect x="182" y="182" width="66" height="84" fill="#fbf8f2" opacity=".55"/>
+    <rect x="182.5" y="182.5" width="66" height="84" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="182" y="182" width="66" height="84" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <rect x="182.5" y="280.5" width="66" height="196" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="182" y="280" width="66" height="196" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <rect x="244" y="298" width="3" height="96" rx="1.5" fill="url(#plate_doors)"/>
+    <line x1="263" y1="176" x2="263" y2="496" stroke="#857462" stroke-width="0.8" stroke-opacity="0.6"/>
+    <rect x="260" y="176" width="88" height="320" fill="url(#leaf_doors)"/><rect x="260" y="176" width="88" height="320" filter="url(#leather_doors)"/>
+    <rect x="272" y="182" width="66" height="84" fill="#fbf8f2" opacity=".55"/>
+    <rect x="272.5" y="182.5" width="66" height="84" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="272" y="182" width="66" height="84" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <rect x="272.5" y="280.5" width="66" height="196" rx="1.5" fill="none" stroke="#fbf8f2" stroke-width="1" stroke-opacity=".8"/><rect x="272" y="280" width="66" height="196" rx="1.5" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <line x1="186" y1="186" x2="186" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="192" y1="186" x2="192" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="198" y1="186" x2="198" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="204" y1="186" x2="204" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="210" y1="186" x2="210" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="216" y1="186" x2="216" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="222" y1="186" x2="222" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="228" y1="186" x2="228" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="234" y1="186" x2="234" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="240" y1="186" x2="240" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="246" y1="186" x2="246" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="276" y1="186" x2="276" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="282" y1="186" x2="282" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="288" y1="186" x2="288" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="294" y1="186" x2="294" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="300" y1="186" x2="300" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="306" y1="186" x2="306" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="312" y1="186" x2="312" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="318" y1="186" x2="318" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="324" y1="186" x2="324" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="330" y1="186" x2="330" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/><line x1="336" y1="186" x2="336" y2="262" stroke="#a8844f" stroke-width="0.75" stroke-opacity="0.75"/>
+    <rect x="273" y="298" width="3" height="96" rx="1.5" fill="url(#plate_doors)"/>
+    <line x1="260" y1="176" x2="260" y2="496" stroke="#857462" stroke-width="1" stroke-opacity="1"/>
+    <line x1="261" y1="176" x2="261" y2="496" stroke="#fbf8f2" stroke-width="0.8" stroke-opacity="0.7"/>
+    <!-- header track and floor track -->
+    <rect x="166" y="156" width="188" height="14" fill="url(#cap_doors)"/>
+    <rect x="166" y="156" width="188" height="14" filter="url(#brushed_doors)"/>
+    <line x1="166" y1="170" x2="354" y2="170" stroke="#7d5f33" stroke-width="0.9" stroke-opacity="1"/>
+    <line x1="166" y1="496" x2="354" y2="496" stroke="#7d5f33" stroke-width="0.9" stroke-opacity="1"/>
+    <line x1="166" y1="498.5" x2="354" y2="498.5" stroke="#a8844f" stroke-width="0.75" stroke-opacity="1"/>
+    <!-- kick plate -->
+    <rect x="62" y="486" width="110" height="14" fill="#6b4a36"/>
+    <rect x="348" y="486" width="110" height="14" fill="#6b4a36"/>
+    <line x1="62" y1="486" x2="172" y2="486" stroke="#a8844f" stroke-width="0.8" stroke-opacity="1"/><line x1="348" y1="486" x2="458" y2="486" stroke="#a8844f" stroke-width="0.8" stroke-opacity="1"/>
+    <!-- wall-top cap rail -->
+    <rect x="56" y="144" width="408" height="8" rx="1" fill="url(#cap_doors)"/>
+    <rect x="56" y="144" width="408" height="8" filter="url(#brushed_doors)"/>
+    <line x1="56" y1="152" x2="464" y2="152" stroke="#7d5f33" stroke-width="0.8" stroke-opacity="1"/>
+    <!-- number plate -->
+    <rect x="374" y="236" width="56" height="34" rx="2" fill="url(#plate_doors)"/>
+    <rect x="374" y="236" width="56" height="34" rx="2" filter="url(#brushed_doors)"/>
+    <rect x="378" y="240" width="48" height="26" rx="1" fill="#3e4c5e"/>
+    <text x="402" y="260" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-size="19" fill="#d4b98a" letter-spacing="1">1A</text>
+    <circle cx="402" cy="292" r="2.6" fill="#a65a69" stroke="#6e2a34" stroke-width=".8"/>
+    <text x="402" y="306" text-anchor="middle" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="4.5" letter-spacing="2" fill="#7d5f33">PRIVACY</text>
+    <line x1="62" y1="150" x2="62" y2="500" stroke="#a8844f" stroke-width="0.8" stroke-opacity="1"/><line x1="458" y1="150" x2="458" y2="500" stroke="#a8844f" stroke-width="0.8" stroke-opacity="1"/>
+<rect width="520" height="600" fill="url(#daylight)"/>
+<rect width="520" height="600" filter="url(#grain)"/>
+</svg>

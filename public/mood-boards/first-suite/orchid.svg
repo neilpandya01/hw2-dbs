@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 600" width="460" height="600">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="460" height="600" fill="#f4eee4"/>
+<defs>
+      <linearGradient id="panel_orch" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+      <radialGradient id="petal_orch" cx=".3" cy=".4" r=".85"><stop offset="0" stop-color="#fff"/><stop offset=".7" stop-color="#fbf8f2"/><stop offset="1" stop-color="#f4eee4"/></radialGradient>
+      <linearGradient id="sepal_orch" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+      <linearGradient id="bud_orch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset=".6" stop-color="#e3c6bf"/><stop offset="1" stop-color="#7c8a6a"/></linearGradient>
+      <radialGradient id="blush_orch"><stop offset="0" stop-color="#c39a92" stop-opacity=".8"/><stop offset="1" stop-color="#e3c6bf" stop-opacity="0"/></radialGradient>
+      <linearGradient id="leaf_orch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#93a07f"/><stop offset=".5" stop-color="#7c8a6a"/><stop offset="1" stop-color="#55644a"/></linearGradient>
+      <linearGradient id="leafback_orch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c8a6a"/><stop offset="1" stop-color="#55644a"/></linearGradient>
+      <linearGradient id="vase_orch" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c5b34"/><stop offset=".35" stop-color="#6b4a36"/><stop offset="1" stop-color="#3b2a20"/></linearGradient>
+      <linearGradient id="stake_orch" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4b98a"/><stop offset="1" stop-color="#a8844f"/></linearGradient>
+      <linearGradient id="shelf_orch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+      <filter id="brush_orch" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".01 .35" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.2  0 0 0 0 0.12  0 0 0 0 0.08  0 0 0 0.35 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="silk_orch" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".5 .02" numOctaves="2" seed="9" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.32  0 0 0 0.1 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    </defs>
+    <rect x="44" y="34" width="372" height="466" fill="url(#panel_orch)"/>
+    <rect x="44" y="34" width="372" height="466" filter="url(#silk_orch)" fill="#000"/>
+    <rect x="44" y="34" width="372" height="466" fill="none" stroke="#a8844f" stroke-width="1"/>
+    <rect x="56" y="46" width="348" height="454" fill="none" stroke="#a8844f" stroke-width=".5" stroke-opacity=".7"/>
+    <!-- shelf -->
+    <rect x="20" y="500" width="420" height="14" fill="url(#shelf_orch)"/>
+    <line x1="20" y1="500" x2="440" y2="500" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/><line x1="20" y1="514" x2="440" y2="514" stroke="#a49180" stroke-width="0.6" stroke-opacity="1"/>
+    <!-- pot with bark and moss -->
+    <ellipse cx="232" cy="500" rx="40" ry="2" fill="#3b2a20" opacity="0.12" filter="url(#soft)"/>
+    <path d="M200 450 L264 450 L258 500 L206 500 Z" fill="url(#vase_orch)"/>
+    <path d="M200 450 L264 450 L258 500 L206 500 Z" filter="url(#brush_orch)" fill="#000"/>
+    <rect x="208" y="456" width="3" height="40" fill="#fff" opacity=".12"/>
+    <rect x="240.2" y="445.2" width="7.3" height="4.4" rx="1" transform="rotate(4 240.2 445.2)" fill="#6b4a36"/><rect x="219.7" y="443.3" width="10.4" height="5.3" rx="1" transform="rotate(-19.5 219.7 443.3)" fill="#9c5b34"/><rect x="218.1" y="442.8" width="8.9" height="3.4" rx="1" transform="rotate(10.4 218.1 442.8)" fill="#9c5b34"/><rect x="222.7" y="446.8" width="9.2" height="4.3" rx="1" transform="rotate(-5.1 222.7 446.8)" fill="#9c5b34"/><rect x="258.5" y="445.1" width="8.9" height="3.5" rx="1" transform="rotate(-1.9 258.5 445.1)" fill="#9c5b34"/><rect x="248.1" y="443.9" width="8.5" height="3.2" rx="1" transform="rotate(-3.4 248.1 443.9)" fill="#6b4a36"/><rect x="255" y="443" width="6.7" height="4.2" rx="1" transform="rotate(20.4 255 443)" fill="#9c5b34"/><rect x="248.3" y="445.6" width="9" height="4.6" rx="1" transform="rotate(-17.5 248.3 445.6)" fill="#6b4a36"/><rect x="224.7" y="446.7" width="7.7" height="3.2" rx="1" transform="rotate(8.8 224.7 446.7)" fill="#6b4a36"/><rect x="209.7" y="443.9" width="7.3" height="5.7" rx="1" transform="rotate(-20.6 209.7 443.9)" fill="#6b4a36"/><rect x="258.7" y="443.6" width="6.7" height="4.2" rx="1" transform="rotate(2.4 258.7 443.6)" fill="#9c5b34"/><rect x="207.9" y="446.1" width="8.6" height="6" rx="1" transform="rotate(10.7 207.9 446.1)" fill="#9c5b34"/><rect x="210.8" y="440.8" width="6.9" height="3.3" rx="1" transform="rotate(-22.5 210.8 440.8)" fill="#9c5b34"/><rect x="204.8" y="441" width="8" height="5.1" rx="1" transform="rotate(-8.2 204.8 441)" fill="#6b4a36"/><rect x="206.1" y="444.4" width="5.8" height="4.5" rx="1" transform="rotate(-19 206.1 444.4)" fill="#6b4a36"/><rect x="247.7" y="441.1" width="10.5" height="5.1" rx="1" transform="rotate(-6.6 247.7 441.1)" fill="#9c5b34"/><rect x="250.6" y="446.6" width="10.9" height="5.3" rx="1" transform="rotate(-6.3 250.6 446.6)" fill="#9c5b34"/><rect x="230.5" y="446.3" width="5.6" height="3.2" rx="1" transform="rotate(-24.5 230.5 446.3)" fill="#6b4a36"/><circle cx="252.7" cy="445.4" r="4.3" fill="#55644a" opacity=".9"/><circle cx="218.4" cy="445.9" r="4" fill="#7c8a6a" opacity=".9"/><circle cx="247.3" cy="443.7" r="2" fill="#7c8a6a" opacity=".9"/><circle cx="227.9" cy="445.9" r="2.6" fill="#7c8a6a" opacity=".9"/><circle cx="249.7" cy="446.6" r="3.7" fill="#55644a" opacity=".9"/><circle cx="237.4" cy="447.7" r="3.2" fill="#55644a" opacity=".9"/><circle cx="228.9" cy="448" r="3.7" fill="#7c8a6a" opacity=".9"/><circle cx="248.2" cy="443.2" r="4.3" fill="#7c8a6a" opacity=".9"/><circle cx="242.6" cy="445.1" r="3.2" fill="#55644a" opacity=".9"/><circle cx="241.3" cy="446.1" r="3.6" fill="#55644a" opacity=".9"/>
+    <rect x="198" y="447" width="68" height="5" rx="1" fill="#a8844f"/>
+    <line x1="198" y1="447.5" x2="266" y2="447.5" stroke="#d4b98a" stroke-width="0.8" stroke-opacity="1"/>
+    <!-- stake, stem, clips -->
+    <rect x="243" y="226" width="2.4" height="222" rx="1.2" fill="url(#stake_orch)"/>
+    <line x1="243" y1="300" x2="245.4" y2="300" stroke="#7d5f33" stroke-width="0.8" stroke-opacity="1"/><line x1="243" y1="372" x2="245.4" y2="372" stroke="#7d5f33" stroke-width="0.8" stroke-opacity="1"/>
+    <path d="M238,446 C239,380 241,290 242,234 C244,172 292,128 342,140 C380,150 398,188 398,232" fill="none" stroke="#55644a" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="237" y="259.5" width="11" height="5" rx="2.5" fill="#d4b98a" stroke="#7d5f33" stroke-width=".6"/><line x1="239.5" y1="262" x2="245.5" y2="262" stroke="#7d5f33" stroke-width="0.5" stroke-opacity="1"/><rect x="237" y="337.5" width="11" height="5" rx="2.5" fill="#d4b98a" stroke="#7d5f33" stroke-width=".6"/><line x1="239.5" y1="340" x2="245.5" y2="340" stroke="#7d5f33" stroke-width="0.5" stroke-opacity="1"/>
+    <!-- leaves: two behind, two in front -->
+    <g transform="translate(232 444) scale(-1 1) rotate(-24)">
+      <path d="M0 -4 C19 -17 57 -13.9 73.7 8 Q78 12 70.7 14 C53.2 16.8 19 11.9 0 4 Z" fill="url(#leafback_orch)" stroke="#55644a" stroke-width=".7"/>
+      <path d="M2 0 Q41.8 -1.4 72.2 10" fill="none" stroke="#55644a" stroke-width="1.1" opacity=".8"/>
+      <path d="M11.4 -5.4 C26.6 -9.9 45.6 -6.4 60.8 0.8" fill="none" stroke="#fff" stroke-width="2" opacity=".3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(232 444) scale(1 1) rotate(-30)">
+      <path d="M0 -4 C17.5 -16 52.5 -12.8 67.9 8 Q72 12 65.1 14 C49 16 17.5 11.2 0 4 Z" fill="url(#leafback_orch)" stroke="#55644a" stroke-width=".7"/>
+      <path d="M2 0 Q38.5 -1.2 66.5 10" fill="none" stroke="#55644a" stroke-width="1.1" opacity=".8"/>
+      <path d="M10.5 -5.1 C24.5 -9.3 42 -5.8 56 1" fill="none" stroke="#fff" stroke-width="2" opacity=".3" stroke-linecap="round"/>
+    </g>
+    <path d="M240 447 C252 442 262 440 272 444" fill="none" stroke="#a49180" stroke-width="3.6" stroke-linecap="round"/><path d="M240 447 C252 442 262 440 272 444" fill="none" stroke="#d8d5cb" stroke-width="2.4" stroke-linecap="round"/><path d="M240 447 C252 442 262 440 272 444" fill="none" stroke="#fff" stroke-width=".7" stroke-linecap="round" opacity=".5" transform="translate(-.5 -.6)"/><circle cx="272" cy="444" r="1.6" fill="#7c8a6a"/>
+    <g transform="translate(232 444) scale(-1 1) rotate(0)">
+      <path d="M0 -4 C27.5 -24 82.5 -17.2 106.7 18 Q112 22 102.3 24 C77 26 27.5 16.8 0 4 Z" fill="url(#leaf_orch)" stroke="#55644a" stroke-width=".7"/>
+      <path d="M2 0 Q60.5 -0.8 104.5 20" fill="none" stroke="#55644a" stroke-width="1.1" opacity=".8"/>
+      <path d="M16.5 -7.7 C38.5 -13.9 66 -7.2 88 4" fill="none" stroke="#fff" stroke-width="2" opacity=".3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(232 444) scale(1 1) rotate(-7)">
+      <path d="M0 -4 C30 -26 90 -20.9 116.4 14 Q122 18 111.6 20 C84 25.9 30 18.2 0 4 Z" fill="url(#leaf_orch)" stroke="#55644a" stroke-width=".7"/>
+      <path d="M2 0 Q66 -2 114 16" fill="none" stroke="#55644a" stroke-width="1.1" opacity=".8"/>
+      <path d="M18 -8.3 C42 -15.1 72 -9.5 96 1.5" fill="none" stroke="#fff" stroke-width="2" opacity=".3" stroke-linecap="round"/>
+    </g>
+    <path d="M226 451 C214 451 204 455 202 466 C200 476 196 482 194 490" fill="none" stroke="#a49180" stroke-width="3.6" stroke-linecap="round"/><path d="M226 451 C214 451 204 455 202 466 C200 476 196 482 194 490" fill="none" stroke="#d8d5cb" stroke-width="2.4" stroke-linecap="round"/><path d="M226 451 C214 451 204 455 202 466 C200 476 196 482 194 490" fill="none" stroke="#fff" stroke-width=".7" stroke-linecap="round" opacity=".5" transform="translate(-.5 -.6)"/><circle cx="194" cy="490" r="1.6" fill="#7c8a6a"/>
+    <path d="M248 452 C258 452 266 456 268 464 C269 470 274 474 278 476" fill="none" stroke="#a49180" stroke-width="3.6" stroke-linecap="round"/><path d="M248 452 C258 452 266 456 268 464 C269 470 274 474 278 476" fill="none" stroke="#d8d5cb" stroke-width="2.4" stroke-linecap="round"/><path d="M248 452 C258 452 266 456 268 464 C269 470 274 474 278 476" fill="none" stroke="#fff" stroke-width=".7" stroke-linecap="round" opacity=".5" transform="translate(-.5 -.6)"/><circle cx="278" cy="476" r="1.6" fill="#7c8a6a"/>
+    <!-- flowers -->
+    <path d="M398 228.1 Q393 228.2 383 223.4" fill="none" stroke="#55644a" stroke-width="1"/><ellipse cx="383" cy="228.4" rx="4" ry="5" transform="rotate(10 383 228.4)" fill="url(#bud_orch)" stroke="#857462" stroke-width=".55"/><path d="M397.2 216.5 Q392.2 217 388.8 211.3" fill="none" stroke="#55644a" stroke-width="1"/><ellipse cx="388.8" cy="217.8" rx="5.5" ry="6.5" transform="rotate(-12 388.8 217.8)" fill="url(#bud_orch)" stroke="#857462" stroke-width=".55"/><path d="M395.1 202.9 Q390.2 203.9 376.9 197.4" fill="none" stroke="#55644a" stroke-width="1"/><ellipse cx="376.9" cy="205.9" rx="7" ry="8.5" transform="rotate(10 376.9 205.9)" fill="url(#bud_orch)" stroke="#857462" stroke-width=".55"/><path d="M378.8 164.9 Q368.5 168.4 369.8 175.4" fill="none" stroke="#55644a" stroke-width="1.2"/><g transform="translate(369.8 182.6)"><g transform="rotate(12.5) scale(0.7 0.7)">
+        <path d="M0 0 C8.5 -8.1 6.8 -22.9 0 -27 C-6.8 -22.9 -8.5 -8.1 0 0 Z" transform="rotate(0)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(-148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/>
+        <path d="M0 1 C4 -10 23.8 -21.8 30.8 -8 C35.7 4 19.9 15.9 2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M3 0 C10 -6 18 -8 25.8 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/><path d="M0 1 C-4 -10 -23.8 -21.8 -30.8 -8 C-35.7 4 -19.9 15.9 -2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M-3 0 C-10 -6 -18 -8 -25.8 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/>
+        <circle cx="0" cy="3" r="9" fill="url(#blush_orch)"/>
+        <path d="M-1 4 C-3 2 -6.5 2.5 -6.5 5.5 C-6.5 8.5 -3.5 8.5 -1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M1 4 C3 2 6.5 2.5 6.5 5.5 C6.5 8.5 3.5 8.5 1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M-3 8.5 C-4.5 12 -2.5 16 0 16 C2.5 16 4.5 12 3 8.5 Q0 10 -3 8.5 Z" fill="#c39a92" stroke="#a65a69" stroke-width=".5"/>
+        <path d="M0 10 L0 14.5" stroke="#6e2a34" stroke-width=".5" opacity=".6"/>
+        <path d="M-1 16 Q-2.5 18.5 -4.5 18 M1 16 Q2.5 18.5 4.5 18" fill="none" stroke="#a65a69" stroke-width=".45"/>
+        <ellipse cx="0" cy="7.5" rx="2.2" ry="1.6" fill="#d4b98a"/>
+        <path d="M-2 6 L-5 3 M2 6 L5 3 M0 6 L0 2" stroke="#6e2a34" stroke-width=".45" opacity=".7"/>
+        <ellipse cx="0" cy="1" rx="2.4" ry="4.2" fill="#fbf8f2" stroke="#857462" stroke-width=".45"/>
+      </g></g><path d="M356.8 145.8 Q350.2 151.4 345.9 156.3" fill="none" stroke="#55644a" stroke-width="1.2"/><g transform="translate(345.9 164.2)"><g transform="rotate(1.6) scale(0.7 0.8)">
+        <path d="M0 0 C8.5 -8.1 6.8 -22.9 0 -27 C-6.8 -22.9 -8.5 -8.1 0 0 Z" transform="rotate(0)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(-148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/>
+        <path d="M0 1 C4 -10 23.6 -21.7 30.5 -8 C35.4 3.9 19.7 15.8 2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M3 0 C10 -6 18 -8 25.6 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/><path d="M0 1 C-4 -10 -23.6 -21.7 -30.5 -8 C-35.4 3.9 -19.7 15.8 -2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M-3 0 C-10 -6 -18 -8 -25.6 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/>
+        <circle cx="0" cy="3" r="9" fill="url(#blush_orch)"/>
+        <path d="M-1 4 C-3 2 -6.5 2.5 -6.5 5.5 C-6.5 8.5 -3.5 8.5 -1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M1 4 C3 2 6.5 2.5 6.5 5.5 C6.5 8.5 3.5 8.5 1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M-3 8.5 C-4.5 12 -2.5 16 0 16 C2.5 16 4.5 12 3 8.5 Q0 10 -3 8.5 Z" fill="#c39a92" stroke="#a65a69" stroke-width=".5"/>
+        <path d="M0 10 L0 14.5" stroke="#6e2a34" stroke-width=".5" opacity=".6"/>
+        <path d="M-1 16 Q-2.5 18.5 -4.5 18 M1 16 Q2.5 18.5 4.5 18" fill="none" stroke="#a65a69" stroke-width=".45"/>
+        <ellipse cx="0" cy="7.5" rx="2.2" ry="1.6" fill="#d4b98a"/>
+        <path d="M-2 6 L-5 3 M2 6 L5 3 M0 6 L0 2" stroke="#6e2a34" stroke-width=".45" opacity=".7"/>
+        <ellipse cx="0" cy="1" rx="2.4" ry="4.2" fill="#fbf8f2" stroke="#857462" stroke-width=".45"/>
+      </g></g><path d="M322.7 138.1 Q323.5 144.9 327.6 153.3" fill="none" stroke="#55644a" stroke-width="1.2"/><g transform="translate(327.6 161.9)"><g transform="rotate(0.9) scale(0.9 0.9)">
+        <path d="M0 0 C8.5 -8.1 6.8 -22.9 0 -27 C-6.8 -22.9 -8.5 -8.1 0 0 Z" transform="rotate(0)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(-148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/>
+        <path d="M0 1 C4 -10 22.6 -20.7 29.2 -8 C33.9 3.8 18.8 15.1 2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M3 0 C10 -6 18 -8 24.5 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/><path d="M0 1 C-4 -10 -22.6 -20.7 -29.2 -8 C-33.9 3.8 -18.8 15.1 -2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M-3 0 C-10 -6 -18 -8 -24.5 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/>
+        <circle cx="0" cy="3" r="9" fill="url(#blush_orch)"/>
+        <path d="M-1 4 C-3 2 -6.5 2.5 -6.5 5.5 C-6.5 8.5 -3.5 8.5 -1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M1 4 C3 2 6.5 2.5 6.5 5.5 C6.5 8.5 3.5 8.5 1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M-3 8.5 C-4.5 12 -2.5 16 0 16 C2.5 16 4.5 12 3 8.5 Q0 10 -3 8.5 Z" fill="#c39a92" stroke="#a65a69" stroke-width=".5"/>
+        <path d="M0 10 L0 14.5" stroke="#6e2a34" stroke-width=".5" opacity=".6"/>
+        <path d="M-1 16 Q-2.5 18.5 -4.5 18 M1 16 Q2.5 18.5 4.5 18" fill="none" stroke="#a65a69" stroke-width=".45"/>
+        <ellipse cx="0" cy="7.5" rx="2.2" ry="1.6" fill="#d4b98a"/>
+        <path d="M-2 6 L-5 3 M2 6 L5 3 M0 6 L0 2" stroke="#6e2a34" stroke-width=".45" opacity=".7"/>
+        <ellipse cx="0" cy="1" rx="2.4" ry="4.2" fill="#fbf8f2" stroke="#857462" stroke-width=".45"/>
+      </g></g><path d="M284.5 150.9 Q293.9 156.9 291.6 166.5" fill="none" stroke="#55644a" stroke-width="1.2"/><g transform="translate(291.6 175.7)"><g transform="rotate(-0.6) scale(0.8 0.9)">
+        <path d="M0 0 C8.5 -8.1 6.8 -22.9 0 -27 C-6.8 -22.9 -8.5 -8.1 0 0 Z" transform="rotate(0)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(-148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/>
+        <path d="M0 1 C4 -10 23.2 -21.3 29.9 -8 C34.8 3.9 19.3 15.5 2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M3 0 C10 -6 18 -8 25.1 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/><path d="M0 1 C-4 -10 -23.2 -21.3 -29.9 -8 C-34.8 3.9 -19.3 15.5 -2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M-3 0 C-10 -6 -18 -8 -25.1 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/>
+        <circle cx="0" cy="3" r="9" fill="url(#blush_orch)"/>
+        <path d="M-1 4 C-3 2 -6.5 2.5 -6.5 5.5 C-6.5 8.5 -3.5 8.5 -1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M1 4 C3 2 6.5 2.5 6.5 5.5 C6.5 8.5 3.5 8.5 1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M-3 8.5 C-4.5 12 -2.5 16 0 16 C2.5 16 4.5 12 3 8.5 Q0 10 -3 8.5 Z" fill="#c39a92" stroke="#a65a69" stroke-width=".5"/>
+        <path d="M0 10 L0 14.5" stroke="#6e2a34" stroke-width=".5" opacity=".6"/>
+        <path d="M-1 16 Q-2.5 18.5 -4.5 18 M1 16 Q2.5 18.5 4.5 18" fill="none" stroke="#a65a69" stroke-width=".45"/>
+        <ellipse cx="0" cy="7.5" rx="2.2" ry="1.6" fill="#d4b98a"/>
+        <path d="M-2 6 L-5 3 M2 6 L5 3 M0 6 L0 2" stroke="#6e2a34" stroke-width=".45" opacity=".7"/>
+        <ellipse cx="0" cy="1" rx="2.4" ry="4.2" fill="#fbf8f2" stroke="#857462" stroke-width=".45"/>
+      </g></g><path d="M255 184.1 Q270.5 187.7 274.1 187.6" fill="none" stroke="#55644a" stroke-width="1.2"/><g transform="translate(274.1 197.3)"><g transform="rotate(-2.4) scale(0.9 1)">
+        <path d="M0 0 C8.5 -8.1 6.8 -22.9 0 -27 C-6.8 -22.9 -8.5 -8.1 0 0 Z" transform="rotate(0)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(-148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/>
+        <path d="M0 1 C4 -10 24 -22 31.1 -8 C36.1 4 20 16 2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M3 0 C10 -6 18 -8 26.1 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/><path d="M0 1 C-4 -10 -24 -22 -31.1 -8 C-36.1 4 -20 16 -2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M-3 0 C-10 -6 -18 -8 -26.1 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/>
+        <circle cx="0" cy="3" r="9" fill="url(#blush_orch)"/>
+        <path d="M-1 4 C-3 2 -6.5 2.5 -6.5 5.5 C-6.5 8.5 -3.5 8.5 -1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M1 4 C3 2 6.5 2.5 6.5 5.5 C6.5 8.5 3.5 8.5 1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M-3 8.5 C-4.5 12 -2.5 16 0 16 C2.5 16 4.5 12 3 8.5 Q0 10 -3 8.5 Z" fill="#c39a92" stroke="#a65a69" stroke-width=".5"/>
+        <path d="M0 10 L0 14.5" stroke="#6e2a34" stroke-width=".5" opacity=".6"/>
+        <path d="M-1 16 Q-2.5 18.5 -4.5 18 M1 16 Q2.5 18.5 4.5 18" fill="none" stroke="#a65a69" stroke-width=".45"/>
+        <ellipse cx="0" cy="7.5" rx="2.2" ry="1.6" fill="#d4b98a"/>
+        <path d="M-2 6 L-5 3 M2 6 L5 3 M0 6 L0 2" stroke="#6e2a34" stroke-width=".45" opacity=".7"/>
+        <ellipse cx="0" cy="1" rx="2.4" ry="4.2" fill="#fbf8f2" stroke="#857462" stroke-width=".45"/>
+      </g></g><path d="M242.6 224.8 Q260.9 225.7 262.5 228.8" fill="none" stroke="#55644a" stroke-width="1.2"/><g transform="translate(262.5 239)"><g transform="rotate(-9.5) scale(1 1)">
+        <path d="M0 0 C8.5 -8.1 6.8 -22.9 0 -27 C-6.8 -22.9 -8.5 -8.1 0 0 Z" transform="rotate(0)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/><path d="M0 0 C8 -7.5 6.4 -21.3 0 -25 C-6.4 -21.3 -8 -7.5 0 0 Z" transform="rotate(-148)" fill="url(#sepal_orch)" stroke="#857462" stroke-width=".55"/>
+        <path d="M0 1 C4 -10 22.9 -21 29.6 -8 C34.4 3.8 19.1 15.3 2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M3 0 C10 -6 18 -8 24.8 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/><path d="M0 1 C-4 -10 -22.9 -21 -29.6 -8 C-34.4 3.8 -19.1 15.3 -2 4 Z" fill="url(#petal_orch)" stroke="#857462" stroke-width=".55"/><path d="M-3 0 C-10 -6 -18 -8 -24.8 -7" fill="none" stroke="#e6dccb" stroke-width=".6"/>
+        <circle cx="0" cy="3" r="9" fill="url(#blush_orch)"/>
+        <path d="M-1 4 C-3 2 -6.5 2.5 -6.5 5.5 C-6.5 8.5 -3.5 8.5 -1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M1 4 C3 2 6.5 2.5 6.5 5.5 C6.5 8.5 3.5 8.5 1 7.5 Z" fill="#e3c6bf" stroke="#c39a92" stroke-width=".5"/>
+        <path d="M-3 8.5 C-4.5 12 -2.5 16 0 16 C2.5 16 4.5 12 3 8.5 Q0 10 -3 8.5 Z" fill="#c39a92" stroke="#a65a69" stroke-width=".5"/>
+        <path d="M0 10 L0 14.5" stroke="#6e2a34" stroke-width=".5" opacity=".6"/>
+        <path d="M-1 16 Q-2.5 18.5 -4.5 18 M1 16 Q2.5 18.5 4.5 18" fill="none" stroke="#a65a69" stroke-width=".45"/>
+        <ellipse cx="0" cy="7.5" rx="2.2" ry="1.6" fill="#d4b98a"/>
+        <path d="M-2 6 L-5 3 M2 6 L5 3 M0 6 L0 2" stroke="#6e2a34" stroke-width=".45" opacity=".7"/>
+        <ellipse cx="0" cy="1" rx="2.4" ry="4.2" fill="#fbf8f2" stroke="#857462" stroke-width=".45"/>
+      </g></g>
+<rect width="460" height="600" fill="url(#daylight)"/>
+<rect width="460" height="600" filter="url(#grain)"/>
+</svg>

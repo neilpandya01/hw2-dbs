@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="440" fill="#f4eee4"/>
+<defs>
+    <linearGradient id="wall_towel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+    <linearGradient id="surface_towel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+    <linearGradient id="tray_towel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a36"/><stop offset="1" stop-color="#8a6448"/></linearGradient>
+    <filter id="veneer_towel" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .03" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.25  0 0 0 0 0.14  0 0 0 0 0.08  0 0 0 0.35 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="roll_towel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fbf8f2"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+    <filter id="terry_towel" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="6" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.5  0 0 0 0 0.43  0 0 0 0 0.34  0 0 0 0.16 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="tong_towel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4b98a"/><stop offset="1" stop-color="#a8844f"/></linearGradient>
+    <linearGradient id="sleeve_towel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8494a8"/><stop offset=".35" stop-color="#3e4c5e"/><stop offset="1" stop-color="#2c3644"/></linearGradient>
+    <linearGradient id="skin_towel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6c6aa"/><stop offset="1" stop-color="#cfa587"/></linearGradient>
+  </defs>
+  <rect width="600" height="440" fill="url(#wall_towel)"/>
+  <line x1="100" y1="0" x2="100" y2="326" stroke="#c8ae86" stroke-width="0.75" stroke-opacity="0.6"/>
+  <!-- side console the tray rests on -->
+  <rect y="326" width="600" height="114" fill="url(#surface_towel)"/>
+  <line x1="0" y1="326" x2="600" y2="326" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+  <line x1="0" y1="392" x2="600" y2="392" stroke="#7d5f33" stroke-width="1" stroke-opacity="1"/>
+  <rect y="392" width="600" height="6" fill="#d4b98a"/>
+  <line x1="0" y1="398" x2="600" y2="398" stroke="#7d5f33" stroke-width="0.75" stroke-opacity="1"/>
+  <rect y="398" width="600" height="42" fill="#f4eee4"/>
+
+  <!-- walnut tray -->
+  <ellipse cx="282" cy="352" rx="140" ry="4" fill="#3b2a20" opacity="0.12" filter="url(#soft)"/>
+  <path d="M146 308 L418 308 L430 340 L134 340 Z" fill="url(#tray_towel)"/>
+  <path d="M146 308 L418 308 L430 340 L134 340 Z" filter="url(#veneer_towel)"/>
+  <path d="M134 340 L430 340 L430 350 L134 350 Z" fill="#6b4a36"/>
+  <line x1="134" y1="340" x2="430" y2="340" stroke="#d4b98a" stroke-width="1" stroke-opacity="1"/>
+  <line x1="146" y1="308" x2="418" y2="308" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+  <line x1="134" y1="350" x2="430" y2="350" stroke="#3b2a20" stroke-width="0.75" stroke-opacity="0.6"/>
+
+  <!-- lemon slice and a sage sprig on the tray -->
+  <ellipse cx="392" cy="326" rx="17" ry="6" fill="#efe39f" stroke="#a8844f" stroke-width=".75"/>
+  <ellipse cx="392" cy="326" rx="13" ry="4.4" fill="#f6eec2"/>
+  <line x1="380" y1="326" x2="404" y2="326" stroke="#e6d67f" stroke-width="0.6" stroke-opacity="1"/><line x1="383.5" y1="323.2" x2="400.5" y2="328.8" stroke="#e6d67f" stroke-width="0.6" stroke-opacity="1"/><line x1="392" y1="322" x2="392" y2="330" stroke="#e6d67f" stroke-width="0.6" stroke-opacity="1"/><line x1="400.5" y1="323.2" x2="383.5" y2="328.8" stroke="#e6d67f" stroke-width="0.6" stroke-opacity="1"/>
+  <path d="M368 330 C376 320 384 318 392 318" fill="none" stroke="#55644a" stroke-width=".9"/>
+  <ellipse cx="372" cy="321" rx="2.6" ry="5" fill="#7c8a6a" transform="rotate(-40 372 324)"/><ellipse cx="380" cy="317" rx="2.6" ry="5" fill="#7c8a6a" transform="rotate(-20 380 320)"/><ellipse cx="388" cy="315.5" rx="2.6" ry="5" fill="#7c8a6a" transform="rotate(0 388 318.5)"/>
+
+  <!-- far arm of the tongs, its tip tucked behind the towel -->
+  <path d="M282 278 L470 222 Q488 220 494 216" fill="none" stroke="#7d5f33" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M282 278 L470 222 Q488 220 494 216" fill="none" stroke="#a8844f" stroke-width="4" stroke-linecap="round"/>
+  <!-- the rolled towel, spiral end towards the viewer's left -->
+  <ellipse cx="274" cy="305" rx="78" ry="3" fill="#3b2a20" opacity="0.14" filter="url(#soft)"/>
+  <path d="M196 267 H352 A7 19 0 0 1 352 305 H196 Z" fill="url(#roll_towel)" stroke="#a49180" stroke-width=".75"/>
+  <path d="M196 267 H352 A7 19 0 0 1 352 305 H196 Z" filter="url(#terry_towel)"/>
+  <line x1="208" y1="267.5" x2="348" y2="267.5" stroke="#fff" stroke-width="1.2" stroke-opacity="1"/>
+  <line x1="245.9" y1="268" x2="245.9" y2="304" stroke="#e6dccb" stroke-width="0.75" stroke-opacity="0.8"/><line x1="302.1" y1="268" x2="302.1" y2="304" stroke="#e6dccb" stroke-width="0.75" stroke-opacity="0.8"/>
+  <ellipse cx="196" cy="286" rx="8" ry="19" fill="#fbf8f2" stroke="#a49180" stroke-width=".75"/>
+  <path d="M196 286 m0 -2 a2 3 0 1 1 0 5 a3.5 7 0 1 1 1 -11 a5 12 0 1 1 -2 22 a6.5 16 0 1 1 3 -31" fill="none" stroke="#a49180" stroke-width=".75"/>
+
+  <!-- steam -->
+  <path d="M232 259 C222 242 242 224 230 198 C222 184 236 174 232 162" fill="none" stroke="#a49180" stroke-width="1.1" stroke-linecap="round" opacity="0.4"/><path d="M268 259 C258 238 278 221 266 192 C258 184 272 174 268 168" fill="none" stroke="#a49180" stroke-width="1.1" stroke-linecap="round" opacity="0.34"/><path d="M306 259 C296 234 316 218 304 186 C296 184 310 174 306 174" fill="none" stroke="#a49180" stroke-width="1.1" stroke-linecap="round" opacity="0.28"/>
+
+  <!-- brass tongs: hinge in the hand, tips pinching the towel -->
+  <path d="M276 266 L470 214 Q486 208 494 216" fill="none" stroke="#7d5f33" stroke-width="6" stroke-linecap="round"/>
+  <path d="M276 266 L470 214 Q486 208 494 216" fill="none" stroke="url(#tong_towel)" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M276 266 L470 214" fill="none" stroke="#fff" stroke-width=".8" opacity=".6"/>
+  <path d="M268 264 q-5 2 -4 6 L272 269" fill="url(#tong_towel)" stroke="#7d5f33" stroke-width=".75"/>
+
+  <!-- the crew member's hand: slate sleeve with a bordeaux cuff stripe, a loose fist round the tongs -->
+  <path d="M514 176 L610 128 L610 232 L532 244 Z" fill="url(#sleeve_towel)"/>
+  <path d="M523 172 L541 242" stroke="#6e2a34" stroke-width="3"/>
+  <line x1="528" y1="170" x2="546" y2="241" stroke="#8494a8" stroke-width="0.6" stroke-opacity="0.7"/>
+  <path d="M504 180 L516 176 L533 244 L520 246 Z" fill="#fbf8f2" stroke="#a49180" stroke-width=".75"/>
+  <path d="M512 186 C494 186 470 194 454 202 C442 208 440 228 450 238 C470 244 494 240 516 236 Z" fill="url(#skin_towel)" stroke="#cfa587" stroke-width=".75"/>
+  
+    <line x1="456" y1="250" x2="474" y2="251" stroke="#cfa587" stroke-width="10.5" stroke-linecap="round"/>
+    <line x1="456" y1="250" x2="474" y2="251" stroke="#e6c6aa" stroke-width="9" stroke-linecap="round"/>
+    <path d="M465 247 v6" stroke="#cfa587" stroke-width=".6" opacity=".7"/>
+    <line x1="450" y1="242" x2="474" y2="244" stroke="#cfa587" stroke-width="11.5" stroke-linecap="round"/>
+    <line x1="450" y1="242" x2="474" y2="244" stroke="#e6c6aa" stroke-width="10" stroke-linecap="round"/>
+    <path d="M459 238.5 v7" stroke="#cfa587" stroke-width=".6" opacity=".7"/>
+    <line x1="446" y1="233" x2="472" y2="235" stroke="#cfa587" stroke-width="12" stroke-linecap="round"/>
+    <line x1="446" y1="233" x2="472" y2="235" stroke="#e6c6aa" stroke-width="10.5" stroke-linecap="round"/>
+    <path d="M455 229.25 v7.5" stroke="#cfa587" stroke-width=".6" opacity=".7"/>
+    <line x1="443" y1="224" x2="470" y2="226" stroke="#cfa587" stroke-width="12.5" stroke-linecap="round"/>
+    <line x1="443" y1="224" x2="470" y2="226" stroke="#e6c6aa" stroke-width="11" stroke-linecap="round"/>
+    <path d="M452 220 v8" stroke="#cfa587" stroke-width=".6" opacity=".7"/>
+  <path d="M500 196 C484 198 462 204 444 210" fill="none" stroke="#cfa587" stroke-width="12.5" stroke-linecap="round"/>
+  <path d="M500 196 C484 198 462 204 444 210" fill="none" stroke="#e6c6aa" stroke-width="11" stroke-linecap="round"/>
+  <path d="M441 207 q4 -2 8 -2" fill="none" stroke="#fbf8f2" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="470" y1="197" x2="488" y2="193" stroke="#cfa587" stroke-width="0.6" stroke-opacity="0.6"/>
+<rect width="600" height="440" fill="url(#daylight)"/>
+<rect width="600" height="440" filter="url(#grain)"/>
+</svg>

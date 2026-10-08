@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="440" fill="#fbf8f2"/>
+<defs>
+    <filter id="linen_wallet" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".55 .55" numOctaves="2" seed="11" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.55  0 0 0 0 0.48  0 0 0 0 0.38  0 0 0 0.12 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="leather_wallet" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.3  0 0 0 0 0.16  0 0 0 0 0.08  0 0 0 0.22 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="grain_pp_wallet" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="3" seed="8" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.1  0 0 0 0 0.12  0 0 0 0 0.16  0 0 0 0.3 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <filter id="brushed_wallet" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".02 .9" numOctaves="2" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 1  0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0.3 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="cover_wallet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c98a5e"/><stop offset="1" stop-color="#9c5b34"/></linearGradient>
+    <linearGradient id="foil_wallet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4b98a"/><stop offset=".5" stop-color="#a8844f"/><stop offset="1" stop-color="#7d5f33"/></linearGradient>
+    <linearGradient id="pp_wallet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8494a8" stop-opacity=".35"/><stop offset="1" stop-color="#3e4c5e" stop-opacity="0"/></linearGradient>
+    <linearGradient id="pen_wallet" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4b98a"/><stop offset=".6" stop-color="#a8844f"/><stop offset="1" stop-color="#7d5f33"/></linearGradient>
+  </defs>
+  <rect width="600" height="440" fill="#fbf8f2"/>
+  <rect width="600" height="440" fill="#fbf8f2" filter="url(#linen_wallet)"/>
+  <ellipse cx="166" cy="328" rx="84" ry="3" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+    <rect x="85" y="76" width="168" height="252" rx="3" fill="#fbf8f2" stroke="#c8ae86" stroke-width=".75"/>
+    <rect x="82" y="74" width="168" height="252" rx="3" fill="url(#cover_wallet)"/>
+    <rect x="82" y="74" width="168" height="252" rx="3" fill="#9c5b34" filter="url(#leather_wallet)"/>
+    <rect x="91" y="83" width="150" height="234" rx="1.5" fill="none" stroke="#d4b98a" stroke-width=".75" stroke-dasharray="3 2.2"/>
+    <line x1="96" y1="74" x2="96" y2="326" stroke="#3b2a20" stroke-width="0.75" stroke-opacity="0.3"/>
+    <g transform="translate(166 170)">
+      <circle r="27" fill="none" stroke="url(#foil_wallet)" stroke-width="1.5"/>
+      <circle r="23" fill="none" stroke="url(#foil_wallet)" stroke-width=".6"/>
+      <path d="M-15 4 C-10 -6 -4 -9 0 -12 C4 -9 10 -6 15 4 C9 -1 4 -2 0 2 C-4 -2 -9 -1 -15 4 Z" fill="url(#foil_wallet)"/>
+      <path d="M-10 9 C-5 6 5 6 10 9" fill="none" stroke="url(#foil_wallet)" stroke-width="1"/>
+      <path d="M-6 13 C-3 11.5 3 11.5 6 13" fill="none" stroke="url(#foil_wallet)" stroke-width=".8"/>
+    </g>
+    <text x="169" y="234" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="6" fill="#d4b98a">FIRST</text>
+    <line x1="148" y1="246" x2="184" y2="246" stroke="#d4b98a" stroke-width="0.75" stroke-opacity="1"/>
+    <text x="168" y="262" text-anchor="middle" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="6" letter-spacing="3.5" fill="#d4b98a">TRAVEL DOCUMENTS</text>
+    <path d="M206 322 L218 322 L218 356 L212 350 L206 356 Z" fill="#6e2a34"/>
+    <line x1="212" y1="326" x2="212" y2="348" stroke="#a65a69" stroke-width="0.5" stroke-opacity="0.6"/>
+    <line x1="206" y1="325.5" x2="218" y2="325.5" stroke="#3b2a20" stroke-width="0.75" stroke-opacity="0.35"/><ellipse cx="402" cy="187" rx="121" ry="2.5" fill="#3b2a20" opacity="0.07" filter="url(#soft)"/>
+    <rect x="276" y="74" width="252" height="112" rx="3" fill="#fbf8f2" stroke="#c8ae86" stroke-width=".75"/>
+    <rect x="276" y="74" width="252" height="18" rx="3" fill="#dcc7a4"/><rect x="276" y="86" width="252" height="6" fill="#dcc7a4"/>
+    <line x1="276" y1="92" x2="528" y2="92" stroke="#a8844f" stroke-width="0.75" stroke-opacity="1"/>
+    <text x="288" y="86" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="6" letter-spacing="4" fill="#3b2a20">BOARDING PASS</text>
+    <text x="444" y="86" text-anchor="end" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="6" letter-spacing="4" fill="#6e2a34">FIRST</text>
+    <text x="290" y="120" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="3" fill="#3b2a20">DXB</text>
+    <text x="392" y="120" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="3" fill="#3b2a20">JFK</text>
+    <line x1="350" y1="112" x2="382" y2="112" stroke="#a8844f" stroke-width="0.75" stroke-opacity="1"/>
+    <path d="M378 109 L383 112 L378 115" fill="none" stroke="#a8844f" stroke-width=".75"/>
+    <text x="290" y="130" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5" letter-spacing="2" fill="#857462">DUBAI</text>
+    <text x="392" y="130" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5" letter-spacing="2" fill="#857462">NEW YORK</text>
+    <text x="290" y="144" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="2.5" fill="#a8844f">FLIGHT</text><text x="290" y="155" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="8" letter-spacing="1.5" fill="#3b2a20">FS 001</text><text x="338" y="144" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="2.5" fill="#a8844f">DATE</text><text x="338" y="155" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="8" letter-spacing="1.5" fill="#3b2a20">07 OCT</text><text x="384" y="144" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="2.5" fill="#a8844f">BOARDS</text><text x="384" y="155" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="8" letter-spacing="1.5" fill="#3b2a20">08:15</text>
+    <text x="352" y="166" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="2.5" fill="#a8844f">GATE</text><text x="352" y="177" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="8" letter-spacing="1.5" fill="#3b2a20">A1</text><text x="384" y="166" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="2.5" fill="#a8844f">ZONE</text><text x="384" y="177" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="8" letter-spacing="1.5" fill="#3b2a20">1</text>
+    <rect x="292" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="293.7" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="296.5" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="299.1" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="302.4" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="304.2" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="307.2" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="309.6" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="311.3" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="313" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="315.2" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="317.5" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="319.4" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="321.3" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="322.9" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="325.8" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="328.2" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="330.1" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="332" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="334.8" y="162" width="1.4" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="337.8" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="339.6" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/><rect x="341.8" y="162" width="0.7" height="13" fill="#3b2a20" fill-opacity=".85"/>
+    <rect x="453" y="74" width="75" height="112" fill="#f4eee4" fill-opacity=".6"/>
+    <line x1="454" y1="78" x2="454" y2="182" stroke="#a49180" stroke-width="0.75" stroke-opacity="1"/>
+    <line x1="454" y1="78" x2="454" y2="182" stroke="#fbf8f2" stroke-width="1" stroke-dasharray="2 2.5"/>
+    <text x="491" y="108" text-anchor="middle" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="3" fill="#a8844f">SEAT</text>
+    <text x="491" y="142" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-size="34" fill="#6e2a34">1A</text>
+    <line x1="472" y1="152" x2="510" y2="152" stroke="#6e2a34" stroke-width="0.75" stroke-opacity="1"/>
+    <text x="492" y="166" text-anchor="middle" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5.5" letter-spacing="2.5" fill="#3b2a20">DXB · JFK</text><ellipse cx="336" cy="379" rx="55.2" ry="2.5" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+    <rect x="278" y="213.5" width="120" height="166" rx="5" fill="#fbf8f2" stroke="#e6dccb" stroke-width=".75"/>
+    <rect x="276" y="212" width="120" height="166" rx="5" fill="#3e4c5e"/>
+    <rect x="276" y="212" width="120" height="166" rx="5" fill="url(#pp_wallet)"/>
+    <rect x="276" y="212" width="120" height="166" rx="5" fill="#3e4c5e" filter="url(#grain_pp_wallet)"/>
+    <text x="336" y="250" text-anchor="middle" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="7" letter-spacing="5" fill="#d4b98a">PASSPORT</text>
+    <g transform="translate(336 296)" stroke="#d4b98a" fill="none">
+      <circle r="20" stroke-width=".9"/>
+      <path d="M0 -13 L3 -4 L12 -4 L5 2 L8 11 L0 5.5 L-8 11 L-5 2 L-12 -4 L-3 -4 Z" stroke-width=".8"/>
+    </g>
+    <rect x="327" y="344" width="18" height="12" rx="2" fill="none" stroke="#d4b98a" stroke-width=".8"/>
+    <circle cx="336" cy="350" r="3" fill="none" stroke="#d4b98a" stroke-width=".7"/><ellipse cx="486" cy="372" rx="6" ry="2" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+    <rect x="481" y="214" width="9" height="150" rx="4.5" fill="url(#pen_wallet)"/>
+    <rect x="481" y="214" width="9" height="150" rx="4.5" fill="#a8844f" filter="url(#brushed_wallet)"/>
+    <line x1="481" y1="262" x2="490" y2="262" stroke="#7d5f33" stroke-width="0.75" stroke-opacity="1"/>
+    <rect x="490" y="222" width="2.2" height="34" rx="1" fill="#7d5f33"/>
+    <path d="M482 364 L485.5 378 L489 364 Z" fill="#7d5f33"/>
+<rect width="600" height="440" fill="url(#daylight)"/>
+<rect width="600" height="440" filter="url(#grain)"/>
+</svg>

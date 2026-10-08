@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="560" height="420" fill="#f4eee4"/>
+<defs>
+    <linearGradient id="table_esp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4eee4"/><stop offset="1" stop-color="#fbf8f2"/></linearGradient>
+    <filter id="linen_esp" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8 .35" numOctaves="3" seed="5" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.5  0 0 0 0 0.43  0 0 0 0 0.34  0 0 0 0.1 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="china_esp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fbf8f2"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+    <radialGradient id="crema_esp" cx=".45" cy=".45" r=".6"><stop offset="0" stop-color="#c98a5e"/><stop offset=".7" stop-color="#9c5b34"/><stop offset="1" stop-color="#6b4a36"/></radialGradient>
+    <linearGradient id="foil_esp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4b98a"/><stop offset="1" stop-color="#a8844f"/></linearGradient>
+    <filter id="brushed_esp" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".02 .9" numOctaves="3" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.3  0 0 0 0 0.08  0 0 0 0 0.1  0 0 0 0.3 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="redfoil_esp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a65a69"/><stop offset=".5" stop-color="#6e2a34"/><stop offset="1" stop-color="#4a1a23"/></linearGradient>
+    <linearGradient id="tray_esp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9c5b34"/><stop offset="1" stop-color="#c98a5e"/></linearGradient>
+    <filter id="leather_esp" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.3  0 0 0 0 0.15  0 0 0 0 0.06  0 0 0 0.2 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+  </defs>
+  <rect width="560" height="420" fill="url(#table_esp)"/>
+  <rect width="560" height="420" filter="url(#linen_esp)"/>
+  <g transform="translate(-40 -92) scale(1.15)">
+  <!-- cognac leather tray -->
+  <ellipse cx="285" cy="372" rx="210" ry="5" fill="#3b2a20" opacity="0.1" filter="url(#soft)"/>
+  <path d="M96 352 L474 352 L474 360 Q474 366 466 366 L104 366 Q96 366 96 360 Z" fill="#9c5b34"/>
+  <line x1="100" y1="366" x2="470" y2="366" stroke="#6b4a36" stroke-width="0.75" stroke-opacity="1"/>
+  <path d="M130 252 L440 252 Q452 252 456 262 L476 344 Q478 352 468 352 L102 352 Q92 352 94 344 L114 262 Q118 252 130 252 Z" fill="url(#tray_esp)"/>
+  <path d="M130 252 L440 252 Q452 252 456 262 L476 344 Q478 352 468 352 L102 352 Q92 352 94 344 L114 262 Q118 252 130 252 Z" filter="url(#leather_esp)"/>
+  <path d="M134 259 L436 259 Q446 259 449 267 L466 340 Q468 345 461 345 L109 345 Q102 345 104 340 L121 267 Q124 259 134 259 Z" fill="none" stroke="#c98a5e" stroke-width=".75" stroke-dasharray="3 2.5"/>
+  <!-- saucer -->
+  <ellipse cx="236" cy="318" rx="112" ry="6" fill="#3b2a20" opacity="0.12" filter="url(#soft)"/>
+  <ellipse cx="236" cy="306" rx="112" ry="28" fill="#e6dccb"/>
+  <ellipse cx="236" cy="300" rx="112" ry="28" fill="url(#china_esp)" stroke="#a49180" stroke-width=".75"/>
+  <ellipse cx="236" cy="300" rx="108" ry="26" fill="none" stroke="#7d5f33" stroke-width=".9"/>
+  <ellipse cx="236" cy="298" rx="56" ry="13" fill="none" stroke="#e6dccb" stroke-width="1"/>
+
+  <!-- spoon resting on the saucer, in front of the cup -->
+  <g transform="rotate(-14 276 312)">
+    <path d="M206 312 C246 309 296 309 328 311 Q334 313 328 315 C296 315 246 315 206 314 Z" fill="url(#foil_esp)" stroke="#a8844f" stroke-width=".6"/>
+    <ellipse cx="194" cy="313" rx="16" ry="7" fill="url(#foil_esp)" stroke="#a8844f" stroke-width=".6"/>
+    <ellipse cx="191" cy="311.5" rx="8" ry="3" fill="#fff" opacity=".45"/>
+    <line x1="216" y1="311.5" x2="316" y2="311.5" stroke="#fff" stroke-width="0.8" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- cup -->
+  <path d="M280 230 C312 222 316 256 274 266" fill="none" stroke="#a49180" stroke-width="9" stroke-linecap="round"/>
+  <path d="M280 230 C312 222 316 256 274 266" fill="none" stroke="#fbf8f2" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M186 214 C187 254 194 272 206 290 Q236 298 266 290 C278 272 285 254 286 214 Z" fill="url(#china_esp)" stroke="#a49180" stroke-width=".75"/>
+  <path d="M200 228 C200 254 206 270 214 284" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+    <ellipse cx="236" cy="214" rx="50" ry="12" fill="#fbf8f2" stroke="#a49180" stroke-width=".75"/>
+  <ellipse cx="236" cy="215.5" rx="46" ry="9.5" fill="url(#crema_esp)"/>
+  <path d="M212 216 C226 210 246 210 258 215" fill="none" stroke="#c98a5e" stroke-width="1" opacity=".7"/>
+  <path d="M186 214 A50 12 0 0 0 286 214" fill="none" stroke="#a8844f" stroke-width="1.5"/>
+
+  <!-- wrapped chocolate: a square in bordeaux foil with twisted ends -->
+  <g transform="rotate(-10 400 318)">
+    <ellipse cx="400" cy="332" rx="34" ry="4" fill="#3b2a20" opacity="0.12" filter="url(#soft)"/>
+    <path d="M358 306 L372 312 L372 326 L356 332 L362 319 Z" fill="url(#redfoil_esp)" stroke="#4a1a23" stroke-width=".6"/>
+    <path d="M442 306 L428 312 L428 326 L444 332 L438 319 Z" fill="url(#redfoil_esp)" stroke="#4a1a23" stroke-width=".6"/>
+    <line x1="362" y1="312" x2="368" y2="318" stroke="#a65a69" stroke-width="0.6" stroke-opacity="1"/><line x1="438" y1="312" x2="432" y2="318" stroke="#a65a69" stroke-width="0.6" stroke-opacity="1"/>
+    <rect x="372" y="304" width="56" height="30" rx="5" fill="url(#redfoil_esp)" stroke="#4a1a23" stroke-width=".75"/>
+    <rect x="372" y="304" width="56" height="30" rx="5" filter="url(#brushed_esp)"/>
+    <rect x="386" y="304" width="28" height="30" fill="#fbf8f2"/>
+    <line x1="386" y1="304" x2="386" y2="334" stroke="#a8844f" stroke-width="0.75" stroke-opacity="1"/><line x1="414" y1="304" x2="414" y2="334" stroke="#a8844f" stroke-width="0.75" stroke-opacity="1"/>
+    <text x="400" y="323" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-style="italic" font-size="11" fill="#6e2a34">S</text>
+    <line x1="374" y1="306.5" x2="426" y2="306.5" stroke="#a65a69" stroke-width="0.8" stroke-opacity="0.7"/>
+  </g>
+  </g>
+<rect width="560" height="420" fill="url(#daylight)"/>
+<rect width="560" height="420" filter="url(#grain)"/>
+</svg>

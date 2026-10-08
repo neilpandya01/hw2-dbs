@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="440" fill="#f4eee4"/>
+<defs>
+      <linearGradient id="top_pj" x1="0" y1="0" x2=".5" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+      <linearGradient id="band_pj" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf8"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+      <linearGradient id="ribbon_pj" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a65a69"/><stop offset=".5" stop-color="#6e2a34"/><stop offset="1" stop-color="#6e2a34"/></linearGradient>
+      <filter id="cotton_pj" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8 .6" numOctaves="2" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.55  0 0 0 0 0.48  0 0 0 0 0.4  0 0 0 0.1 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="terry_pj" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="6" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.55  0 0 0 0 0.48  0 0 0 0 0.4  0 0 0 0.18 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="sheet_pj" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".6 .9" numOctaves="2" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.6  0 0 0 0 0.52  0 0 0 0 0.44  0 0 0 0.07 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    </defs>
+    <rect width="600" height="440" fill="#fbf8f2"/>
+    <rect width="600" height="440" filter="url(#sheet_pj)" fill="#fff"/>
+    <ellipse cx="220" cy="368" rx="116" ry="4" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+    <!-- trousers underneath -->
+    <rect x="104" y="98" width="232" height="268" rx="7" fill="#e6dccb" stroke="#a49180" stroke-width=".8"/>
+    <line x1="106" y1="358" x2="334" y2="358" stroke="#3e4c5e" stroke-width="1.1" stroke-opacity="1"/>
+    <!-- folded top -->
+    <rect x="110" y="90" width="220" height="262" rx="8" fill="url(#top_pj)" stroke="#a49180" stroke-width=".8"/>
+    <rect x="110" y="90" width="220" height="262" rx="8" filter="url(#cotton_pj)" fill="#000"/>
+    <line x1="128" y1="96" x2="128" y2="346" stroke="#e6dccb" stroke-width="1" stroke-opacity="0.9"/><line x1="312" y1="96" x2="312" y2="346" stroke="#e6dccb" stroke-width="1" stroke-opacity="0.9"/>
+    <path d="M184 90 L220 152 L256 90 Z" fill="#e6dccb"/>
+    <path d="M190 90 Q220 104 250 90" fill="none" stroke="#e6dccb" stroke-width="1.2"/>
+    <path d="M160 90 L184 90 L220 152 L220 184 Z" fill="#fbf8f2"/>
+    <path d="M280 90 L256 90 L220 152 L220 184 Z" fill="#f4eee4"/>
+    <path d="M160 90 L220 184 L280 90" fill="none" stroke="#3e4c5e" stroke-width="1.4"/>
+    <path d="M184 90 L220 152 L256 90" fill="none" stroke="#e6dccb" stroke-width=".8"/>
+    <line x1="220" y1="184" x2="220" y2="348" stroke="#e6dccb" stroke-width="1" stroke-opacity="1"/><line x1="224" y1="184" x2="224" y2="348" stroke="#3e4c5e" stroke-width="1.1" stroke-opacity="1"/>
+    <circle cx="214" cy="208" r="3.6" fill="#fbf8f2" stroke="#a49180" stroke-width=".8"/><circle cx="213" cy="208" r=".6" fill="#a49180"/><circle cx="215" cy="208" r=".6" fill="#a49180"/><circle cx="214" cy="252" r="3.6" fill="#fbf8f2" stroke="#a49180" stroke-width=".8"/><circle cx="213" cy="252" r=".6" fill="#a49180"/><circle cx="215" cy="252" r=".6" fill="#a49180"/>
+    <!-- pocket with monogram -->
+    <path d="M248 212 L296 212 L296 258 Q296 262 292 262 L252 262 Q248 262 248 258 Z" fill="none" stroke="#a49180" stroke-width=".8"/>
+    <line x1="248" y1="212" x2="296" y2="212" stroke="#3e4c5e" stroke-width="1.4" stroke-opacity="1"/>
+    <text x="272" y="241" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-style="italic" font-size="17" fill="#3e4c5e">fs</text>
+    <!-- ribbon and bow -->
+    <rect x="104" y="294" width="232" height="6" fill="url(#ribbon_pj)"/>
+    <line x1="104" y1="294" x2="336" y2="294" stroke="#6e2a34" stroke-width="0.5" stroke-opacity="1"/><line x1="104" y1="300" x2="336" y2="300" stroke="#6e2a34" stroke-width="0.5" stroke-opacity="1"/>
+    <path d="M222 298 C200 278 184 284 188 296 C192 308 206 304 222 298 Z" fill="url(#ribbon_pj)" stroke="#6e2a34" stroke-width=".7"/>
+    <path d="M222 298 C244 278 260 284 256 296 C252 308 238 304 222 298 Z" fill="url(#ribbon_pj)" stroke="#6e2a34" stroke-width=".7"/>
+    <path d="M219 300 L204 332 L210 330 L212 336 L224 301 Z" fill="url(#ribbon_pj)" stroke="#6e2a34" stroke-width=".6"/>
+    <path d="M225 300 L242 330 L236 329 L235 335 L221 302 Z" fill="url(#ribbon_pj)" stroke="#6e2a34" stroke-width=".6"/>
+    <rect x="217" y="293" width="10" height="10" rx="2.5" fill="#6e2a34" stroke="#6e2a34" stroke-width=".7"/>
+    <!-- slippers -->
+    <ellipse cx="410" cy="326" rx="22" ry="3" fill="#3b2a20" opacity="0.07" filter="url(#soft)"/><ellipse cx="482" cy="330" rx="22" ry="3" fill="#3b2a20" opacity="0.07" filter="url(#soft)"/>
+    <g transform="translate(410 222) rotate(-3) scale(-1 1)">
+      <path d="M0 -100 C26 -100 31 -64 29 -22 C27 26 24 70 20 88 Q0 104 -18 88 C-24 70 -28 26 -30 -20 C-32 -62 -26 -100 0 -100 Z" fill="#dcc7a4" stroke="#857462" stroke-width=".8"/>
+      <path d="M0 -94 C21 -94 25 -62 23 -22 C21 24 19 66 15 82 Q0 96 -13 82 C-18 66 -22 24 -24 -20 C-26 -60 -21 -94 0 -94 Z" fill="#fbf8f2"/>
+      <path d="M0 -94 C21 -94 25 -62 23 -22 C21 24 19 66 15 82 Q0 96 -13 82 C-18 66 -22 24 -24 -20 C-26 -60 -21 -94 0 -94 Z" filter="url(#terry_pj)"/>
+      <path d="M-31 -18 C-33 -62 -27 -102 0 -102 C27 -102 32 -64 30 -18 Q0 -4 -31 -18 Z" fill="url(#band_pj)"/>
+      <path d="M-31 -18 C-33 -62 -27 -102 0 -102 C27 -102 32 -64 30 -18 Q0 -4 -31 -18 Z" filter="url(#terry_pj)"/>
+      <path d="M-31 -18 Q0 -4 30 -18" fill="none" stroke="#c39a92" stroke-width="2.2"/>
+      <path d="M-31 -18 C-33 -62 -27 -102 0 -102 C27 -102 32 -64 30 -18" fill="none" stroke="#c39a92" stroke-width="1.6"/>
+      <text x="0" y="-36" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-style="italic" font-size="10" fill="#c39a92" transform="scale(-1 1)">fs</text>
+    </g>
+    <g transform="translate(482 226) rotate(3) scale(1 1)">
+      <path d="M0 -100 C26 -100 31 -64 29 -22 C27 26 24 70 20 88 Q0 104 -18 88 C-24 70 -28 26 -30 -20 C-32 -62 -26 -100 0 -100 Z" fill="#dcc7a4" stroke="#857462" stroke-width=".8"/>
+      <path d="M0 -94 C21 -94 25 -62 23 -22 C21 24 19 66 15 82 Q0 96 -13 82 C-18 66 -22 24 -24 -20 C-26 -60 -21 -94 0 -94 Z" fill="#fbf8f2"/>
+      <path d="M0 -94 C21 -94 25 -62 23 -22 C21 24 19 66 15 82 Q0 96 -13 82 C-18 66 -22 24 -24 -20 C-26 -60 -21 -94 0 -94 Z" filter="url(#terry_pj)"/>
+      <path d="M-31 -18 C-33 -62 -27 -102 0 -102 C27 -102 32 -64 30 -18 Q0 -4 -31 -18 Z" fill="url(#band_pj)"/>
+      <path d="M-31 -18 C-33 -62 -27 -102 0 -102 C27 -102 32 -64 30 -18 Q0 -4 -31 -18 Z" filter="url(#terry_pj)"/>
+      <path d="M-31 -18 Q0 -4 30 -18" fill="none" stroke="#c39a92" stroke-width="2.2"/>
+      <path d="M-31 -18 C-33 -62 -27 -102 0 -102 C27 -102 32 -64 30 -18" fill="none" stroke="#c39a92" stroke-width="1.6"/>
+      <text x="0" y="-36" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-style="italic" font-size="10" fill="#c39a92" transform="scale(1 1)">fs</text>
+    </g>
+<rect width="600" height="440" fill="url(#daylight)"/>
+<rect width="600" height="440" filter="url(#grain)"/>
+</svg>

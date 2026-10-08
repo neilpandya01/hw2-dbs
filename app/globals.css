@@ -39,7 +39,18 @@
   }
 }
 
+/* Hub + default page colors: a mid-light neutral stone, so moving between
+   the dark (Mid Flight) and light (First Suite) pages isn't a glare jump. */
+@theme {
+  --color-hub-bg: #d4d1cb;
+  --color-hub-surface: #e0ddd8;
+  --color-hub-raised: #c6c2bb;
+  --color-hub-border: #aaa59d;
+  --color-hub-text: #1f1e1c;
+  --color-hub-muted: #4f4b46;
+}
+
 body {
-  background: var(--color-white);
-  color: var(--color-neutral-900);
+  background: var(--color-hub-bg);
+  color: var(--color-hub-text);
 }

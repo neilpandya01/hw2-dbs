@@ -12,9 +12,9 @@ export default function DesignSystem({ mood }: { mood: Mood }) {
   if (System) return <System />;
   return (
     <main className="mx-auto max-w-3xl p-6">
-      <Link href="/" className="text-sm text-sky-700 hover:underline">← Hub</Link>
+      <Link href="/" className="text-sm text-hub-text underline-offset-4 hover:underline">← Hub</Link>
       <h1 className="mt-4 text-3xl">{mood.name} · Design System</h1>
-      <p className="mt-2 text-neutral-500">Design system coming soon.</p>
+      <p className="mt-2 text-hub-muted">Design system coming soon.</p>
     </main>
   );
 }

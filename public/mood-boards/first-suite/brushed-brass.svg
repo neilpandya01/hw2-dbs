@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.025 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="400" fill="#f4eee4"/>
+<defs>
+      <linearGradient id="plate_brass" x1="0" y1=".1" x2="1" y2=".9"><stop offset="0" stop-color="#a8844f"/><stop offset=".36" stop-color="#c3a170"/><stop offset=".48" stop-color="#e2cca2"/><stop offset=".6" stop-color="#c09d6a"/><stop offset="1" stop-color="#9a7843"/></linearGradient>
+      <filter id="brush_brass" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".003 .9" numOctaves="2" seed="3" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.4  0 0 0 0 0.29  0 0 0 0 0.15  0 0 0 0.45 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="brushhi_brass" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".006 1.2" numOctaves="2" seed="8" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 1  0 0 0 0 0.97  0 0 0 0 0.9  0 0 0 0.3 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    </defs>
+    <rect width="600" height="400" fill="url(#plate_brass)"/>
+    <rect width="600" height="400" filter="url(#brush_brass)" fill="#000"/>
+    <rect width="600" height="400" filter="url(#brushhi_brass)" fill="#000"/>
+    <line x1="0" y1="268" x2="600" y2="268" stroke="#7d5f33" stroke-width="1" stroke-opacity="1"/>
+    <line x1="0" y1="269.1" x2="600" y2="269.1" stroke="#d4b98a" stroke-width="0.8" stroke-opacity="0.9"/>
+<rect width="600" height="400" fill="url(#daylight)"/>
+<rect width="600" height="400" filter="url(#grain)"/>
+</svg>

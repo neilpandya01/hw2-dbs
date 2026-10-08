@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.025 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="420" fill="#f4eee4"/>
+<defs>
+      <linearGradient id="under_linen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4eee4"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+      <linearGradient id="over_linen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+      <filter id="warp_linen" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .06" numOctaves="2" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.55  0 0 0 0 0.47  0 0 0 0 0.38  0 0 0 0.13 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="weft_linen" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".06 .9" numOctaves="2" seed="5" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.55  0 0 0 0 0.47  0 0 0 0 0.38  0 0 0 0.11 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="b1_linen" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.2"/></filter><filter id="b3_linen" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter><filter id="b6_linen" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter>
+      <clipPath id="top_linen"><path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112 L600 0 L0 0 Z"/></clipPath>
+    </defs>
+    <rect width="600" height="420" fill="url(#under_linen)"/>
+    <path d="M330 400 C400 340, 470 300, 600 270" fill="none" stroke="#a49180" stroke-width="7" opacity="0.3" filter="url(#b3_linen)"/><path d="M330 400 C400 340, 470 300, 600 270" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.75" filter="url(#b1_linen)" transform="translate(-2 -2)"/><path d="M120 420 C170 390, 230 370, 300 352" fill="none" stroke="#a49180" stroke-width="6" opacity="0.2" filter="url(#b3_linen)"/><path d="M120 420 C170 390, 230 370, 300 352" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.6499999999999999" filter="url(#b1_linen)" transform="translate(-2 -2)"/><path d="M470 420 C520 380, 560 360, 600 350" fill="none" stroke="#a49180" stroke-width="5" opacity="0.2" filter="url(#b3_linen)"/><path d="M470 420 C520 380, 560 360, 600 350" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.6" filter="url(#b1_linen)" transform="translate(-2 -2)"/>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#a49180" stroke-width="12" opacity=".42" filter="url(#b6_linen)" transform="translate(7 10)"/>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#a49180" stroke-width="3" opacity=".25" filter="url(#b3_linen)" transform="translate(2 3)"/>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112 L600 0 L0 0 Z" fill="url(#over_linen)"/>
+    <g clip-path="url(#top_linen)">
+      <path d="M60 70 C120 140, 160 220, 200 296" fill="none" stroke="#a49180" stroke-width="7" opacity="0.3" filter="url(#b3_linen)"/><path d="M60 70 C120 140, 160 220, 200 296" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.8" filter="url(#b1_linen)" transform="translate(-2 -2)"/><path d="M250 40 C290 110, 310 170, 330 232" fill="none" stroke="#a49180" stroke-width="6" opacity="0.2" filter="url(#b3_linen)"/><path d="M250 40 C290 110, 310 170, 330 232" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.7" filter="url(#b1_linen)" transform="translate(-2 -2)"/><path d="M420 0 C440 60, 460 110, 480 168" fill="none" stroke="#a49180" stroke-width="5" opacity="0.2" filter="url(#b3_linen)"/><path d="M420 0 C440 60, 460 110, 480 168" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.6499999999999999" filter="url(#b1_linen)" transform="translate(-2 -2)"/><path d="M0 200 C40 230, 80 260, 110 306" fill="none" stroke="#a49180" stroke-width="5" opacity="0.2" filter="url(#b3_linen)"/><path d="M0 200 C40 230, 80 260, 110 306" fill="none" stroke="#fff" stroke-width="2.4" opacity="0.6" filter="url(#b1_linen)" transform="translate(-2 -2)"/>
+      <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#fff" stroke-width="18" opacity=".95" filter="url(#b3_linen)" transform="translate(-8 -14)"/>
+      <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#a49180" stroke-width="7" opacity=".5" filter="url(#b3_linen)" transform="translate(-1 -1)"/>
+    </g>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#857462" stroke-width=".8"/>
+    <!-- embroidered bordeaux border band on the turned-back hem -->
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#6e2a34" stroke-width="5" transform="translate(-15 -32)"/>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#a65a69" stroke-width=".6" stroke-dasharray="1.6 1.6" transform="translate(-15 -32)"/>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#6e2a34" stroke-width=".7" transform="translate(-14 -25)"/>
+    <path d="M0 318 C150 300, 250 268, 350 222 S520 136, 600 112" fill="none" stroke="#6e2a34" stroke-width=".7" transform="translate(-16 -39)"/>
+    <rect width="600" height="420" filter="url(#warp_linen)" fill="#000"/>
+    <rect width="600" height="420" filter="url(#weft_linen)" fill="#000"/>
+<rect width="600" height="420" fill="url(#daylight)"/>
+<rect width="600" height="420" filter="url(#grain)"/>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 600" width="460" height="600">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="460" height="600" fill="#f4eee4"/>
+<defs>
+    <linearGradient id="wall_flute" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+    <linearGradient id="leather_flute" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9c5b34"/><stop offset="1" stop-color="#c98a5e"/></linearGradient>
+    <filter id="grainLeather_flute" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="3" seed="5" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.3  0 0 0 0 0.15  0 0 0 0 0.06  0 0 0 0.2 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="brassEdge_flute" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4b98a"/><stop offset="1" stop-color="#a8844f"/></linearGradient>
+    <filter id="brushed_flute" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".01 .9" numOctaves="3" seed="8" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.4  0 0 0 0 0.3  0 0 0 0 0.17  0 0 0 0.25 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="front_flute" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+    <filter id="linen_flute" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .4" numOctaves="3" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.25  0 0 0 0 0.3  0 0 0 0 0.2  0 0 0 0.18 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="fizz_flute" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#d4b98a"/></linearGradient>
+    <clipPath id="clip_flute"><path d="M207 128 C206 208 209 268 218 302 C224 313 229 316 229.5 320 L234.5 320 C235 316 240 313 246 302 C255 268 258 208 257 128 Z"/></clipPath>
+  </defs>
+  <rect width="460" height="452" fill="url(#wall_flute)"/>
+  <line x1="70" y1="0" x2="70" y2="388" stroke="#c8ae86" stroke-width="0.75" stroke-opacity="0.6"/><line x1="390" y1="0" x2="390" y2="388" stroke="#c8ae86" stroke-width="0.75" stroke-opacity="0.6"/>
+  <!-- console: leather top seen at a shallow angle, brushed brass edge, taupe front -->
+  <path d="M0 388 H460 V452 H0 Z" fill="url(#leather_flute)"/>
+  <rect y="388" width="460" height="64" fill="#c98a5e" opacity=".0"/>
+  <path d="M0 388 H460 V452 H0 Z" filter="url(#grainLeather_flute)"/>
+  <line x1="0" y1="388" x2="460" y2="388" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+  <path d="M0 394 H460" stroke="#c98a5e" stroke-width=".75" stroke-dasharray="3 3"/>
+  <path d="M0 446 H460" stroke="#dcc7a4" stroke-width=".75" stroke-dasharray="3 3" opacity=".8"/>
+  <rect y="452" width="460" height="12" fill="url(#brassEdge_flute)"/>
+  <rect y="452" width="460" height="12" filter="url(#brushed_flute)"/>
+  <line x1="0" y1="452.5" x2="460" y2="452.5" stroke="#d4b98a" stroke-width="1" stroke-opacity="1"/>
+  <line x1="0" y1="464" x2="460" y2="464" stroke="#7d5f33" stroke-width="0.75" stroke-opacity="1"/>
+  <rect y="464" width="460" height="136" fill="url(#front_flute)"/>
+  <line x1="230" y1="464" x2="230" y2="600" stroke="#a49180" stroke-width="0.75" stroke-opacity="0.6"/>
+  <rect x="184" y="504" width="34" height="3" rx="1.5" fill="#a8844f"/>
+  <rect x="242" y="504" width="34" height="3" rx="1.5" fill="#a8844f"/>
+
+  <!-- linen coaster, seen in perspective -->
+  <path d="M174 444 L188 420 L278 420 L292 444 Z" fill="#7c8a6a" stroke="#55644a" stroke-width=".75"/>
+  <path d="M174 444 L188 420 L278 420 L292 444 Z" filter="url(#linen_flute)"/>
+  <path d="M180 441 L191 423 L275 423 L286 441 Z" fill="none" stroke="#fbf8f2" stroke-width=".6" stroke-dasharray="2 2" opacity=".8"/>
+  <ellipse cx="232" cy="433" rx="30" ry="2.5" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+
+  <!-- the flute -->
+  <g clip-path="url(#clip_flute)">
+    <rect x="192" y="128" width="80" height="194" fill="#fff" opacity=".4"/>
+    <rect x="192" y="176" width="80" height="146" fill="url(#fizz_flute)"/>
+    <rect x="192" y="176" width="12" height="140" fill="#fff" opacity=".25"/>
+    <circle cx="226.4" cy="256.4" r="0.9" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="242.3" cy="223.9" r="1.2" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="222.7" cy="271.8" r="0.7" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="231.9" cy="201" r="0.8" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="233.8" cy="206.3" r="1.6" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="224.6" cy="275.6" r="1.5" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="217.3" cy="178.6" r="1.4" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="225" cy="199.6" r="1.7" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="219.6" cy="215.2" r="1" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="226.7" cy="194.1" r="1.1" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="229.8" cy="178.4" r="0.7" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="222.1" cy="256.1" r="0.8" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="241.1" cy="210.9" r="0.9" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="231.1" cy="262.4" r="1.8" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="225.4" cy="202.5" r="1.2" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="234.4" cy="244" r="1.7" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="238.7" cy="222.2" r="0.7" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="239.6" cy="221.7" r="1.2" fill="none" stroke="#fff" stroke-width=".9" opacity="1"/><circle cx="222.4" cy="228.3" r="0.6" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="228.9" cy="248.5" r="1.1" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="241.9" cy="195.7" r="0.8" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="245.6" cy="196.2" r="1.1" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="228.8" cy="290.7" r="1.5" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="226.2" cy="248.3" r="1.8" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="232.5" cy="303.3" r="1.1" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="233.3" cy="188.9" r="0.7" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="231.6" cy="209.3" r="1.3" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="231.2" cy="240.5" r="0.9" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="226.3" cy="235.4" r="1.4" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="233.9" cy="291" r="1.6" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="230.9" cy="303.7" r="1.6" fill="none" stroke="#fff" stroke-width=".9" opacity="0.7"/><circle cx="231.9" cy="219.5" r="1.3" fill="none" stroke="#fff" stroke-width=".9" opacity="0.9"/><circle cx="235.2" cy="266.8" r="1.5" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="226.7" cy="239.1" r="1.1" fill="none" stroke="#fff" stroke-width=".9" opacity="0.8"/><circle cx="234" cy="304" r="0.7" fill="#fff" opacity=".85"/><circle cx="235.2" cy="293" r="0.8" fill="#fff" opacity=".85"/><circle cx="234.6" cy="282" r="0.8" fill="#fff" opacity=".85"/><circle cx="233.2" cy="271" r="0.9" fill="#fff" opacity=".85"/><circle cx="232.9" cy="260" r="1" fill="#fff" opacity=".85"/><circle cx="234.3" cy="249" r="1.1" fill="#fff" opacity=".85"/><circle cx="235.2" cy="238" r="1.1" fill="#fff" opacity=".85"/><circle cx="234.4" cy="227" r="1.2" fill="#fff" opacity=".85"/><circle cx="233" cy="216" r="1.3" fill="#fff" opacity=".85"/><circle cx="233.1" cy="205" r="1.3" fill="#fff" opacity=".85"/><circle cx="234.5" cy="194" r="1.4" fill="#fff" opacity=".85"/><circle cx="235.2" cy="183" r="1.5" fill="#fff" opacity=".85"/>
+    <path d="M215 140 C213 208 215 268 222 292" fill="none" stroke="#fff" stroke-width="2.5" opacity=".85" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="232" cy="176" rx="24.7" ry="3.5" fill="#fbf8f2" stroke="#d4b98a" stroke-width=".6"/>
+  <path d="M207 128 C206 208 209 268 218 302 C224 313 229 316 229.5 320 L234.5 320 C235 316 240 313 246 302 C255 268 258 208 257 128 Z" fill="none" stroke="#857462" stroke-width="1"/>
+  <ellipse cx="232" cy="128" rx="25" ry="3.5" fill="#fff" fill-opacity=".3" stroke="#857462" stroke-width="1"/>
+  <path d="M229.5 320 L230 426 C228 430 210 430 200 432 M234.5 320 L234 426 C236 430 254 430 264 432" fill="none" stroke="#857462" stroke-width="1"/>
+  <ellipse cx="232" cy="432" rx="32" ry="4.5" fill="#fff" fill-opacity=".3" stroke="#857462" stroke-width="1"/>
+  <line x1="231.2" y1="326" x2="231.2" y2="422" stroke="#fff" stroke-width="1" stroke-opacity="0.9"/>
+  <!-- bubbles escaping above the rim -->
+  <circle cx="236" cy="114" r="1.2" fill="none" stroke="#a8844f" stroke-width=".6" opacity=".6"/><circle cx="226" cy="100" r="0.9" fill="none" stroke="#a8844f" stroke-width=".6" opacity=".6"/><circle cx="233" cy="84" r="0.7" fill="none" stroke="#a8844f" stroke-width=".6" opacity=".6"/>
+<rect width="460" height="600" fill="url(#daylight)"/>
+<rect width="460" height="600" filter="url(#grain)"/>
+</svg>

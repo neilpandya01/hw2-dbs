@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 600" width="460" height="600">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="460" height="600" fill="#f4eee4"/>
+<defs>
+      <radialGradient id="wash_lamp" cx="230" cy="270" r="210" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9e4c0" stop-opacity=".95"/><stop offset=".5" stop-color="#fbedd6" stop-opacity=".3"/><stop offset="1" stop-color="#fbf0dc" stop-opacity="0"/></radialGradient>
+      <linearGradient id="shade_lamp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f6ecda"/><stop offset=".35" stop-color="#fffaf0"/><stop offset=".7" stop-color="#fdf3e2"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+      <linearGradient id="stem_lamp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4b98a"/><stop offset=".45" stop-color="#a8844f"/><stop offset="1" stop-color="#7d5f33"/></linearGradient>
+      <linearGradient id="top_lamp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c8ae86"/><stop offset=".5" stop-color="#dcc7a4"/><stop offset="1" stop-color="#c8ae86"/></linearGradient>
+      <linearGradient id="front_lamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#857462"/><stop offset="1" stop-color="#6b4a36"/></linearGradient>
+      <linearGradient id="panel_lamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4eee4"/><stop offset="1" stop-color="#efe6d8"/></linearGradient>
+      <filter id="linen_lamp" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .5" numOctaves="2" seed="3" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.6  0 0 0 0 0.5  0 0 0 0 0.38  0 0 0 0.12 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="veneer_lamp" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".006 .25" numOctaves="3" seed="5" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.36  0 0 0 0 0.25  0 0 0 0 0.17  0 0 0 0.3 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+      <filter id="brush_lamp" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".02 .9" numOctaves="2" seed="2" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.4  0 0 0 0 0.3  0 0 0 0 0.18  0 0 0 0.25 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    </defs>
+    <rect x="40" y="40" width="380" height="404" fill="url(#panel_lamp)"/>
+    <rect x="40" y="40" width="380" height="404" fill="none" stroke="#a8844f" stroke-width=".9"/>
+    <rect x="48" y="48" width="364" height="396" fill="none" stroke="#a8844f" stroke-width=".5" stroke-opacity=".6"/>
+    <rect width="460" height="600" fill="url(#wash_lamp)"/>
+    <!-- console -->
+    <rect x="30" y="444" width="400" height="12" fill="url(#top_lamp)"/>
+    <line x1="30" y1="444" x2="430" y2="444" stroke="#a8844f" stroke-width="0.8" stroke-opacity="1"/>
+    <rect x="30" y="456" width="400" height="74" fill="url(#front_lamp)"/>
+    <rect x="30" y="456" width="400" height="74" filter="url(#veneer_lamp)" fill="#000"/>
+    <line x1="30" y1="456.5" x2="430" y2="456.5" stroke="#d4b98a" stroke-width="1.2" stroke-opacity="1"/>
+    <line x1="30" y1="529.5" x2="430" y2="529.5" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+    <rect x="44" y="468" width="372" height="50" fill="none" stroke="#d4b98a" stroke-width=".8" stroke-opacity=".8"/>
+    <rect x="216" y="490" width="28" height="3" rx="1.5" fill="url(#stem_lamp)"/>
+    <ellipse cx="230" cy="450" rx="90" ry="4" fill="#fbf8f2" opacity=".18"/>
+    <!-- books: bordeaux, slate and sage cloth spines -->
+    <ellipse cx="340" cy="444" rx="44" ry="2" fill="#3b2a20" opacity="0.12" filter="url(#soft)"/>
+    <rect x="296" y="429" width="92" height="15" rx="1.5" fill="#6e2a34"/>
+    <line x1="300" y1="432.5" x2="384" y2="432.5" stroke="#d4b98a" stroke-width="0.6" stroke-opacity="1"/><line x1="300" y1="440.5" x2="384" y2="440.5" stroke="#d4b98a" stroke-width="0.6" stroke-opacity="1"/>
+    <rect x="304" y="417" width="78" height="12" rx="1.5" fill="#3e4c5e"/>
+    <text x="343" y="425.5" text-anchor="middle" font-family="Jost, Futura, 'Century Gothic', 'Avenir Next', Helvetica, Arial, sans-serif" font-size="5" letter-spacing="2.5" fill="#d4b98a">VOYAGES</text>
+    <rect x="300" y="407" width="84" height="10" rx="1.5" fill="#7c8a6a"/>
+    <line x1="304" y1="412" x2="380" y2="412" stroke="#55644a" stroke-width="0.6" stroke-opacity="1"/>
+    <rect x="300" y="407" width="84" height="37" rx="1.5" fill="none" stroke="#3b2a20" stroke-opacity=".12" stroke-width=".6"/>
+    <!-- lamp -->
+    <ellipse cx="230" cy="444" rx="46" ry="2" fill="#3b2a20" opacity="0.12" filter="url(#soft)"/>
+    <path d="M190 444 L194 436 Q230 430 266 436 L270 444 Q230 448 190 444 Z" fill="url(#stem_lamp)"/>
+    <path d="M190 444 L194 436 Q230 430 266 436 L270 444 Q230 448 190 444 Z" filter="url(#brush_lamp)" fill="#000"/>
+    <ellipse cx="230" cy="435" rx="36" ry="3.4" fill="#d4b98a" opacity=".8"/>
+    <rect x="226.5" y="318" width="7" height="116" fill="url(#stem_lamp)"/>
+    <rect x="224" y="378" width="12" height="9" rx="2" fill="url(#stem_lamp)"/>
+    <rect x="226" y="300" width="8" height="18" rx="1" fill="url(#stem_lamp)"/>
+    <ellipse cx="230" cy="320" rx="84" ry="10" fill="#fffaf1"/>
+    <path d="M152 202 L146 320 A84 10 0 0 0 314 320 L308 202 A78 9 0 0 1 152 202 Z" fill="url(#shade_lamp)"/>
+    <path d="M152 202 L146 320 A84 10 0 0 0 314 320 L308 202 A78 9 0 0 1 152 202 Z" filter="url(#linen_lamp)" fill="#000"/>
+    <ellipse cx="230" cy="202" rx="78" ry="9" fill="#fcefd6"/>
+    <ellipse cx="230" cy="202" rx="78" ry="9" fill="none" stroke="#7d5f33" stroke-width="1"/>
+    <path d="M146 320 A84 10 0 0 0 314 320" fill="none" stroke="#7d5f33" stroke-width="1.1"/>
+    <line x1="230" y1="202" x2="230" y2="193" stroke="#a8844f" stroke-width="1.6" stroke-opacity="1"/>
+    <circle cx="230" cy="191" r="3.4" fill="url(#stem_lamp)"/>
+    <path d="M186 204 L186 318" stroke="#fff" stroke-width="10" opacity=".25"/>
+<rect width="460" height="600" fill="url(#daylight)"/>
+<rect width="460" height="600" filter="url(#grain)"/>
+</svg>

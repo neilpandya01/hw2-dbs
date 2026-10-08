@@ -9,23 +9,28 @@ export default function MoodBoard({ mood }: { mood: Mood }) {
   if (!board) {
     return (
       <main className="mx-auto max-w-3xl p-6">
-        <Link href="/" className="text-sm text-sky-700 hover:underline">← Hub</Link>
+        <Link href="/" className="text-sm text-hub-text underline-offset-4 hover:underline">← Hub</Link>
         <h1 className="mt-4 text-3xl">{mood.name}</h1>
-        <p className="mt-2 text-neutral-500">Mood board coming soon.</p>
+        <p className="mt-2 text-hub-muted">Mood board coming soon.</p>
       </main>
     );
   }
 
-  const { theme } = board;
+  const { theme, fonts } = board;
   return (
-    <main className="min-h-screen" style={{ background: theme.bg, color: theme.text }}>
+    <main
+      className={`min-h-screen ${fonts?.className ?? ""}`}
+      style={{ background: theme.bg, color: theme.text, fontFamily: fonts?.body }}
+    >
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-8">
         <Link href="/" className="text-sm hover:underline" style={{ color: theme.muted }}>
           ← Hub
         </Link>
         <header className="mt-6 mb-10 flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-light tracking-tight sm:text-5xl">{mood.name}</h1>
+            <h1 className="text-4xl font-light tracking-tight sm:text-5xl" style={{ fontFamily: fonts?.display }}>
+              {mood.name}
+            </h1>
             <p className="mt-2 text-lg font-light" style={{ color: theme.muted }}>{board.tagline}</p>
             <p className="mt-4 text-sm leading-relaxed" style={{ color: theme.muted }}>{board.description}</p>
           </div>

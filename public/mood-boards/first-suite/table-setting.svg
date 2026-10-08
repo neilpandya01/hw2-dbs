@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" width="560" height="560">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="560" height="560" fill="#f4eee4"/>
+<defs>
+    <linearGradient id="cloth_table" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#f4eee4"/></linearGradient>
+    <filter id="linen_table" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8 .8" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.5  0 0 0 0 0.43  0 0 0 0 0.34  0 0 0 0.12 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <radialGradient id="plate_table" cx=".42" cy=".4" r=".65"><stop offset="0" stop-color="#fffdf9"/><stop offset="1" stop-color="#fbf8f2"/></radialGradient>
+    <linearGradient id="napkin_table" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3c6bf"/><stop offset="1" stop-color="#c39a92"/></linearGradient>
+    <radialGradient id="bloom_table" cx=".45" cy=".45" r=".6"><stop offset="0" stop-color="#6e2a34"/><stop offset="1" stop-color="#c39a92"/></radialGradient>
+    <filter id="napLinen_table" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .5" numOctaves="3" seed="6" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.5  0 0 0 0 0.43  0 0 0 0 0.34  0 0 0 0.14 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+  </defs>
+  <rect width="560" height="560" fill="url(#cloth_table)"/>
+  <rect width="560" height="560" filter="url(#linen_table)"/>
+  <!-- pressed fold in the tablecloth -->
+  <line x1="0" y1="54" x2="560" y2="54" stroke="#e6dccb" stroke-width="1.2" stroke-opacity="1"/>
+  <line x1="0" y1="55.5" x2="560" y2="55.5" stroke="#fff" stroke-width="1" stroke-opacity="0.9"/>
+
+  <!-- charger with a fine brass rim, dinner plate on it -->
+  <ellipse cx="282" cy="322" rx="124" ry="124" fill="#3b2a20" opacity="0.05" filter="url(#soft)"/>
+  <circle cx="280" cy="318" r="124" fill="#e6dccb" stroke="#7d5f33" stroke-width="1.5"/>
+  <circle cx="280" cy="318" r="119" fill="none" stroke="#a8844f" stroke-width=".75"/>
+  <circle cx="280" cy="318" r="100" fill="url(#plate_table)" stroke="#a49180" stroke-width=".75"/>
+  <circle cx="280" cy="318" r="96" fill="none" stroke="#a8844f" stroke-width=".6"/>
+  <circle cx="280" cy="318" r="66" fill="none" stroke="#e6dccb" stroke-width="1"/>
+  <!-- folded napkin on the plate, with a monogram -->
+  <g transform="rotate(0 280 318)">
+    <rect x="242" y="256" width="76" height="124" fill="url(#napkin_table)" stroke="#c39a92" stroke-width=".75"/>
+    <rect x="242" y="256" width="76" height="124" filter="url(#napLinen_table)"/>
+    <path d="M242 256 L288 256 L242 308 Z" fill="#e3c6bf" opacity=".9"/>
+    <line x1="288" y1="256" x2="242" y2="308" stroke="#c39a92" stroke-width="0.9" stroke-opacity="1"/>
+    <line x1="310" y1="256" x2="310" y2="380" stroke="#c39a92" stroke-width="1" stroke-opacity="1"/>
+    <rect x="248" y="262" width="64" height="112" fill="none" stroke="#fbf8f2" stroke-width=".6" stroke-dasharray="1.5 2" opacity=".9"/>
+    <text x="276" y="356" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-style="italic" font-size="15" fill="#6e2a34">S</text>
+  </g>
+
+  <!-- flatware: forks left, knife and spoon right, dessert spoon above -->
+  <g fill="#d4b98a" stroke="#a8844f" stroke-width=".75">
+    <rect x="109.4" y="222" width="3.2" height="30" rx="1.6"/><rect x="115.4" y="222" width="3.2" height="30" rx="1.6"/><rect x="121.4" y="222" width="3.2" height="30" rx="1.6"/><rect x="127.4" y="222" width="3.2" height="30" rx="1.6"/>
+    <path d="M108 248 H132 V256 C132 268 123 274 123 296 H117 C117 274 108 268 108 256 Z"/>
+    <path d="M117 296 C114 332 113 392 114 404 Q120 414 126 404 C127 392 126 332 123 296 Z"/>
+  </g>
+  <g fill="#d4b98a" stroke="#a8844f" stroke-width=".75">
+    <rect x="133.4" y="238" width="3.2" height="30" rx="1.6"/><rect x="139.4" y="238" width="3.2" height="30" rx="1.6"/><rect x="145.4" y="238" width="3.2" height="30" rx="1.6"/><rect x="151.4" y="238" width="3.2" height="30" rx="1.6"/>
+    <path d="M132 264 H156 V272 C156 284 147 290 147 312 H141 C141 290 132 284 132 272 Z"/>
+    <path d="M141 312 C138 348 137 394 138 406 Q144 416 150 406 C151 394 150 348 147 312 Z"/>
+  </g>
+  <g fill="#d4b98a" stroke="#a8844f" stroke-width=".75">
+    <path d="M418 310 V228 C418 221 421 218 424 220 C428 238 427 288 425 310 Z"/>
+    <path d="M417 310 H426 C427 348 428 404 426 412 Q421.5 420 417 412 C415 404 416 348 417 310 Z"/>
+    <line x1="418" y1="310" x2="426" y2="310" stroke="#7d5f33" stroke-width="0.6" stroke-opacity="1"/>
+  </g>
+  <g fill="#d4b98a" stroke="#a8844f" stroke-width=".75">
+    <path d="M443.5 270 C442 324 440 392 440.5 406 Q446 416 451.5 406 C452 392 450 324 448.5 270 Z"/>
+    <ellipse cx="446" cy="248" rx="14" ry="24"/>
+    <ellipse cx="443" cy="242" rx="6.3" ry="12" fill="#fff" fill-opacity=".35" stroke="none"/>
+  </g>
+  <g transform="rotate(90 280 168)"><g fill="#d4b98a" stroke="#a8844f" stroke-width=".75">
+    <path d="M277.5 116 C276 184 274 230 274.5 244 Q280 254 285.5 244 C286 230 284 184 282.5 116 Z"/>
+    <ellipse cx="280" cy="101" rx="10" ry="17"/>
+    <ellipse cx="277" cy="95" rx="4.5" ry="8.5" fill="#fff" fill-opacity=".35" stroke="none"/>
+  </g></g>
+
+  <!-- bread plate with butter knife, upper left -->
+  <ellipse cx="112" cy="122" rx="42" ry="42" fill="#3b2a20" opacity="0.05" filter="url(#soft)"/>
+  <circle cx="110" cy="120" r="42" fill="url(#plate_table)" stroke="#a49180" stroke-width=".75"/>
+  <circle cx="110" cy="120" r="38.5" fill="none" stroke="#3e4c5e" stroke-width="1"/>
+  <circle cx="110" cy="120" r="35" fill="none" stroke="#8494a8" stroke-width="2.5" stroke-dasharray="1 4.5"/>
+  <circle cx="110" cy="120" r="31.5" fill="none" stroke="#3e4c5e" stroke-width=".6"/>
+  <g transform="translate(110 120) rotate(-45) scale(.46)"><g fill="#d4b98a" stroke="#a8844f" stroke-width=".75">
+    <path d="M-4 -8 V-90 C-4 -97 -1 -100 2 -98 C6 -80 5 -30 3 -8 Z"/>
+    <path d="M-5 -8 H4 C5 30 6 86 4 94 Q-0.5 102 -5 94 C-7 86 -6 30 -5 -8 Z"/>
+    <line x1="-4" y1="-8" x2="4" y2="-8" stroke="#7d5f33" stroke-width="0.6" stroke-opacity="1"/>
+  </g></g>
+
+  <!-- water glass seen from above, upper right -->
+  <ellipse cx="438" cy="142" rx="36" ry="36" fill="#3b2a20" opacity="0.05" filter="url(#soft)"/>
+  <circle cx="436" cy="140" r="36" fill="#fff" fill-opacity=".55" stroke="#857462" stroke-width="1"/>
+  <circle cx="436" cy="140" r="33" fill="none" stroke="#a49180" stroke-width=".6" opacity=".6"/>
+  <circle cx="436" cy="140" r="22" fill="#d3dfe6" fill-opacity=".35" stroke="#c8ae86" stroke-width=".6"/>
+  <circle cx="436" cy="140" r="8" fill="none" stroke="#a49180" stroke-width=".6" opacity=".6"/>
+  <path d="M410 122 A32 32 0 0 1 430 108" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- bud vase with a single rose, seen from above -->
+  <ellipse cx="281" cy="96" rx="20" ry="20" fill="#3b2a20" opacity="0.06" filter="url(#soft)"/>
+  <circle cx="280" cy="94" r="19" fill="#fff" fill-opacity=".6" stroke="#857462" stroke-width="1"/>
+  <circle cx="280" cy="94" r="16" fill="#d3dfe6" fill-opacity=".4" stroke="#a49180" stroke-width=".5"/>
+  <path d="M286 88 C306 72 320 74 326 82 C314 90 298 92 286 88 Z" fill="#7c8a6a" stroke="#55644a" stroke-width=".75"/>
+  <line x1="288" y1="88" x2="322" y2="81" stroke="#55644a" stroke-width="0.6" stroke-opacity="1"/>
+  <path d="M274 98 C258 108 246 104 242 96 C252 90 264 92 274 98 Z" fill="#7c8a6a" stroke="#55644a" stroke-width=".75"/>
+  <circle cx="280" cy="94" r="13" fill="url(#bloom_table)" stroke="#6e2a34" stroke-width=".75"/>
+  <path d="M269 94 A11 11 0 1 1 286.6 102.8" fill="none" stroke="#6e2a34" stroke-width=".8" transform="rotate(0 280 94)"/><path d="M272 94 A8 8 0 1 1 284.8 100.4" fill="none" stroke="#6e2a34" stroke-width=".8" transform="rotate(70 280 94)"/><path d="M274 94 A6 6 0 1 1 283.6 98.8" fill="none" stroke="#6e2a34" stroke-width=".8" transform="rotate(150 280 94)"/><path d="M276 94 A4 4 0 1 1 282.4 97.2" fill="none" stroke="#6e2a34" stroke-width=".8" transform="rotate(230 280 94)"/><path d="M277.5 94 A2.5 2.5 0 1 1 281.5 96" fill="none" stroke="#6e2a34" stroke-width=".8" transform="rotate(300 280 94)"/>
+  <path d="M271 86 A11 11 0 0 1 284 83" fill="none" stroke="#e3c6bf" stroke-width="1.2" opacity=".8"/>
+
+  <!-- salt and pepper either side -->
+  
+    <ellipse cx="229" cy="96" rx="13" ry="13" fill="#3b2a20" opacity="0.06" filter="url(#soft)"/>
+    <circle cx="228" cy="94" r="13" fill="#fbf8f2" stroke="#a8844f" stroke-width="1"/>
+    <circle cx="228" cy="94" r="9" fill="#d4b98a" stroke="#a8844f" stroke-width=".6"/>
+    <circle cx="225" cy="92" r=".9" fill="#7d5f33"/><circle cx="231" cy="92" r=".9" fill="#7d5f33"/><circle cx="228" cy="97" r=".9" fill="#7d5f33"/>
+    <ellipse cx="333" cy="96" rx="13" ry="13" fill="#3b2a20" opacity="0.06" filter="url(#soft)"/>
+    <circle cx="332" cy="94" r="13" fill="#e6dccb" stroke="#a8844f" stroke-width="1"/>
+    <circle cx="332" cy="94" r="9" fill="#d4b98a" stroke="#a8844f" stroke-width=".6"/>
+    <circle cx="329" cy="92" r=".9" fill="#7d5f33"/><circle cx="335" cy="92" r=".9" fill="#7d5f33"/><circle cx="332" cy="97" r=".9" fill="#7d5f33"/>
+<rect width="560" height="560" fill="url(#daylight)"/>
+<rect width="560" height="560" filter="url(#grain)"/>
+</svg>

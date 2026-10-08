@@ -15,7 +15,12 @@ export const moods: Mood[] = [
     keywords: ["Nocturnal", "Hushed", "Nostalgic"],
     swatches: ["#05070f", "#0b1330", "#1a2752", "#5b8cff", "#7fd3ff", "#ffc979"],
   },
-  { slug: "mood-2", name: "Mood 2", keywords: ["TBD", "TBD", "TBD"], swatches: [] },
+  {
+    slug: "first-suite",
+    name: "First Suite",
+    keywords: ["Private", "Polished", "Quiet luxury"],
+    swatches: ["#f4eee4", "#dcc7a4", "#a8844f", "#6e2a34", "#3e4c5e", "#55644a", "#3b2a20"],
+  },
   { slug: "mood-3", name: "Mood 3", keywords: ["TBD", "TBD", "TBD"], swatches: [] },
 ];
 

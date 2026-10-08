@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+<defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .23  0 0 0 0 .16  0 0 0 0 .12  0 0 0 0.035 0"/></filter>
+  <radialGradient id="daylight" cx=".3" cy="0" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="600" height="440" fill="#f4eee4"/>
+<defs>
+    <linearGradient id="duvet_turn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fbf8f2"/></linearGradient>
+    <linearGradient id="sheet_turn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4eee4"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+    <filter id="cotton_turn" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .6" numOctaves="3" seed="3" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.5  0 0 0 0 0.43  0 0 0 0 0.34  0 0 0 0.1 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="head_turn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcc7a4"/><stop offset="1" stop-color="#c8ae86"/></linearGradient>
+    <filter id="leather_turn" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="3" seed="6" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.45  0 0 0 0 0.36  0 0 0 0 0.25  0 0 0 0.12 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <linearGradient id="pillow_turn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e6dccb"/></linearGradient>
+    <linearGradient id="side_turn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e6dccb"/><stop offset="1" stop-color="#dcc7a4"/></linearGradient>
+    <linearGradient id="box_turn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dcc7a4"/><stop offset="1" stop-color="#c8ae86"/></linearGradient>
+    <linearGradient id="throw_turn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3c6bf"/><stop offset=".2" stop-color="#c39a92"/><stop offset="1" stop-color="#c39a92"/></linearGradient>
+    <filter id="knit_turn" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".25 1.2" numOctaves="3" seed="8" result="n"/><feColorMatrix in="n" result="c" values="0 0 0 0 0.45  0 0 0 0 0.25  0 0 0 0 0.25  0 0 0 0.18 0"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+    <radialGradient id="choc_turn" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#6b4a36"/><stop offset="1" stop-color="#3b2a20"/></radialGradient>
+  </defs>
+  <!-- cabin floor / carpet to the right of the bed -->
+  <rect x="500" width="100" height="440" fill="#f4eee4"/>
+  <!-- headboard -->
+  <rect width="524" height="60" fill="url(#head_turn)"/>
+  <rect width="524" height="60" filter="url(#leather_turn)"/>
+  <line x1="124" y1="0" x2="124" y2="60" stroke="#a49180" stroke-width="0.75" stroke-opacity="1"/><line x1="248" y1="0" x2="248" y2="60" stroke="#a49180" stroke-width="0.75" stroke-opacity="1"/><line x1="372" y1="0" x2="372" y2="60" stroke="#a49180" stroke-width="0.75" stroke-opacity="1"/>
+  <line x1="0" y1="6" x2="524" y2="6" stroke="#a8844f" stroke-width="0.75" stroke-opacity="1"/>
+  <line x1="0" y1="60" x2="524" y2="60" stroke="#a8844f" stroke-width="1.2" stroke-opacity="1"/>
+  <line x1="524" y1="0" x2="524" y2="60" stroke="#a8844f" stroke-width="1" stroke-opacity="1"/>
+  <!-- mattress side -->
+  <rect x="500" y="60" width="18" height="380" fill="url(#side_turn)"/>
+  <line x1="518" y1="60" x2="518" y2="440" stroke="#a49180" stroke-width="0.75" stroke-opacity="1"/>
+  <!-- sheet on the bed -->
+  <rect y="60" width="500" height="380" fill="url(#sheet_turn)"/>
+  <rect y="60" width="500" height="380" filter="url(#cotton_turn)"/>
+  <line x1="500" y1="60" x2="500" y2="440" stroke="#c8ae86" stroke-width="0.75" stroke-opacity="1"/>
+
+  <!-- pillow -->
+  <path d="M90 74 Q216 64 342 74 Q352 110 342 146 Q216 156 90 146 Q80 110 90 74 Z" fill="#e6dccb" stroke="#3e4c5e" stroke-width="1.5"/>
+  <ellipse cx="196" cy="176" rx="150" ry="6" fill="#3b2a20" opacity="0.06" filter="url(#soft)"/>
+  <path d="M58 92 Q196 80 334 92 Q346 132 334 172 Q196 184 58 172 Q46 132 58 92 Z" fill="url(#pillow_turn)" stroke="#c8ae86" stroke-width=".75"/>
+  <path d="M58 92 Q196 80 334 92 Q346 132 334 172 Q196 184 58 172 Q46 132 58 92 Z" fill="none" stroke="#3e4c5e" stroke-width="1.8"/>
+  <path d="M68 99 Q196 88 324 99 Q335 132 324 165 Q196 176 68 165 Q57 132 68 99 Z" fill="none" stroke="#8494a8" stroke-width=".6" stroke-dasharray="2 2"/>
+  <path d="M140 116 Q190 130 250 120" fill="none" stroke="#dcc7a4" stroke-width="1.2"/>
+
+  <!-- duvet: top cuff folded back, the corner turned down diagonally -->
+  <path d="M0 218 H500 V440 H0 Z" fill="url(#duvet_turn)"/>
+  <path d="M0 218 H500 V440 H0 Z" filter="url(#cotton_turn)"/>
+  <!-- turned-back corner reveals the sheet -->
+  <path d="M300 218 L500 218 L500 400 Z" fill="url(#sheet_turn)"/>
+  <path d="M300 218 L500 218 L500 400 Z" filter="url(#cotton_turn)"/>
+  <!-- the folded-back flap -->
+  <ellipse cx="370" cy="300" rx="50" ry="4" fill="#3b2a20" opacity="0.05" filter="url(#soft)"/>
+  <line x1="300" y1="218" x2="500" y2="400" stroke="#a49180" stroke-width="1" stroke-opacity="1"/>
+  <path d="M300 218 L500 400 L319 417 Z" fill="#fff" stroke="#a49180" stroke-width=".75"/>
+  <path d="M300 218 L500 400 L319 417 Z" filter="url(#cotton_turn)"/>
+  <path d="M300 218 L319 417 L500 400" fill="none" stroke="#a8844f" stroke-width="1"/>
+  <path d="M308 234 L324 406 L478 392" fill="none" stroke="#a8844f" stroke-width=".5" stroke-dasharray="2 2"/>
+  <!-- cuff along the top of the duvet -->
+  <path d="M0 218 H300 L306 248 H0 Z" fill="#fff" stroke="#a49180" stroke-width=".75"/>
+  <line x1="0" y1="242" x2="302" y2="242" stroke="#a8844f" stroke-width="0.6" stroke-opacity="1"/>
+  <line x1="0" y1="248" x2="306" y2="248" stroke="#dcc7a4" stroke-width="1" stroke-opacity="1"/>
+  <!-- dusty-rose throw across the foot, its end folded -->
+  <ellipse cx="140" cy="396" rx="150" ry="3" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+  <path d="M0 394 L262 394 L286 440 L0 440 Z" fill="url(#throw_turn)" stroke="#c39a92" stroke-width=".75"/>
+  <path d="M0 394 L262 394 L286 440 L0 440 Z" filter="url(#knit_turn)"/>
+  <line x1="0" y1="402" x2="266" y2="402" stroke="#fbf8f2" stroke-width="0.75" stroke-opacity="0.8"/>
+  <line x1="0" y1="430" x2="281" y2="430" stroke="#a65a69" stroke-width="0.75" stroke-opacity="0.6"/>
+  <line x1="266" y1="402" x2="270" y2="404" stroke="#c39a92" stroke-width="0.8" stroke-opacity="1"/><line x1="269.6" y1="408.8" x2="273.6" y2="410.8" stroke="#c39a92" stroke-width="0.8" stroke-opacity="1"/><line x1="273.2" y1="415.6" x2="277.2" y2="417.6" stroke="#c39a92" stroke-width="0.8" stroke-opacity="1"/><line x1="276.8" y1="422.4" x2="280.8" y2="424.4" stroke="#c39a92" stroke-width="0.8" stroke-opacity="1"/><line x1="280.4" y1="429.2" x2="284.4" y2="431.2" stroke="#c39a92" stroke-width="0.8" stroke-opacity="1"/><line x1="284" y1="436" x2="288" y2="438" stroke="#c39a92" stroke-width="0.8" stroke-opacity="1"/>
+
+  <!-- chocolate box on the duvet -->
+  <g transform="rotate(-6 150 318)">
+    <ellipse cx="150" cy="344" rx="52" ry="4" fill="#3b2a20" opacity="0.08" filter="url(#soft)"/>
+    <rect x="98" y="292" width="104" height="52" fill="url(#box_turn)" stroke="#a8844f" stroke-width=".75"/>
+    <rect x="104" y="298" width="92" height="40" fill="#fbf8f2" stroke="#a8844f" stroke-width=".5"/>
+    <line x1="150" y1="298" x2="150" y2="338" stroke="#a8844f" stroke-width="0.5" stroke-opacity="1"/>
+    <rect x="114" y="304" width="28" height="28" rx="3" fill="url(#choc_turn)"/>
+    <path d="M120 316 Q128 310 136 316" fill="none" stroke="#d4b98a" stroke-width=".8"/>
+    <circle cx="172" cy="318" r="14" fill="url(#choc_turn)"/>
+    <path d="M164 316 Q172 310 180 316 M164 321 Q172 315 180 321" fill="none" stroke="#d4b98a" stroke-width=".8"/>
+    <!-- bordeaux ribbon round the box, bow at the corner -->
+    <rect x="98" y="336" width="104" height="5" fill="#6e2a34"/>
+    <rect x="190" y="292" width="5" height="52" fill="#6e2a34"/>
+    <path d="M192.5 338.5 C182 330 178 344 192.5 338.5 C204 330 208 344 192.5 338.5 Z" fill="#a65a69" stroke="#6e2a34" stroke-width=".9"/>
+    <path d="M192.5 338.5 L186 352 M192.5 338.5 L200 351" stroke="#6e2a34" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="192.5" cy="338.5" r="2.4" fill="#6e2a34"/>
+  </g>
+  <!-- the note card -->
+  <g transform="rotate(5 250 330)">
+    <ellipse cx="254" cy="362" rx="50" ry="4" fill="#3b2a20" opacity="0.07" filter="url(#soft)"/>
+    <rect x="210" y="300" width="96" height="62" fill="#fbf8f2" stroke="#a49180" stroke-width=".75"/>
+    <rect x="215" y="305" width="86" height="52" fill="none" stroke="#a8844f" stroke-width=".5"/>
+    <text x="258" y="338" text-anchor="middle" font-family="'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif" font-style="italic" font-size="18" fill="#3b2a20">Sleep well</text>
+    <line x1="244" y1="346" x2="272" y2="346" stroke="#a8844f" stroke-width="0.5" stroke-opacity="1"/>
+  </g>
+<rect width="600" height="440" fill="url(#daylight)"/>
+<rect width="600" height="440" filter="url(#grain)"/>
+</svg>
