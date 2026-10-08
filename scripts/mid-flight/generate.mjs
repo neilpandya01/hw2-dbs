@@ -4,9 +4,10 @@ import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { scenes as views } from "./scenes-views.mjs";
 import { scenes as cabin } from "./scenes-cabin.mjs";
 import { scenes as things } from "./scenes-things.mjs";
+import { scenes as boarding } from "./scenes-boarding.mjs";
 
 const OUT = new URL("../../public/mood-boards/mid-flight/", import.meta.url);
-const all = { ...views, ...cabin, ...things };
+const all = { ...views, ...cabin, ...things, ...boarding };
 
 mkdirSync(OUT, { recursive: true });
 for (const old of readdirSync(OUT)) if (!(old in all)) rmSync(new URL(old, OUT));

@@ -1,5 +1,5 @@
 // Cabin details, close up: the things around your seat at 2 AM.
-import { rng, f, C, blur, svg } from "./lib.mjs";
+import { rng, f, C, blur, svg, seatBack, seatDefs } from "./lib.mjs";
 
 export const scenes = {};
 
@@ -165,38 +165,62 @@ scenes["seatbelt-buckle.svg"] = svg(
   <circle cx="232" cy="170" r="10" fill="${C.amber}" opacity=".6" filter="url(#b4)"/>`
 );
 
-// 11. Galley curtain at the front, warm light spilling through the gap.
+// 11. Galley curtain from the aisle: seat rows on both sides leading up to the
+//     front bulkhead, the curtain drawn across the aisle, warm light through the gap.
 {
+  const W = 560, H = 620, vx = 280, vy = 230, sb = 0.42;
+  const r = rng(211);
+  const bx0 = vx - 620 * sb, bx1 = vx + 620 * sb, by0 = vy - 260 * sb, by1 = vy + 430 * sb;
+  const ox0 = vx - 72 * sb, ox1 = vx + 72 * sb, oy0 = vy - 170 * sb;
   let folds = "";
-  for (let x = 130; x < 370; x += 20) folds += `<rect x="${x}" y="110" width="20" height="360" fill="url(#fold11)"/>`;
+  for (let x = ox0; x < ox1 - 1; x += 7) folds += `<rect x="${f(x)}" y="${f(oy0)}" width="7" height="${f(by1 - oy0)}" fill="url(#fold11)"/>`;
+  let rows = "", floorLights = "";
+  for (let k = 0; k < 10; k++) {
+    const s = 1 - (k / 10) * (1 - sb);
+    for (const side of [-1, 1]) floorLights += `<circle cx="${f(vx + side * 64 * s)}" cy="${f(vy + 425 * s)}" r="${f(3 * s)}" fill="${C.cyan}"/>`;
+  }
+  const screens = [C.cyan, C.led, C.violet];
+  for (let i = 5; i >= 0; i--) {
+    const s = sb * 1.12 + (1 - sb * 1.12) * Math.pow(0.66, i) * (i === 0 ? 1 : 1);
+    const ss = Math.pow(0.8, i);
+    const top = vy + 100 * ss, bottom = vy + 430 * ss;
+    for (const [x0, x1] of [[vx - 560 * ss, vx - 66 * ss], [vx + 66 * ss, vx + 560 * ss]]) {
+      const gap = 6 * ss, sw = (x1 - x0 - gap * 2) / 3;
+      for (let k = 0; k < 3; k++)
+        rows += seatBack(x0 + k * (sw + gap), top, sw, bottom - top, ss, { head: r() > 0.4, headTilt: (r() - 0.5) * 24, topFace: 16 * ss, screen: r() > 0.7 ? screens[Math.floor(r() * 3)] : null });
+    }
+  }
   scenes["galley-curtain.svg"] = svg(
-    500,
-    620,
+    W,
+    H,
     `<defs>
-      <linearGradient id="fold11" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a1128"/><stop offset=".5" stop-color="#1e2c5e"/><stop offset="1" stop-color="#0a1128"/></linearGradient>
-      <linearGradient id="spill11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.amber}" stop-opacity=".55"/><stop offset="1" stop-color="${C.amber}" stop-opacity="0"/></linearGradient>
+      <linearGradient id="fold11" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a1128"/><stop offset=".5" stop-color="#22306a"/><stop offset="1" stop-color="#0a1128"/></linearGradient>
+      <linearGradient id="bulk11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2856"/><stop offset="1" stop-color="#0c1430"/></linearGradient>
+      <linearGradient id="spill11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.amber}" stop-opacity=".45"/><stop offset="1" stop-color="${C.amber}" stop-opacity="0"/></linearGradient>
       <linearGradient id="slit11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.amberHi}"/><stop offset="1" stop-color="${C.amber}"/></linearGradient>
-      ${blur("b6", 6)}${blur("b18", 18)}
+      <linearGradient id="carpet11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1129"/><stop offset="1" stop-color="#141e44"/></linearGradient>
+      ${seatDefs}${blur("b3", 3)}${blur("b6", 6)}${blur("b10", 10)}
     </defs>
-    <rect width="500" height="620" fill="#05070f"/>
-    <polygon points="0,0 500,0 370,110 130,110" fill="#0c1534"/>
-    <line x1="0" y1="10" x2="130" y2="110" stroke="${C.led}" stroke-width="10" opacity=".5" filter="url(#b6)"/>
-    <line x1="500" y1="10" x2="370" y2="110" stroke="${C.led}" stroke-width="10" opacity=".5" filter="url(#b6)"/>
-    <line x1="0" y1="10" x2="130" y2="110" stroke="${C.ledHi}" stroke-width="2"/>
-    <line x1="500" y1="10" x2="370" y2="110" stroke="${C.ledHi}" stroke-width="2"/>
-    <polygon points="0,0 130,110 130,470 0,620" fill="#0a1026"/>
-    <polygon points="500,0 370,110 370,470 500,620" fill="#0a1026"/>
-    <polygon points="130,470 370,470 500,620 0,620" fill="#0b1229"/>
-    <rect x="292" y="104" width="30" height="372" fill="${C.amber}" opacity=".6" filter="url(#b18)"/>
-    <rect x="300" y="110" width="14" height="360" fill="url(#slit11)"/>
+    <rect width="${W}" height="${H}" fill="#05070f"/>
+    <polygon points="150,0 410,0 ${f(ox1 + 20)},${f(by0)} ${f(ox0 - 20)},${f(by0)}" fill="#0f1a42"/>
+    <polygon points="0,0 150,0 ${f(ox0 - 20)},${f(by0)} ${f(bx0)},${f(by0 + 20)} 0,230" fill="#0b1434"/>
+    <polygon points="${W},0 410,0 ${f(ox1 + 20)},${f(by0)} ${f(bx1)},${f(by0 + 20)} ${W},230" fill="#0b1434"/>
+    <line x1="150" y1="0" x2="${f(ox0 - 20)}" y2="${f(by0)}" stroke="${C.led}" stroke-width="12" opacity=".55" filter="url(#b10)"/>
+    <line x1="410" y1="0" x2="${f(ox1 + 20)}" y2="${f(by0)}" stroke="${C.led}" stroke-width="12" opacity=".55" filter="url(#b10)"/>
+    <line x1="150" y1="0" x2="${f(ox0 - 20)}" y2="${f(by0)}" stroke="${C.ledHi}" stroke-width="2"/>
+    <line x1="410" y1="0" x2="${f(ox1 + 20)}" y2="${f(by0)}" stroke="${C.ledHi}" stroke-width="2"/>
+    <rect x="${f(bx0)}" y="${f(by0)}" width="${f(bx1 - bx0)}" height="${f(by1 - by0)}" fill="url(#bulk11)"/>
+    <path d="M${f(bx0)} ${f(by0 + 40)} H${f(ox0 - 4)} M${f(ox1 + 4)} ${f(by0 + 40)} H${f(bx1)}" stroke="${C.ledHi}" stroke-opacity=".2"/>
+    <rect x="${f(vx + 30)}" y="${f(oy0 - 26)}" width="22" height="12" rx="2" fill="#05070f" stroke="#2c3a72"/>
+    <circle cx="${f(vx + 41)}" cy="${f(oy0 - 20)}" r="3" fill="${C.amber}"/><circle cx="${f(vx + 41)}" cy="${f(oy0 - 20)}" r="8" fill="${C.amber}" opacity=".4" filter="url(#b3)"/>
+    <rect x="${f(ox0 - 6)}" y="${f(oy0 - 4)}" width="${f(ox1 - ox0 + 12)}" height="5" rx="2" fill="#2a3670"/>
+    <rect x="${f(vx + 2)}" y="${f(oy0)}" width="8" height="${f(by1 - oy0)}" fill="${C.amber}" opacity=".7" filter="url(#b6)"/>
     ${folds}
-    <rect x="130" y="110" width="168" height="360" fill="#000" opacity=".15"/>
-    <rect x="314" y="110" width="56" height="360" fill="#000" opacity=".1"/>
-    <path d="M298 110 Q296 290 300 470" stroke="${C.amber}" stroke-opacity=".7" stroke-width="2" fill="none"/>
-    <path d="M316 110 Q318 290 314 470" stroke="${C.amber}" stroke-opacity=".5" stroke-width="2" fill="none"/>
-    <rect x="130" y="104" width="240" height="8" rx="3" fill="#2a3670"/>
-    <polygon points="296,470 318,470 380,620 230,620" fill="url(#spill11)"/>
-    <path d="M0 620 L0 520 Q30 500 80 510 L90 620 Z M500 620 L500 520 Q470 500 420 510 L410 620 Z" fill="#111a3a"/>`
+    <rect x="${f(vx + 3)}" y="${f(oy0)}" width="5" height="${f(by1 - oy0)}" fill="url(#slit11)"/>
+    <polygon points="${f(ox0)},${f(by1)} ${f(ox1)},${f(by1)} ${vx + 130},${H} ${vx - 130},${H}" fill="url(#carpet11)"/>
+    <polygon points="${f(vx + 2)},${f(by1)} ${f(vx + 9)},${f(by1)} ${vx + 70},${H} ${vx - 40},${H}" fill="url(#spill11)"/>
+    <g filter="url(#b3)">${floorLights}</g>${floorLights}
+    ${rows}`
   );
 }
 
