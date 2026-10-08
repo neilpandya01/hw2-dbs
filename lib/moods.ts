@@ -25,7 +25,7 @@ export const moods: Mood[] = [
     slug: "through-the-airport",
     name: "Process Through the Airport",
     keywords: ["Legible", "Systematic", "Loud"],
-    swatches: ["#111214", "#ffcc00", "#ffffff", "#d8d6d0", "#1f9d55", "#ff8a00", "#e0322b", "#1d5fd1"],
+    swatches: ["#111214", "#ffcc00", "#ffffff", "#e9e8e4", "#16793c", "#ff8a00", "#c8261f", "#1d5fd1"],
   },
 ];
 

@@ -88,6 +88,48 @@
   font-variant-numeric: lining-nums;
 }
 
+/* ---------- Process Through the Airport design tokens ---------- */
+/* Fonts are loaded per-system with next/font (components/ui/through-the-airport/fonts.ts). */
+@theme inline {
+  --font-ap: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-ap-cond: var(--font-barlow-condensed), "Arial Narrow", ui-sans-serif, sans-serif;
+}
+
+@theme {
+  /* color roles */
+  --color-ap-bg: #e9e8e4; /* terminal floor */
+  --color-ap-surface: #ffffff; /* sign face, bag tag */
+  --color-ap-raised: #dcdad5; /* concrete: hover, pressed */
+  --color-ap-sign: #111214; /* sign black: text, panels, chosen */
+  --color-ap-text: #111214;
+  --color-ap-muted: #55595f; /* steel grey */
+  --color-ap-sign-muted: #a9adb3; /* secondary text on a black sign panel */
+  --color-ap-border: #c9c7c1; /* floor seams, decorative */
+  --color-ap-control: #6b7078; /* stanchion: input / checkbox outlines, ≥3:1 */
+  --color-ap-accent: #ffcc00; /* signal yellow: primary action only */
+  --color-ap-accent-pressed: #e6b800;
+  --color-ap-focus: #1d5fd1; /* information blue: focus ring, links, info */
+  --color-ap-success: #16793c; /* boarding green */
+  --color-ap-warning: #ff8a00; /* delayed amber (always with black text) */
+  --color-ap-error: #c8261f; /* cancelled red */
+
+  /* shape: sign panels, barely rounded */
+  --radius-ap-sm: 2px;
+  --radius-ap-md: 3px;
+
+  /* wayfinding arrows lighting up one after another: "this way, still going" */
+  --animate-ap-march: ap-march 1.2s steps(1) infinite;
+  @keyframes ap-march {
+    0%, 33% { opacity: 1; }
+    34%, 100% { opacity: 0.18; }
+  }
+}
+
+/* Disabled controls are hatched, like a closed lane. A utility so it takes variants (disabled:ap-hatch). */
+@utility ap-hatch {
+  background-image: repeating-linear-gradient(135deg, rgb(17 18 20 / 0.08) 0 6px, transparent 6px 12px);
+}
+
 /* Hub + default page colors: a mid-light neutral stone, so moving between
    the dark (Mid Flight) and light (First Suite) pages isn't a glare jump. */
 @theme {
