@@ -52,7 +52,7 @@ export const scenes = {};
   );
 }
 
-// 2. Terminal entrance: the giant yellow 3, the glass wall, the sliding doors.
+// 2. Terminal entrance: the giant yellow 3, the glass wall, the doors parting for a traveler.
 {
   const W = 640, H = 640;
   let mull = "";
@@ -76,17 +76,28 @@ export const scenes = {};
     ${t(100, 356, "3", { size: 260, fill: C.yellow, anchor: "middle" })}
     ${picto("departures", 64, 400, 72)}
     ${t(100, 508, "Gates A · B · C", { size: 14, weight: 400, anchor: "middle", len: 104 })}
-    <!-- sliding doors -->
+    <!-- sliding doors, parting as the traveler reaches them -->
     ${rect(250, 296, 340, 248, C.steel)}
-    ${rect(262, 310, 154, 230, C.glassLo)}${rect(424, 310, 154, 230, C.glassLo)}
-    ${rect(416, 310, 8, 230, C.steelLo)}
-    ${rect(262, 404, 154, 22, C.sign)}${rect(424, 404, 154, 22, C.sign)}
-    ${t(339, 420, "AUTOMATIC DOOR", { size: 11, anchor: "middle", ls: 2, len: 120 })}
-    ${t(501, 420, "AUTOMATIC DOOR", { size: 11, anchor: "middle", ls: 2, len: 120 })}
-    ${rect(380, 318, 80, 80, C.sign)}${picto("departures", 392, 330, 56)}
-    <!-- a traveler heading in -->
-    ${picto("man", 440, 382, 150, C.sign)}
-    ${picto("baggage", 530, 478, 64, C.sign, C.glassLo)}
+    ${rect(262, 310, 316, 230, "#5e7d8c")}
+    ${rect(262, 470, 316, 70, "#c9cdc9")}
+    ${rect(262, 310, 112, 230, C.glassLo)}${rect(466, 310, 112, 230, C.glassLo)}
+    ${rect(370, 310, 6, 230, C.steelLo)}${rect(464, 310, 6, 230, C.steelLo)}
+    ${rect(262, 404, 112, 22, C.sign)}${rect(466, 404, 112, 22, C.sign)}
+    ${t(318, 420, "AUTOMATIC", { size: 11, anchor: "middle", ls: 2, len: 90 })}
+    ${t(522, 420, "AUTOMATIC", { size: 11, anchor: "middle", ls: 2, len: 90 })}
+    ${rect(380, 206, 80, 80, C.sign)}${picto("departures", 392, 218, 56)}
+    <!-- a traveler from behind, mid-stride, about to walk through, pulling a bag -->
+    <g fill="${C.sign}">
+      <rect x="401" y="462" width="17" height="86" rx="7" transform="rotate(9 409 462)"/>
+      <rect x="424" y="462" width="17" height="84" rx="7" transform="rotate(-11 432 462)"/>
+      <rect x="386" y="394" width="12" height="64" rx="6" transform="rotate(12 392 396)"/>
+      <rect x="444" y="394" width="12" height="62" rx="6" transform="rotate(-34 450 396)"/>
+      <rect x="395" y="388" width="52" height="84" rx="12"/>
+      <circle cx="421" cy="370" r="15"/>
+    </g>
+    ${line(484, 444, 512, 486, C.steelLo, 4)}
+    <g transform="rotate(-10 524 552)">${rect(500, 482, 56, 70, C.blue, { r: 8 })}${rect(512, 482, 4, 70, "#174ca8")}${rect(540, 482, 4, 70, "#174ca8")}</g>
+    <circle cx="512" cy="552" r="5" fill="${C.sign}"/>
     <!-- pavement and tactile strip -->
     ${rect(0, 540, W, 100, C.concrete)}
     ${rect(0, 552, W, 18, C.yellow)}
@@ -145,42 +156,6 @@ export const scenes = {};
     ${head(cols.time, "TIME")}${head(cols.flight, "FLIGHT")}${head(cols.dest, "DESTINATION")}${head(cols.gate, "GATE")}${head(cols.rem, "REMARKS")}
     ${body}`,
     { bg: C.floor },
-  );
-}
-
-// 4. Split-flap macro: the gate number mid-flip, B21 becoming B22.
-{
-  const W = 640, H = 560, tw = 168, th = 252, y0 = 150, xs = [44, 236, 428], fs = 210;
-  const clipT = (id, x) => `<clipPath id="${id}"><rect x="${x}" y="${y0}" width="${tw}" height="${th / 2}"/></clipPath>`;
-  const clipB = (id, x) => `<clipPath id="${id}"><rect x="${x}" y="${y0 + th / 2}" width="${tw}" height="${th / 2}"/></clipPath>`;
-  const glyph = (x, ch, fill = C.white) => t(x + tw / 2, y0 + th / 2 + fs * 0.36, ch, { size: fs, anchor: "middle", fill });
-  const pins = (x) => `${rect(x - 10, y0 + th / 2 - 7, 12, 14, C.steel, { r: 2 })}${rect(x + tw - 2, y0 + th / 2 - 7, 12, 14, C.steel, { r: 2 })}`;
-  // The falling flap, past horizontal: a foreshortened trapezoid under the hinge
-  // showing the new 2's lower half, squashed.
-  const x3 = xs[2], hy = y0 + th / 2, fh = th / 2 * 0.42;
-  const fall = `<clipPath id="fallc"><path d="M${x3} ${hy} L${x3 + tw} ${hy} L${x3 + tw + 10} ${hy + fh} L${x3 - 10} ${hy + fh} Z"/></clipPath>
-    <path d="M${x3} ${hy} L${x3 + tw} ${hy} L${x3 + tw + 10} ${hy + fh} L${x3 - 10} ${hy + fh} Z" fill="#30343a"/>
-    <g clip-path="url(#fallc)"><g transform="translate(0 ${f(hy)}) scale(1 .42) translate(0 ${f(-hy)})"><g clip-path="url(#cB3)">${glyph(x3, "2", C.yellow)}</g></g></g>
-    ${rect(x3 - 10, hy + fh, tw + 20, 10, "#000", { o: 0.35 })}`;
-  scenes["flap-closeup.svg"] = svg(
-    W,
-    H,
-    `<defs>${clipT("cT1", xs[0])}${clipB("cB1", xs[0])}${clipT("cT3", xs[2])}${clipB("cB3", xs[2])}</defs>
-    ${rect(0, 0, W, H, C.board)}
-    ${rect(0, 0, W, 96, C.sign)}
-    ${t(44, 62, "GATE", { size: 26, fill: C.steelHi, ls: 8, len: 110 })}
-    ${t(W - 44, 62, "UA 914 · LONDON", { size: 26, fill: C.yellow, anchor: "end", len: 250 })}
-    ${flap(xs[0], y0, tw, th, "B", { size: fs, color: C.yellow })}${pins(xs[0])}
-    ${flap(xs[1], y0, tw, th, "2", { size: fs, color: C.yellow })}${pins(xs[1])}
-    <!-- third tile: new top already showing, old bottom still there, flap falling over it -->
-    ${rect(x3, y0, tw, th / 2, C.flap, { r: 1.5 })}<g clip-path="url(#cT3)">${glyph(x3, "2", C.yellow)}</g>
-    ${rect(x3, y0 + th / 2, tw, th / 2, C.flapLo, { r: 1.5 })}<g clip-path="url(#cB3)">${glyph(x3, "1", C.yellow)}</g>
-    ${fall}
-    ${line(x3, hy, x3 + tw, hy, "#0b0c0e", 10)}${pins(x3)}
-    ${line(xs[0], hy, xs[0] + tw, hy, "#0b0c0e", 10)}${line(xs[1], hy, xs[1] + tw, hy, "#0b0c0e", 10)}
-    <!-- next row peeking in at the bottom -->
-    ${flapRow(44, 470, "BOARDING", 64, 90, 6, { color: C.white })}`,
-    { bg: C.board },
   );
 }
 

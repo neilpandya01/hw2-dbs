@@ -1,6 +1,6 @@
 // Scenes drawn from your own eyes, at a traveler's eye height: walking into
 // check-in, joining the security queue, reaching passport control, waiting at
-// the belt, and heading out through the doors. Each space gets its own
+// the belt, heading out through the doors, and scanning your pass to board. Each space gets its own
 // architecture so they don't read as the same room with different signs.
 import { f, C, t, rect, line, svg, picto, arrow, panel, cam } from "./lib.mjs";
 
@@ -146,8 +146,6 @@ const rods = (v, xs, y, z, h) => xs.map((x) => line(...v.p(x, y, z), ...v.p(x, h
     ${Array.from({ length: 12 }, (_, i) => line(...v.p(-5.5, 0, 1 + i * 2.4), ...v.p(-5.5, hgt, 1 + i * 2.4), C.steel, Math.max(1.5, v.k(1 + i * 2.4) * 0.07))).join("")}
     ${v.poly([[-5.5, 1.0, 0.6], [-5.5, 1.08, 0.6], [-5.5, 1.08, 30], [-5.5, 1.0, 30]], C.steel)}
     ${seams(v, -5.5, 6.5, 1, 30, 1.2)}
-    <!-- a stack of trays waiting on the right -->
-    ${v.place(4.6, 1.2, 4.2, 100, `${Array.from({ length: 8 }, (_, i) => rect(0, 40 + i * 8, 110, 7, i % 2 ? "#5d6670" : "#727c87", { r: 2 })).join("")}${rect(10, 104, 90, 16, C.steelLo)}${rect(0, 0, 110, 36, C.yellow, { r: 2 })}${t(55, 25, "TRAYS", { size: 18, fill: C.sign, anchor: "middle", ls: 2 })}`)}
     <!-- scanners at the far end -->
     ${v.place(-3.2, 2.3, 26, 100, `${rect(0, 0, 160, 230, C.steel)}${rect(20, 20, 120, 210, C.steelHi)}${rect(200, 120, 260, 110, C.sign)}${rect(200, 120, 260, 14, C.yellow)}${rect(500, 0, 160, 230, C.steel)}${rect(520, 20, 120, 210, C.steelHi)}${rect(700, 120, 140, 110, C.sign)}${rect(700, 120, 140, 14, C.yellow)}`)}
     <!-- the overhead sign -->
@@ -279,5 +277,49 @@ const rods = (v, xs, y, z, h) => xs.map((x) => line(...v.p(x, y, z), ...v.p(x, h
     ${rect(626, 440, 9, 130, C.steelLo)}${rect(681, 440, 9, 130, C.steelLo)}
     ${rect(612, 424, 92, 22, C.sign, { r: 8 })}
     ${rect(570, 530, 180, 40, C.blue, { r: 10 })}`,
+  );
+}
+
+// 6. Boarding: your phone held out to the gate reader, the flaps about to open, the jet bridge beyond.
+{
+  const W = 760, H = 580, v = cam({ vx: 400, vy: 220, fl: 420 }), hgt = 4;
+  // a pedestal: a steel box beside the lane, its inner face toward you
+  const pedestal = (x0, x1, inner) => `${v.poly([[inner, 0, 3.4], [inner, 1.1, 3.4], [inner, 1.1, 5.2], [inner, 0, 5.2]], C.steel)}
+    ${v.poly([[x0, 1.1, 3.4], [x1, 1.1, 3.4], [x1, 1.1, 5.2], [x0, 1.1, 5.2]], C.steelHi)}
+    ${v.poly([[x0, 0, 3.4], [x1, 0, 3.4], [x1, 1.1, 3.4], [x0, 1.1, 3.4]], C.steelLo)}`;
+  scenes["e-gate.svg"] = svg(
+    W,
+    H,
+    `${room(v, { x0: -5, x1: 5, h: hgt, z1: 14, ceil: C.concrete, back: C.concreteLo })}
+    ${tileCeiling(v, -5, 5, hgt, 0.6, 14)}${seams(v, -5, 5, 1, 14, 1.25)}
+    <!-- the gate wall: windows onto the plane on the right, the jet bridge door straight ahead -->
+    ${v.place(-5, 3.2, 14, 100, `${rect(640, 20, 360, 260, C.glass)}${rect(640, 140, 360, 50, C.white)}${Array.from({ length: 9 }, (_, i) => rect(660 + i * 38, 152, 16, 20, C.glassLo, { r: 6 })).join("")}${rect(640, 182, 360, 8, C.blue)}${rect(760, 20, 6, 260, C.steelLo)}${rect(880, 20, 6, 260, C.steelLo)}
+      ${rect(380, 60, 240, 260, C.sign)}${rect(400, 80, 200, 240, "#2b2f36")}${rect(400, 300, 200, 20, C.steelLo)}
+      ${rect(380, 0, 240, 50, C.yellow)}${t(500, 38, "B22", { size: 38, fill: C.sign, anchor: "middle" })}`)}
+    <!-- the gate agent at the podium -->
+    ${v.person(-2.6, 8, "woman", C.blue)}
+    ${v.place(-3.2, 1.1, 7.2, 100, `${rect(0, 0, 120, 110, C.sign)}${rect(0, 0, 120, 16, C.yellow)}`)}
+    <!-- overhead boarding sign -->
+    ${rods(v, [-1.5, 1.5], 3.4, 6, hgt)}
+    ${v.place(-2.6, 3.4, 6, 100, `${panel(0, 0, 520, 90)}${t(24, 56, "Boarding", { size: 40, len: 170 })}${rect(220, 18, 280, 54, C.green, { r: 3 })}${t(360, 54, "Groups 1–3", { size: 26, anchor: "middle" })}`)}
+    <!-- the lane: yellow arrow through, glass flaps closed until the scan -->
+    ${v.poly([[-0.12, 0, 6], [0.12, 0, 6], [0.12, 0, 7.4], [0.36, 0, 7.4], [0, 0, 8.4], [-0.36, 0, 7.4], [-0.12, 0, 7.4]], C.yellow)}
+    ${pedestal(-1.2, -0.6, -0.6)}${pedestal(0.6, 1.2, 0.6)}
+    ${v.poly([[-0.6, 0.35, 4.6], [-0.03, 0.35, 4.6], [-0.03, 1.45, 4.6], [-0.6, 1.45, 4.6]], C.glass, ' opacity=".75"')}
+    ${v.poly([[0.03, 0.35, 4.6], [0.6, 0.35, 4.6], [0.6, 1.45, 4.6], [0.03, 1.45, 4.6]], C.glass, ' opacity=".75"')}
+    <!-- status light on the far end of the left pedestal: green arrow -->
+    ${v.place(-1.15, 1.6, 5.1, 100, `${rect(0, 0, 50, 50, C.sign, { r: 3 })}${arrow(5, 5, 40, -90, C.green)}`)}
+    <!-- the reader window on the pedestal top -->
+    ${v.poly([[-1.1, 1.11, 3.5], [-0.7, 1.11, 3.5], [-0.7, 1.11, 3.95], [-1.1, 1.11, 3.95]], "#1b1d21")}
+    <!-- your hand and phone, held out over the reader -->
+    <g transform="rotate(-14 230 420)">
+      ${rect(168, 300, 120, 220, C.sign, { r: 16 })}${rect(176, 312, 104, 196, C.white, { r: 8 })}
+      ${rect(176, 312, 104, 40, C.yellow)}${t(228, 338, "UA 914 · B22", { size: 13, fill: C.sign, anchor: "middle" })}
+      ${Array.from({ length: 49 }, (_, i) => ((i * 37) % 11 > 4 || i === 0 || i === 6 || i === 42) ? rect(194 + (i % 7) * 10, 372 + Math.floor(i / 7) * 10, 10, 10, C.sign) : "").join("")}
+      ${t(228, 470, "Scan to board", { size: 12, fill: C.steelLo, anchor: "middle", weight: 400 })}
+    </g>
+    <path d="M190 600 L200 500 Q206 470 232 466 L300 470 Q318 476 312 500 L300 600 Z" fill="${C.skin}"/>
+    ${rect(150, 408, 30, 70, C.skin, { r: 14 })}
+    ${[0, 1, 2].map((i) => rect(272, 380 + i * 30, 46, 24, C.skin, { r: 12 })).join("")}`,
   );
 }

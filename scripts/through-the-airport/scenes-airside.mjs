@@ -165,24 +165,6 @@ const topPerson = (x, y, rot, coat) =>
   );
 }
 
-// 16. The yellow line, from above.
-{
-  const W = 640, H = 540;
-  // shoe toes, from above, stopping at the line
-  const toe = (x, rot) => `<g transform="translate(${x} 480) rotate(${rot})"><path d="M-26 70 L-26 0 C-26 -36 26 -36 26 0 L26 70 Z" fill="${C.sign}"/><path d="M-26 -2 C-26 -30 26 -30 26 -2" fill="none" stroke="${C.white}" stroke-width="5"/></g>`;
-  scenes["floor-line.svg"] = svg(
-    W,
-    H,
-    `${Array.from({ length: 6 }, (_, i) => rect(0, i * 110 - 20, W, 3, C.concreteLo)).join("")}
-    ${Array.from({ length: 5 }, (_, i) => rect(i * 160 + 70, 0, 3, H, C.concreteLo)).join("")}
-    ${t(320, 150, "PLEASE WAIT", { size: 64, fill: C.sign, anchor: "middle", len: 470 })}
-    ${t(320, 220, "BEHIND THE LINE", { size: 64, fill: C.sign, anchor: "middle", len: 470 })}
-    ${hazard("hz_line", 0, 290, W, 26)}
-    ${rect(0, 330, W, 34, C.yellow)}
-    ${toe(268, -6)}${toe(352, 4)}`,
-  );
-}
-
 // 17. Moving walkway, looking down its length.
 {
   const W = 640, H = 640, vx = 320, vy = 250;

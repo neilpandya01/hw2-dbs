@@ -1,5 +1,5 @@
 // At the gate: the gate pillar, a gate change, the boarding-group lanes, the
-// seats, the mobile pass, the e-gate scanner, and the plane through the glass.
+// seats, the mobile pass, and the plane through the glass.
 import { f, rng, C, COND, t, rect, line, svg, picto, arrow, panel, barcode } from "./lib.mjs";
 
 export const scenes = {};
@@ -138,41 +138,6 @@ export const scenes = {};
     ${rect(px + 24, 680, pw - 48, 70, C.sign, { r: 4 })}
     ${t(px + pw / 2, 724, "Add to wallet", { size: 18, anchor: "middle" })}`,
     { bg: C.concrete },
-  );
-}
-
-// 24. The e-gate: scan, then the green arrow.
-{
-  const W = 640, H = 660;
-  scenes["e-gate.svg"] = svg(
-    W,
-    H,
-    `${rect(0, 0, W, 470, C.concrete)}${rect(0, 470, W, 190, C.floor)}
-    <!-- left pedestal -->
-    ${rect(60, 200, 170, 380, C.steelHi, { r: 8 })}
-    ${rect(60, 200, 170, 90, C.sign, { r: 8 })}${rect(60, 260, 170, 30, C.sign)}
-    ${rect(84, 222, 122, 50, C.green, { r: 4 })}
-    ${arrow(116, 222, 50, 0, C.white)}
-    ${rect(84, 318, 122, 80, "#2b3036", { r: 6 })}
-    ${rect(96, 330, 98, 56, C.glassLo, { r: 3 })}
-    ${t(145, 524, "SCAN PASS", { size: 15, fill: C.sign, anchor: "middle", ls: 2 })}${arrow(130, 470, 30, -90, C.sign)}
-    ${rect(60, 560, 170, 20, C.steelLo)}
-    <!-- glass flap doors, open -->
-    ${rect(230, 300, 70, 160, C.glass, { o: 0.85 })}${rect(450, 300, 70, 160, C.glass, { o: 0.85 })}
-    ${rect(230, 300, 70, 6, C.steelLo)}${rect(450, 300, 70, 6, C.steelLo)}
-    <!-- right pedestal -->
-    ${rect(520, 200, 120, 380, C.steelHi, { r: 8 })}${rect(520, 200, 120, 90, C.sign, { r: 8 })}${rect(520, 260, 120, 30, C.sign)}
-    ${t(580, 256, "B22", { size: 32, fill: C.yellow, anchor: "middle" })}
-    ${rect(520, 560, 120, 20, C.steelLo)}
-    <!-- floor lane -->
-    <path d="M300 580 L450 580 L520 660 L230 660 Z" fill="${C.concrete}"/>
-    ${arrow(335, 590, 80, -90, C.yellow)}
-    <!-- a phone held to the reader -->
-    <g transform="translate(0 70) rotate(-12 150 300)">${rect(110, 250, 80, 140, C.sign, { r: 12 })}${rect(118, 262, 64, 116, C.white, { r: 6 })}
-      ${(() => { const r = rng(7); return Array.from({ length: 49 }, (_, i) => (r() > 0.5 || i === 0 || i === 6 || i === 42) ? rect(122 + (i % 7) * 8, 290 + Math.floor(i / 7) * 8, 8, 8, C.sign) : "").join(""); })()}</g>
-    <!-- top banner -->
-    ${rect(0, 40, W, 70, C.sign)}
-    ${t(30, 86, "Boarding", { size: 30 })}${t(W - 30, 86, "UA 914 · London", { size: 22, fill: C.yellow, anchor: "end" })}`,
   );
 }
 
