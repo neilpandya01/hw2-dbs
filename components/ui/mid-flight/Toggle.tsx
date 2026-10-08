@@ -3,15 +3,22 @@
 import { useState } from "react";
 import { cx } from "./styles";
 
-export default function Toggle({ label, defaultOn = false, disabled }: { label: string; defaultOn?: boolean; disabled?: boolean }) {
-  const [on, setOn] = useState(defaultOn);
+type Props = { label: string; defaultOn?: boolean; disabled?: boolean; on?: boolean; onChange?: (on: boolean) => void };
+
+// Pass `on` + `onChange` to control it from the page; otherwise it keeps its own state.
+export default function Toggle({ label, defaultOn = false, disabled, on: onProp, onChange }: Props) {
+  const [inner, setInner] = useState(defaultOn);
+  const on = onProp ?? inner;
   return (
     <button
       type="button"
       role="switch"
       aria-checked={on}
       disabled={disabled}
-      onClick={() => setOn((v) => !v)}
+      onClick={() => {
+        setInner(!on);
+        onChange?.(!on);
+      }}
       className="group inline-flex items-center gap-3 rounded-full font-mf text-sm text-mf-text focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mf-focus disabled:cursor-not-allowed disabled:text-mf-muted/50"
     >
       <span

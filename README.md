@@ -34,7 +34,7 @@ _Flying in the night, from the window seat._ The cabin lights are dimmed to blue
 - **References / inspiration:** red-eye flights, blue LED cabin mood lighting, the seatback flight-progress map, city lights from 35,000 ft
 - **Why it might fit a flight log:** it's the feeling of actually being on the flights being logged — quiet, reflective, looking back at where you've been
 - **Artifacts:** 28 SVG illustrations drawn by the agent (`node scripts/mid-flight/generate.mjs` → `public/mood-boards/mid-flight/`)
-- **Design system:** `/design-systems/mid-flight` — color roles with contrast ratios, type roles, spacing & shape, components, control states, UI states. Components live in `components/ui/mid-flight/` so the site can reuse them.
+- **Design system:** `/design-systems/mid-flight`: color roles with contrast ratios, type roles, spacing & shape, components, control states, UI states. Components live in `components/ui/mid-flight/` so the site can reuse them.
 
 ### Mood 2 — First Suite
 
@@ -62,15 +62,38 @@ _Curb to curb, read at a glance._ Every step of getting through an airport, not 
 
 ### Chosen style
 
-_TBD: which mood the Flight Log uses, and why it fits the site and the people who'd use it._
+**Mid Flight.** _TBD: why it fits the site and the people who'd use it._
 
 ## Site features
 
-- [ ] World map of visited airports / flight routes (static SVG, no map APIs)
-- [ ] Summary stats (flights, countries, airports, distance)
-- [ ] Interaction 1: _TBD (e.g. filter by year / region)_
-- [ ] Interaction 2: _TBD (e.g. destination detail panel)_
-- [ ] Responsive at 390px (mobile) and 1440px (desktop)
+`/flight-log` is built from the Mid Flight components in `components/ui/mid-flight/`, with page sections in `components/flight-log/`.
+
+- [x] **Globe** of every route: a dotted night-side Earth like the seatback flight map, drawn on a canvas in orthographic projection. Flights are great-circle arcs lifted off the surface. Drag or use the arrow keys to turn it. It turns slowly on its own unless the visitor prefers reduced motion. The land dots come from Natural Earth 110m, generated once into `data/landDots.ts` by `node scripts/flight-log/land-dots.mjs`, so the site makes no map API calls
+- [x] A personal greeting ("Flying since 2017", "Welcome back, Neil"), the headline total distance (Display), and stat tiles for flights, countries, airports and hours
+- [x] **Accurate distances**: great-circle distance on the WGS-84 ellipsoid (Vincenty), from airport coordinates to 4 decimals. This matches published figures (e.g. JFK–LHR 3,451 mi, LAX–SYD 7,488 mi). Each row rounds once in the chosen unit, and the headline is the sum of the rows, so mi and km both add up. Flight times are estimated from distance (marked "~") unless a flight has `minutes` in `data/flights.ts`
+- [x] Interaction 1, **filters**: search, sort select, region chips and flight-time chips (Under 3h / 3–6h / 6–12h / 12h+, i.e. short to ultra-long haul; a chip is disabled when nothing behind it matches), a year range, and "Red-eyes only" / "First visit to a country" checkboxes. Filtered-out routes fade on the globe, and an empty state offers Clear filters
+- [x] Interaction 2, **trace and detail**: hovering or focusing a flight turns the globe to that route and lights it up. Clicking opens the design system's detail panel, with a small globe facing the route
+- [x] Interaction 3, **Log a flight** (the one amber primary action): a form with an error summary and field errors, a loading state, a success message, and the button showing "✓ Logged". It is faked: the flight joins the list until reload
+- [x] **Aircraft miniatures** on the cards (`components/ui/mid-flight/AircraftArt.tsx`): an SVG side view of each flight's aircraft type, with lengths roughly to scale and the right engine count, nose and wingtips, painted in the airline's livery (tail art, belly, cheatline, engines). Windows are lit and the beacon is on, as at night. Rows and cards also name the aircraft
+- [x] Display settings: mi / km radios in the header (they change every number on the page) and a Show routes toggle under the globe. Tabs switch the list between rows and cards
+- [x] Clicking the globe leads to the flights: an airport filters the list to that airport, and a route (arc) filters it to every flight between those two cities, in either direction, shown as a removable chip. Hovering an arc brightens it and labels both ends
+- [x] Responsive: two columns with a sticky globe at 1440px, one column with a menu button at 390px
+
+### Design system coverage
+
+Every Mid Flight piece is used on `/flight-log`:
+
+| Design system | Where on the site |
+| --- | --- |
+| Type roles | Display: total distance. Heading: section and year titles, dialog titles. Body: the line under the total and the globe caption. Label: every small caps label. Shared as `displayText` / `headingText` / `bodyText` / `labelText` in `components/ui/mid-flight/styles.ts` |
+| Buttons & link | Primary: Log a flight, Add to log. Secondary: Cancel, Close, Clear filters (empty state). Link: Clear filters, View flight |
+| Text input · Select | Search, the Log a flight fields · Sort by |
+| Checkboxes & radios · Toggle | Red-eyes only, First visit to a country · Miles / Kilometers · Show routes |
+| Tabs · Year range · Filter chips | List / Cards · Years · Regions |
+| Card · List rows · Badges · Stat tiles | Cards view · List view · Red-eye / New country · Hero counts |
+| Modal / detail panel | Flight detail (controlled mode, globe as the picture), Log a flight |
+| Control states | Rest, hover, focus and pressed on every control. Selected: chips, tabs, checkboxes, radios, toggle, the current row, and the primary button after logging ("✓ Logged"). Disabled: region chips with no matches, and Cancel while a flight is being added |
+| UI states | Loading: the list while flights load. Empty: no matching flights. Error: the Log a flight error summary. Success: "Flight added" |
 
 ## Design decisions
 

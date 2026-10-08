@@ -145,3 +145,8 @@ body {
   background: var(--color-hub-bg);
   color: var(--color-hub-text);
 }
+
+/* Airport-code fields suggest from a <datalist>; hide Chrome's dropdown arrow so they read as plain text inputs. */
+input[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}

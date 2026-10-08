@@ -71,3 +71,11 @@ export const inputStyles = {
 } as const;
 
 export const labelText = "font-mf-mono text-[11px] uppercase tracking-[0.2em] text-mf-muted";
+
+// The four type roles (see the design system's Type roles section). Use these, not one-off sizes.
+export const displayText = "font-mf text-5xl font-light tracking-tight sm:text-[56px] sm:leading-[60px]";
+export const headingText = "font-mf text-2xl font-normal";
+export const bodyText = "font-mf text-base leading-[26px] font-light";
+
+export type Unit = "mi" | "km";
+export const fmtDistance = (mi: number, unit: Unit = "mi") => `${Math.round(unit === "km" ? mi * 1.609344 : mi).toLocaleString("en-US")} ${unit}`;
