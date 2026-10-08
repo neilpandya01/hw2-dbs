@@ -1,5 +1,4 @@
 import Checkbox from "@/components/ui/mid-flight/Checkbox";
-import Chip from "@/components/ui/mid-flight/Chip";
 import FilterChips from "@/components/ui/mid-flight/FilterChips";
 import Select from "@/components/ui/mid-flight/Select";
 import TextInput from "@/components/ui/mid-flight/TextInput";
@@ -31,17 +30,9 @@ type Props = {
 // Everything that narrows or orders the list: search and sort, region chips, a year range, and two checkboxes.
 export default function FilterBar({ filters, onChange, sort, onSortChange, yearBounds, emptyRegions, emptyHauls }: Props) {
   const set = (patch: Partial<Filters>) => onChange({ ...filters, ...patch });
+  const routeLabel = filters.route && `${airportByCode.get(filters.route[0])?.city} ⇄ ${airportByCode.get(filters.route[1])?.city}`;
   return (
     <div className="grid gap-5">
-      {filters.route && (
-        <div className="flex flex-wrap items-center gap-3">
-          <span className={labelText}>Route from the globe</span>
-          <Chip selected onClick={() => set({ route: null })} aria-label={`Remove route filter: ${filters.route.join(" and ")}`}>
-            {airportByCode.get(filters.route[0])?.city} ⇄ {airportByCode.get(filters.route[1])?.city}
-            <span aria-hidden className="ml-1">✕</span>
-          </Chip>
-        </div>
-      )}
       <div className="grid gap-4 sm:grid-cols-[1fr_12rem]">
         <TextInput label="Search" icon="search" type="search" placeholder="City, airport, or airline" value={filters.query} onChange={(e) => set({ query: e.target.value })} />
         <Select label="Sort by" options={[...sorts]} value={sort} onChange={(e) => onSortChange(e.target.value as Sort)} />
@@ -53,6 +44,14 @@ export default function FilterBar({ filters, onChange, sort, onSortChange, yearB
       <div className="grid gap-2">
         <span className={labelText}>Flight time</span>
         <FilterChips label="Filter by flight time" options={[...hauls]} value={filters.hauls} onChange={(h) => set({ hauls: h })} disabledOptions={emptyHauls} />
+      </div>
+      {/* Routes are picked on the globe; here they show and clear like any other filter. */}
+      <div className="grid gap-2">
+        <span className={labelText}>Route</span>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <FilterChips label="Filter by route" options={routeLabel ? [routeLabel] : []} value={routeLabel ? [routeLabel] : []} onChange={(v) => v.length === 0 && set({ route: null })} />
+          {!routeLabel && <span className="font-mf text-xs font-light text-mf-muted">Click a route on the globe to add it</span>}
+        </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-end sm:gap-10">
         <YearRange

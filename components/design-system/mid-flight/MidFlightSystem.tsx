@@ -17,7 +17,7 @@ export default function MidFlightSystem() {
             <Link href="/mood-boards/mid-flight" className="rounded-sm hover:text-mf-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mf-focus">Mood board</Link>
           </nav>
           <div>
-            <p className="font-mf-mono text-[11px] tracking-[0.2em] text-mf-muted uppercase">Design system · 01</p>
+            <p className="font-mf-mono text-[0.6875rem] tracking-[0.2em] text-mf-muted uppercase">Design system · 01</p>
             <h1 className="mt-3 text-5xl font-light tracking-tight sm:text-6xl">Mid Flight</h1>
             <p className="mt-3 max-w-xl text-base leading-relaxed font-light text-mf-muted">
               A UI library built from the night-flight mood board: a dark navy cabin, one warm reading lamp for the action that matters, and cool aisle light for where you are.

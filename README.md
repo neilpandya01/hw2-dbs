@@ -73,11 +73,23 @@ _Curb to curb, read at a glance._ Every step of getting through an airport, not 
 - [x] **Accurate distances**: great-circle distance on the WGS-84 ellipsoid (Vincenty), from airport coordinates to 4 decimals. This matches published figures (e.g. JFK–LHR 3,451 mi, LAX–SYD 7,488 mi). Each row rounds once in the chosen unit, and the headline is the sum of the rows, so mi and km both add up. Flight times are estimated from distance (marked "~") unless a flight has `minutes` in `data/flights.ts`
 - [x] Interaction 1, **filters**: search, sort select, region chips and flight-time chips (Under 3h / 3–6h / 6–12h / 12h+, i.e. short to ultra-long haul; a chip is disabled when nothing behind it matches), a year range, and "Red-eyes only" / "First visit to a country" checkboxes. Filtered-out routes fade on the globe, and an empty state offers Clear filters
 - [x] Interaction 2, **trace and detail**: hovering or focusing a flight turns the globe to that route and lights it up. Clicking opens the design system's detail panel, with a small globe facing the route
-- [x] Interaction 3, **Log a flight** (the one amber primary action): a form with an error summary and field errors, a loading state, a success message, and the button showing "✓ Logged". It is faked: the flight joins the list until reload
+- [x] Interaction 3, **Log a flight** (the one amber primary action): a form for every detail a card shows (route, date, seat, airline, flight number, aircraft, flight time, red-eye, notes). Only the route and date are required, and suggestions come from the airports, airlines and aircraft the site can draw. Distance, estimated time and "new country" are calculated and previewed live. It has an error summary and field errors, a loading state, a success message, and the button showing "✓ Logged". It is faked: the flight joins the list until reload
 - [x] **Aircraft miniatures** on the cards (`components/ui/mid-flight/AircraftArt.tsx`): an SVG side view of each flight's aircraft type, with lengths roughly to scale and the right engine count, nose and wingtips, painted in the airline's livery (tail art, belly, cheatline, engines). Windows are lit and the beacon is on, as at night. Rows and cards also name the aircraft
 - [x] Display settings: mi / km radios in the header (they change every number on the page) and a Show routes toggle under the globe. Tabs switch the list between rows and cards
 - [x] Clicking the globe leads to the flights: an airport filters the list to that airport, and a route (arc) filters it to every flight between those two cities, in either direction, shown as a removable chip. Hovering an arc brightens it and labels both ends
 - [x] Responsive: two columns with a sticky globe at 1440px, one column with a menu button at 390px
+
+### Responsive and accessible
+
+Checked in headless Chrome at 320, 375, 390, 768, 1024, 1280, 1440 and 1920px, plus 640px (a 1280px screen at 200% zoom), a 125% default font size, and a phone held sideways:
+
+- No horizontal scrolling at any size. One column with a menu button below 640px; two columns with a sticky globe from 1024px
+- [axe-core](https://github.com/dequelabs/axe-core) (WCAG 2.2 AA plus best practices) reports no violations on the page, the mobile menu, the detail panel, the Log a flight form with errors showing, or the cards view
+- Every control is at least 24×24px (WCAG 2.2 target size), and every one has a visible focus ring
+- Keyboard: a "Skip to flights" link comes first, the tab order is logical, the globe turns with the arrow keys, and dialogs trap focus, close with Esc and return focus to where you were. Everything the globe does by click also has a list or filter equivalent
+- Landmarks: the header is its own banner, the content is in `<main>`, and headings run in order
+- Type is sized in rem, so it follows the reader's browser font size
+- With "reduce motion" on, the globe stops spinning and stops animating its planes, and spinners, shimmers and transitions settle instantly
 
 ### Design system coverage
 

@@ -39,7 +39,7 @@ export const buttonStyles = {
 } as const;
 
 export const chipBase =
-  "inline-flex h-8 items-center gap-1.5 rounded-full border px-3.5 font-mf-mono text-[11px] uppercase tracking-[0.15em] transition duration-150 select-none";
+  "inline-flex h-8 items-center gap-1.5 rounded-full border px-3.5 font-mf-mono text-[0.6875rem] uppercase tracking-[0.15em] transition duration-150 select-none";
 
 export const chipStyles = {
   live:
@@ -70,12 +70,12 @@ export const inputStyles = {
   },
 } as const;
 
-export const labelText = "font-mf-mono text-[11px] uppercase tracking-[0.2em] text-mf-muted";
+export const labelText = "font-mf-mono text-[0.6875rem] uppercase tracking-[0.2em] text-mf-muted";
 
 // The four type roles (see the design system's Type roles section). Use these, not one-off sizes.
-export const displayText = "font-mf text-5xl font-light tracking-tight sm:text-[56px] sm:leading-[60px]";
+export const displayText = "font-mf text-5xl font-light tracking-tight sm:text-[3.5rem] sm:leading-[3.75rem]";
 export const headingText = "font-mf text-2xl font-normal";
-export const bodyText = "font-mf text-base leading-[26px] font-light";
+export const bodyText = "font-mf text-base leading-[1.625rem] font-light";
 
 export type Unit = "mi" | "km";
 export const fmtDistance = (mi: number, unit: Unit = "mi") => `${Math.round(unit === "km" ? mi * 1.609344 : mi).toLocaleString("en-US")} ${unit}`;

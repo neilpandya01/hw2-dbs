@@ -29,6 +29,17 @@ const specs: [RegExp, Spec][] = [
 ];
 const fallback: Spec = { m: 40, h: 10.5, nose: 1.25, fin: 1.95, engines: 2, eng: 0.48, tip: "winglet" };
 
+// Names the art knows how to draw, offered as suggestions when logging a flight (anything else still works, drawn generic).
+export const knownAircraft = [
+  "Airbus A220-300", "Airbus A320", "Airbus A320neo", "Airbus A321", "Airbus A330-300", "Airbus A350-900", "Airbus A380",
+  "Boeing 737-800", "Boeing 737-900", "Boeing 737 MAX 8", "Boeing 737 MAX 9", "Boeing 757-200", "Boeing 767-300ER",
+  "Boeing 777-200", "Boeing 777-200LR", "Boeing 777-300ER", "Boeing 787-8", "Boeing 787-9", "Boeing 787-10", "Embraer E175",
+];
+export const knownAirlines = [
+  "Aeromexico", "Air Canada", "Air France", "Air India", "Alaska", "American", "ANA", "British Airways", "Delta", "Emirates",
+  "Icelandair", "JetBlue", "Korean Air", "LATAM", "Qantas", "Singapore Airlines", "United", "Vistara", "Vueling",
+];
+
 // Short type for tight spaces: "Boeing 777-300ER" → "777-300ER", "Embraer E175" → "E175".
 export const shortAircraft = (name: string) => name.replace(/^(Boeing|Airbus|Embraer)\s+/i, "");
 

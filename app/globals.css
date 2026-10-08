@@ -150,3 +150,15 @@ body {
 input[list]::-webkit-calendar-picker-indicator {
   display: none !important;
 }
+
+/* Respect "reduce motion": spinners, shimmers and transitions settle instantly. (The globe checks this itself.) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

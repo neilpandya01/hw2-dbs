@@ -16,7 +16,7 @@ export default function Section({ n, title, note, children }: { n: number; title
 export function Specimen({ label, children, className = "" }: { label: string; children: React.ReactNode; className?: string }) {
   return (
     <div className={`grid content-start gap-3 ${className}`}>
-      <p className="font-mf-mono text-[10px] tracking-[0.2em] text-mf-muted uppercase">{label}</p>
+      <p className="font-mf-mono text-[0.625rem] tracking-[0.2em] text-mf-muted uppercase">{label}</p>
       {children}
     </div>
   );

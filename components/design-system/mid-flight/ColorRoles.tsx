@@ -33,11 +33,11 @@ export default function ColorRoles() {
               <div className="aspect-[4/3] rounded-mf-md border border-mf-border" style={{ background: r.hex }} />
               <div className="grid gap-1">
                 <p className="text-sm text-mf-text">{r.name}</p>
-                <p className="font-mf-mono text-[11px] text-mf-muted">{r.hex}</p>
+                <p className="font-mf-mono text-[0.6875rem] text-mf-muted">{r.hex}</p>
                 <p className="min-h-8 text-xs leading-4 font-light text-mf-muted">
                   {r.from} · {r.use}
                 </p>
-                <p className={`font-mf-mono text-[11px] ${r.check === "none" ? "text-mf-muted/60" : "text-mf-focus"}`}>{ratio}</p>
+                <p className={`font-mf-mono text-[0.6875rem] ${r.check === "none" ? "text-mf-muted/60" : "text-mf-focus"}`}>{ratio}</p>
               </div>
             </li>
           );

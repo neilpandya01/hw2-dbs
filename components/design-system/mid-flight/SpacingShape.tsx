@@ -11,7 +11,7 @@ export default function SpacingShape() {
             {space.map((s) => (
               <div key={s} className="grid justify-items-center gap-2">
                 <div className="w-6 rounded-sm bg-mf-led/70" style={{ height: s * 2 }} />
-                <span className="font-mf-mono text-[11px] text-mf-muted">{s}</span>
+                <span className="font-mf-mono text-[0.6875rem] text-mf-muted">{s}</span>
               </div>
             ))}
           </div>
@@ -25,8 +25,8 @@ export default function SpacingShape() {
             ].map(([v, cls, use]) => (
               <div key={v} className="grid justify-items-center gap-2">
                 <div className={`size-14 border border-mf-control bg-mf-surface ${cls}`} />
-                <span className="font-mf-mono text-[11px] text-mf-muted">{v}</span>
-                <span className="font-mf text-[11px] font-light text-mf-muted">{use}</span>
+                <span className="font-mf-mono text-[0.6875rem] text-mf-muted">{v}</span>
+                <span className="font-mf text-[0.6875rem] font-light text-mf-muted">{use}</span>
               </div>
             ))}
           </div>

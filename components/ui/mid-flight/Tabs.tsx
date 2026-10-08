@@ -30,7 +30,7 @@ export default function Tabs({ tabs, defaultIndex = 0, onChange }: { tabs: strin
           tabIndex={i === active ? 0 : -1}
           onClick={() => select(i)}
           className={cx(
-            "relative -mb-px rounded-t-sm pb-3 font-mf text-sm transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mf-focus active:translate-y-px",
+            "relative -mb-px rounded-t-sm px-1.5 pb-3 font-mf text-sm transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mf-focus active:translate-y-px",
             i === active ? "text-mf-text" : "text-mf-muted hover:text-mf-text"
           )}
         >

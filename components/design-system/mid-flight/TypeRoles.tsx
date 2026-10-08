@@ -9,7 +9,7 @@ const roles = [
     spec: "DM Sans · Light 300 · 16/26",
     el: <p className={`max-w-xl ${bodyText}`}>Red-eye to Tokyo. Watched the sunrise come up over the wing from 32A while the rest of the cabin slept.</p>,
   },
-  { role: "Label", spec: "DM Mono · Regular 400 · 11/16 · caps · +20% tracking", el: <p className="font-mf-mono text-[11px] tracking-[0.2em] uppercase">Seat 32A · Window · Mar 14 2023</p> },
+  { role: "Label", spec: "DM Mono · Regular 400 · 11/16 · caps · +20% tracking", el: <p className="font-mf-mono text-[0.6875rem] tracking-[0.2em] uppercase">Seat 32A · Window · Mar 14 2023</p> },
 ];
 
 export default function TypeRoles() {
@@ -21,7 +21,7 @@ export default function TypeRoles() {
             {r.el}
             <div className="sm:text-right">
               <p className="font-mf text-sm text-mf-text">{r.role}</p>
-              <p className="font-mf-mono text-[11px] text-mf-muted">{r.spec}</p>
+              <p className="font-mf-mono text-[0.6875rem] text-mf-muted">{r.spec}</p>
             </div>
           </div>
         ))}

@@ -19,7 +19,7 @@ export default function Toggle({ label, defaultOn = false, disabled, on: onProp,
         setInner(!on);
         onChange?.(!on);
       }}
-      className="group inline-flex items-center gap-3 rounded-full font-mf text-sm text-mf-text focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mf-focus disabled:cursor-not-allowed disabled:text-mf-muted/50"
+      className="group inline-flex shrink-0 items-center gap-3 rounded-full font-mf whitespace-nowrap text-sm text-mf-text focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mf-focus disabled:cursor-not-allowed disabled:text-mf-muted/50"
     >
       <span
         className={cx(

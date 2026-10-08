@@ -44,8 +44,8 @@ export default function ControlStates() {
               <th />
               {states.map((s) => (
                 <th key={s} scope="col" className="px-2 pb-3 text-center align-top">
-                  <span className="block font-mf-mono text-[11px] tracking-[0.2em] text-mf-text uppercase">{s}</span>
-                  <span className="block text-[11px] font-light text-mf-muted">{meaning[s]}</span>
+                  <span className="block font-mf-mono text-[0.6875rem] tracking-[0.2em] text-mf-text uppercase">{s}</span>
+                  <span className="block text-[0.6875rem] font-light text-mf-muted">{meaning[s]}</span>
                 </th>
               ))}
             </tr>

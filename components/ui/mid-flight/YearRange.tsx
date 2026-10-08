@@ -101,7 +101,7 @@ export default function YearRange({ min = 2012, max = 2025, defaultFrom = 2016, 
           />
         ))}
       </div>
-      <div className="flex justify-between font-mf-mono text-[11px] text-mf-muted">
+      <div className="flex justify-between font-mf-mono text-[0.6875rem] text-mf-muted">
         <span>{min}</span>
         <span>{max}</span>
       </div>

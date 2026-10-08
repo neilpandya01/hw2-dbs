@@ -12,7 +12,7 @@ const links = [
 ];
 
 const navLink =
-  "rounded-sm text-sm text-mf-muted transition hover:text-mf-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mf-focus active:text-mf-focus";
+  "-my-2 rounded-sm py-2 text-sm text-mf-muted transition hover:text-mf-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mf-focus active:text-mf-focus";
 
 // Wordmark, nav, and the distance units (they change every number on the page, so they live up here).
 // On phones the nav folds into a menu button; the units stay visible.
@@ -20,12 +20,12 @@ export default function SiteHeader({ unit, onUnitChange }: { unit: Unit; onUnitC
   const [open, setOpen] = useState(false);
   return (
     <header className="relative flex items-center justify-between gap-6 border-b border-mf-border pb-5">
-      <Link href="/flight-log" className="flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mf-focus">
+      <Link href="/flight-log" className="-my-2 flex shrink-0 items-center gap-2.5 rounded-sm py-2 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mf-focus">
         <span aria-hidden className="size-2 rounded-full bg-mf-focus shadow-[0_0_10px_var(--color-mf-focus)]" />
-        <span className="font-mf-mono text-[11px] tracking-[0.2em] text-mf-text uppercase">Flight Log</span>
+        <span className="font-mf-mono text-[0.6875rem] tracking-[0.2em] text-mf-text uppercase">Flight Log</span>
       </Link>
 
-      <div className="flex items-center gap-5 sm:gap-8">
+      <div className="flex items-center gap-3 sm:gap-8">
         <nav aria-label="Site" className="hidden gap-7 sm:flex">
           {links.map((l) => (
             <Link key={l.href} href={l.href} className={navLink}>
@@ -33,7 +33,7 @@ export default function SiteHeader({ unit, onUnitChange }: { unit: Unit; onUnitC
             </Link>
           ))}
         </nav>
-        <div role="radiogroup" aria-label="Distance units" className="flex gap-4 sm:border-l sm:border-mf-border sm:pl-8">
+        <div role="radiogroup" aria-label="Distance units" className="flex gap-3 sm:gap-4 sm:border-l sm:border-mf-border sm:pl-8">
           <Checkbox type="radio" name="units" label="mi" checked={unit === "mi"} onChange={() => onUnitChange("mi")} />
           <Checkbox type="radio" name="units" label="km" checked={unit === "km"} onChange={() => onUnitChange("km")} />
         </div>
@@ -62,7 +62,7 @@ export default function SiteHeader({ unit, onUnitChange }: { unit: Unit; onUnitC
         className={cx("absolute inset-x-0 top-full z-20 mt-2 grid gap-1 rounded-mf-md border border-mf-control bg-mf-surface p-2 shadow-mf-glow sm:hidden", !open && "hidden")}
       >
         {links.map((l) => (
-          <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className={cx(navLink, "rounded-mf-sm px-3 py-3 text-base hover:bg-mf-raised")}>
+          <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className={cx(navLink, "my-0 rounded-mf-sm px-3 py-3 text-base hover:bg-mf-raised")}>
             {l.label}
           </Link>
         ))}
