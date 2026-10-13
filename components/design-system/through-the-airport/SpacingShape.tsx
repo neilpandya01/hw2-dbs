@@ -1,6 +1,6 @@
 import Section, { Specimen } from "./Section";
 
-const space = [4, 8, 12, 16, 24, 32, 48];
+const space = [4, 8, 12, 16, 24, 32, 48, 56];
 
 export default function SpacingShape() {
   return (
@@ -15,12 +15,13 @@ export default function SpacingShape() {
               </div>
             ))}
           </div>
-          <p className="font-ap text-sm text-ap-muted">Denser than the other two systems: signs pack information. Rows sit 4 apart, cards pad at 16, sections at 48.</p>
+          <p className="font-ap text-sm text-ap-muted">Denser than the other two systems: signs pack information. Rows sit 4 apart, cards pad at 16, sections at 56.</p>
         </Specimen>
         <Specimen label="Corners">
-          <div className="flex items-start gap-4">
+          <div className="flex flex-wrap items-start gap-4">
             {[
               ["0", "rounded-none", "List rows"],
+              ["2", "rounded-ap-sm", "Inputs, chips, badges"],
               ["3", "rounded-ap-md", "Buttons, panels"],
               ["full", "rounded-full", "Radios"],
             ].map(([v, cls, use]) => (
